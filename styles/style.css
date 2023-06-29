@@ -19,6 +19,33 @@ html {
     font-size: 12px;
 }
 
+.mobile-friendly {
+    margin: 0;
+    padding: 0;
+}
+
+#nav-icon {
+    border: 1px solid red;
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: crosshair;
+    z-index: 9999;
+}
+  
+.bar {
+    width: 25px;
+    height: 2px;
+    border-radius: 3px;
+    background-color: #4DA62F;
+    margin-bottom: 6px;
+    transition: 0.3s;
+}
+
+#nav-menu {
+    display: none;
+}
 
 #nav-section {
     /* border: .5px solid rgb(0, 13, 255); */
@@ -319,6 +346,18 @@ span {
      text-decoration: underline;
 }
 
+#nav-icon.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #nav-icon.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  #nav-icon.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
 @media only screen and (max-width: 700px) {
     * {
         margin: 0;
@@ -339,6 +378,49 @@ span {
         margin: 0;
         padding: 0;
         padding: 20px;
+    }
+
+    .full-menu {
+        padding-left: 40px;
+    }
+
+    #content-top {
+        display: none;
+    }
+
+    #nav-icon {
+        display: block;
+      }
+    
+    #nav-menu,
+    #about-me {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        max-width: 300px;
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 999;
+        display: none;
+    }
+
+    .dashed-line {
+        border-top: 3px dotted #4da62f;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: fit-content;
+    }
+    
+    .content-menu,
+    .social-menu {
+        padding-left: 0;
+    }
+    
+    .link {
+        display: block;
+        margin-bottom: 10px;
     }
 }
 
