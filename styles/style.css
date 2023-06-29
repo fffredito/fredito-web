@@ -342,11 +342,12 @@ span {
 }
 
 .tube-watch {
-     /* border: 2px solid red; */
-     display: flex;
-     align-items: left;
-     padding-left: 13px;
-     text-decoration: underline;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: left;
+    margin-top: 10px;
+    padding-left: 13px;
+    text-decoration: underline;
 }
 
 #nav-icon.active .bar:nth-child(2) {
@@ -361,7 +362,7 @@ span {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     * {
         margin: 0;
         padding: 0;
