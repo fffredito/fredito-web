@@ -25,6 +25,7 @@ html {
     width: 19rem;
     float: right;
     padding: 20px;
+    padding-top: 45px;
     position: sticky;
     top: 0;
 }
@@ -37,6 +38,8 @@ html {
 
 .name {
     /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
     font-size: 12px;
     line-height: .5rem;
     letter-spacing: .1rem;
@@ -44,11 +47,6 @@ html {
     text-decoration-style: wavy;
     text-transform: uppercase;
     text-underline-offset: 2px;
-}
-
-.name-container {
-    /* border: 1px solid red; */
-    margin-left: -20px;
 }
 
 .dashed-line {
@@ -59,6 +57,8 @@ html {
 
 .subheadings {
     /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: .07rem;
@@ -66,19 +66,28 @@ html {
 }
 
 .about {
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
     text-indent: 25px;
     font-size: 12px;
 }
 
+#about-me {
+    margin: 0;
+    padding: 0;
+}
+
 .desc {
+    /* border: 1px solid red; */
     font-size: 12px;
     line-height: 20px;
 }
 
 #nav-menu {
     /* border: 1px solid red; */
-    padding-top: 15px;
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: row;
 }
@@ -110,8 +119,8 @@ html {
 
 .full-menu {
     /* border: 1px solid red; */
+    margin: 0;
     padding: 0;
-    margin-left: -30px;
     display: inline-block;
 }
 
@@ -310,7 +319,7 @@ span {
      text-decoration: underline;
 }
 
-/* @media only screen and (max-width: 700px) {
+@media only screen and (max-width: 700px) {
     * {
         margin: 0;
         padding: 0;
@@ -325,16 +334,13 @@ span {
     
 
     #nav-section {
-        border: .5px solid rgb(0, 13, 255);
+        /* border: .5px solid rgb(0, 13, 255); */
         width: fit-content;
         margin: 0;
         padding: 0;
-        float: right;
         padding: 20px;
-        position: sticky;
-        top: 0;
     }
-} */
+}
 
 
 @media screen and (min-width: 1200px) {
