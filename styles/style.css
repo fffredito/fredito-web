@@ -597,4 +597,11 @@ span {
         letter-spacing: .08rem;
         margin-left: 60px;
     }
+
+    .arrow {
+        /* border: 1px solid red; */
+        width: 13px;
+        padding: 0;
+        display: none;
+    }
 }
