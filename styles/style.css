@@ -608,4 +608,8 @@ span {
     .index {
         display: none;
     }
+
+    .content-heading {
+        display: none;
+    }
 }
