@@ -193,6 +193,12 @@ a:hover {
     padding-top: 20px;
 }
 
+#image-content {
+    /* border: 1px solid red; */
+    margin-right: 345px;
+    padding-top: 20px;
+}
+
 .content-heading {
     /* border: 1px solid red; */
     font-size: 12px;
@@ -416,6 +422,7 @@ span {
         display: flex;
         flex-direction: column;
         line-height: 40px;
+        justify-content: center;
     }
 }
 
@@ -529,7 +536,10 @@ span {
 
     .mid-menu {
         /* border: 2px solid red; */
+        display: flex;
+        flex-direction: row;
         margin-top: -30px;
+        
     }
 
     .projects {
@@ -568,16 +578,23 @@ span {
 
     .desc {
         /* border: 1px solid red; */
-        margin-top: -40px;
         font-size: 12px;
         line-height: 20x;
+        margin-top: -30px;
     }
 
     .desc-mix {
         /* border: 1px solid red; */
-        margin-top: -40px;
-        margin-bottom: 35px;
         font-size: 12px;
         line-height: 20x;
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+
+    .vid-menu-two {
+        /* border: 1px solid red; */
+        text-transform: uppercase;
+        letter-spacing: .08rem;
+        margin-left: 60px;
     }
 }
