@@ -78,6 +78,7 @@ html {
 
 .dashed-line {
     border-top: 3px dotted #4da62f;
+    /* border: 1px solid red; */
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -208,7 +209,7 @@ a:hover {
 .content-dashed-line {
     border-top: 3px dotted #4da62f;
     margin-top: 20px;
-    width: 622px;
+    min-width: fit-content;
 }
 
 #content {
@@ -390,6 +391,18 @@ span {
 
     #content-top {
         display: none;
+    }
+
+    .dashed-line {
+        border-top: 3px dotted #4da62f;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .content-dashed-line {
+        border-top: 3px dotted #4da62f;
+        margin-top: 20px;
+        width: fit-content;
     }
 
     /* #nav-icon {
