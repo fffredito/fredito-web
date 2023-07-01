@@ -509,8 +509,8 @@ span {
         padding: 0;
         display: flex;
         flex-wrap: wrap;
-        align-items: left;
-        justify-content: left;
+        align-items: center;
+        justify-content: center;
     }
 
     .mix-covers {
