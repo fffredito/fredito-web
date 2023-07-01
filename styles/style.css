@@ -401,7 +401,7 @@ span {
         padding: 0;
         display: flex;
         flex-direction: column;
-       }
+    }
 
     .mix-covers {
         display: inline-block;
@@ -427,6 +427,7 @@ span {
     }
 
     body {
+        /* border: .5px solid rgb(255, 0, 0); */
         display: flex;
         flex-direction: column;
         margin: 0;
@@ -438,7 +439,9 @@ span {
         margin: 0;
         width: fit-content;
         padding: 20px;
+        position:relative;
     }
+
     .content-menu {
         /* border: .5px solid rgb(255, 0, 0); */
         display: flex;
@@ -471,27 +474,26 @@ span {
         flex-wrap: wrap;
     }
 
-    .link {
-
-    }
-
     #content-top {
-        display: none;
+        /* border: .5px solid rgb(255, 0, 0); */
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin: 0;
+        padding: 20px;
+
     }
 
     .dashed-line {
         border-top: 3px dotted #4da62f;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .content-dashed-line {
         border-top: 3px dotted #4da62f;
         margin-top: 20px;
         width: fit-content;
-    }
-    .dashed-line {
-        width: 100%;
     }
 
     .mix-pack {
@@ -510,11 +512,49 @@ span {
         padding: 8px 8px;
     }
 
-    .mobile-friendly {
-    
+    #visualizers {
+        /* border: 2px solid red; */
+        flex-shrink: 0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
     }
 
-    .about {
-       
+    .sticky-top {
+        /* border: 2px solid red; */
+        display: inline-flex;
+    }
+
+    .mid-menu {
+        /* border: 2px solid red; */
+        margin-top: -30px;
+    }
+
+    .projects {
+        /* border: 2px solid red; */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-container {
+        /* border: 2px solid red; */
+        margin: 0;
+        padding: 5px;
+        font-size: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .proj-desc,
+    span {
+        /* border: 2px solid red; */
+        font-size: 12px;
+        margin: 0;
     }
 }
