@@ -335,7 +335,7 @@ span {
     display: flex;
     flex-wrap: wrap;
     align-items: left;
-    justify-content: left;
+    justify-content: center;
 }
 
 .unavailable {
@@ -351,19 +351,76 @@ span {
     text-decoration: underline;
 }
 
-#nav-icon.active .bar:nth-child(2) {
+/* #nav-icon.active .bar:nth-child(2) {
     opacity: 0;
-  }
+}
   
   #nav-icon.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
-  }
+}
   
-  #nav-icon.active .bar:nth-child(3) {
+#nav-icon.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-  }
+} */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1400px) {
+
+    .mix-pack {
+        /* border: 2px solid red; */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: left;
+        justify-content: center;
+    }
+
+    .mix-covers {
+        display: inline-flex;
+        padding: 8px 8px;
+    }
+}
+
+
+/* @media screen and (min-width: 1200px) {
+    .proj-img {
+        width: 500px;
+    }
+
+    .content-dashed-line {
+        width: 97%;
+    }
+} */
+
+@media only screen and (max-width: 1100px) {
+
+    .projects {
+        /* border: 2px solid red; */
+        margin: 0;
+        margin-top: -15px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+       }
+
+    .mix-covers {
+        display: inline-block;
+        max-width: 100%;
+        padding: 8px 8px;
+    }
+
+    .mid-menu {
+        /* border: 1px solid red; */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        line-height: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 850px) {
     * {
         margin: 0;
         padding: 0;
@@ -375,18 +432,47 @@ span {
         margin: 0;
         padding: 0;
     }
-    
 
     #nav-section {
         /* border: .5px solid rgb(0, 13, 255); */
-        width: fit-content;
         margin: 0;
-        padding: 0;
+        width: fit-content;
         padding: 20px;
+    }
+    .content-menu {
+        /* border: .5px solid rgb(255, 0, 0); */
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
     }
 
     .full-menu {
-        padding-left: 40px;
+        display: flex;
+        flex-direction: row;
+        padding-left: 20px;
+        justify-content: center;
+        /* border: .5px solid rgb(0, 13, 255); */
+
+    }
+
+    #nav-menu {
+        /* border: .5px solid rgb(0, 13, 255); */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social-menu {
+        display: none;
+    }
+
+    .nav-link {
+        /* border: .5px solid rgb(0, 13, 255); */
+        width: fit-content;
+        flex-wrap: wrap;
+    }
+
+    .link {
+
     }
 
     #content-top {
@@ -404,54 +490,31 @@ span {
         margin-top: 20px;
         width: fit-content;
     }
-
-    /* #nav-icon {
-        display: block;
-      }
-    
-    #nav-menu,
-    #about-me {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 100%;
-        max-width: 300px;
-        padding: 20px;
-        box-sizing: border-box;
-        z-index: 999;
-    }
-
     .dashed-line {
-        border-top: 3px dotted #4da62f;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        width: fit-content;
+        width: 100%;
     }
-    
-    .content-menu,
-    .social-menu {
-        padding-left: 0;
+
+    .mix-pack {
+        /* border: 2px solid red; */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: left;
+        justify-content: left;
     }
-    
-    .link {
-        display: block;
-        margin-bottom: 10px;
+
+    .mix-covers {
+        display: inline-block;
+        max-width: 100%;
+        padding: 8px 8px;
     }
 
     .mobile-friendly {
-        display: block;
-        margin: 0;
-        padding: 0;
-    } */
-}
-
-
-@media screen and (min-width: 1200px) {
-    .proj-img {
-        width: 500px;
+    
     }
 
-    .content-dashed-line {
-        width: 97%;
+    .about {
+       
     }
 }
