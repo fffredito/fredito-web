@@ -446,7 +446,7 @@ span {
         margin: 0;
         width: fit-content;
         padding: 20px;
-        position:relative;
+        position: relative;
     }
 
     .content-menu {
@@ -459,8 +459,8 @@ span {
     .full-menu {
         display: flex;
         flex-direction: row;
-        padding-left: 20px;
-        justify-content: center;
+        padding-top: 12px;
+        justify-content: left;
         /* border: .5px solid rgb(0, 13, 255); */
 
     }
@@ -602,6 +602,10 @@ span {
         /* border: 1px solid red; */
         width: 13px;
         padding: 0;
+        display: none;
+    }
+
+    .index {
         display: none;
     }
 }
