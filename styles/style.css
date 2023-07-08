@@ -500,7 +500,7 @@ a:hover {
     }
 
     .link {
-        letter-spacing: 2px;
+        letter-spacing: 1px;
     }
 
     #content-top {
@@ -545,7 +545,7 @@ a:hover {
         padding: 0;
         display: flex;
         flex-direction: column;
-        gap: 45px;
+        gap: 70px;
     }
 
     .sticky-top {
@@ -555,7 +555,15 @@ a:hover {
     .mid-menu {
         display: flex;
         flex-direction: row;
+        margin: 0;
+        padding: 0;
         
+    }
+
+    #content {
+        margin: 0;
+        margin-top: -40px;
+        padding: 0;
     }
 
     .projects {
@@ -564,6 +572,10 @@ a:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .proj-title {
+        justify-content: center;
     }
 
     .title-container {
@@ -619,5 +631,14 @@ a:hover {
 
     .content-heading {
         display: none;
+    }
+
+    .tube-watch {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: end;
+        margin-top: 10px;
+        text-decoration: underline;
     }
 }
