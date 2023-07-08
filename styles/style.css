@@ -643,4 +643,9 @@ a:hover {
         margin-top: 10px;
         text-decoration: underline;
     }
+
+    .landing-img {
+        width: 80%;
+        mix-blend-mode:screen;
+    }
 }
