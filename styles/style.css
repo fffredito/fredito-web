@@ -560,6 +560,11 @@ a:hover {
         
     }
 
+    #content-top {
+        margin-top: 10px;
+        width: auto;
+    }
+
     #content {
         margin: 0;
         margin-top: -40px;
