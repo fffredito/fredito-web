@@ -555,7 +555,6 @@ a:hover {
     .mid-menu {
         display: flex;
         flex-direction: row;
-        margin-top: -30px;
         
     }
 
