@@ -466,15 +466,15 @@ a:hover {
 
     #nav-section {
         margin: 0;
-        width: 100vw;
         padding: 20px;
+        width: fit-content;
         position: relative;
     }
 
     .content-menu {
         display: flex;
         flex-direction: row;
-        column-gap: 100px;
+        column-gap: 80px;
         justify-content: space-between;
         align-items: center;
     }
