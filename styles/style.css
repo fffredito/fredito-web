@@ -460,26 +460,28 @@ a:hover {
     #nav-section {
         margin: 0;
         width: fit-content;
-        padding: 100px;
+        padding: 20px;
         position: relative;
     }
 
     .content-menu {
         display: flex;
         flex-direction: row;
-        height: fit-content;
+        column-gap: 100px;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .full-menu {
         display: flex;
         flex-direction: row;
-        justify-content: left;
     }
 
     #nav-menu {
         /* border: 1px solid red; */
         display: flex;
         flex-direction: row;
+       justify-content: center;
     }
 
     .subheadings {
@@ -490,9 +492,8 @@ a:hover {
         display: none;
     }
 
-    .nav-link {
-        width: fit-content;
-        flex-wrap: wrap;
+    .link {
+        letter-spacing: 2px;
     }
 
     #content-top {
