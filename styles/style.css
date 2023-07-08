@@ -460,7 +460,7 @@ a:hover {
     #nav-section {
         margin: 0;
         width: fit-content;
-        padding: 20px;
+        padding: 100px;
         position: relative;
     }
 
@@ -473,13 +473,17 @@ a:hover {
     .full-menu {
         display: flex;
         flex-direction: row;
-        padding-top: 12px;
         justify-content: left;
     }
 
     #nav-menu {
+        border: 1px solid red;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+    }
+
+    .subheadings {
+        display: none;
     }
 
     .social-menu {
