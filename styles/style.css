@@ -475,7 +475,7 @@ a:hover {
         display: flex;
         flex-direction: row;
         column-gap: 80px;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
     }
 
