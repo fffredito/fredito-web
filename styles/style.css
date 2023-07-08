@@ -548,10 +548,6 @@ a:hover {
         gap: 70px;
     }
 
-    .sticky-top {
-        display: inline-flex;
-    }
-
     .mid-menu {
         display: flex;
         flex-direction: row;
