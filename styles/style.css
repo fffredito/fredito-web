@@ -217,9 +217,15 @@ a:hover {
     text-underline-offset: 2px;
 }
 
-/* .sticky-top {
-    border: 1px solid red;
-} */
+.sub-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.sticky-top {
+    display: flex;
+    flex-direction: row;
+}
 
 .content-dashed-line {
     border-top: 3px dotted #4da62f;
@@ -238,8 +244,9 @@ a:hover {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 50px;
+    gap: 70px;
     flex-direction: row;
+    justify-content: right;
 }
 
 .vid-menu-one,
@@ -255,7 +262,9 @@ a:hover {
     flex-direction: row;
     justify-content: left;
     align-items: center;
-    margin-top: 12px;
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
 }
 
 .music-icon {
@@ -271,21 +280,24 @@ a:hover {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 80px;
 }
 
 .projects {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: fit-content;
+    /* align-items: center;
+    justify-content: center; */
+    text-align: center;
 }
 
 .proj-img {
     margin: 0;
     padding: 0;
-    width: 490px;
+    width: 70%;
 }
 
 .video-img {
@@ -300,26 +312,38 @@ a:hover {
     font-family: Cousine;
     font-display:initial;
     letter-spacing: 2px;
-    line-height: 32px;
     text-decoration-line: none;
     text-transform: uppercase;
-    text-underline-offset: 3px;
+    margin: 3px 0 0 0;
+    padding: 0;
 }
 
 .title-container {
-    padding: 0;
+    margin: 0 150px 0 150px;
     display: flex;
     flex-direction: column;
     gap: 2px;
 }
 
+.title-runtime {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 .sub-desc {
+    margin: 10px 0 0 0;
+    padding: 0;
     font-size: 12px;
 }
 
 .proj-desc {
     font-size: 12px;
-    margin-top: 10px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
 }
 
 .track-p {
@@ -371,11 +395,9 @@ a:hover {
 }
 
 .tube-watch {
-    margin: 0;
+    margin: 10px 0 0 0;
     padding: 0;
     display: flex;
-    justify-content: end;
-    margin-top: 10px;
     text-decoration: underline;
 }
 
