@@ -132,8 +132,11 @@ html {
 
 
 .social-menu {
-    margin-top: 30px;
-    line-height: 20px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .link {
@@ -156,7 +159,7 @@ html {
 .full-menu {
     margin: 0;
     padding: 0;
-    display: inline-block;
+    display:flex;
 }
 
 .arrow {
@@ -165,6 +168,8 @@ html {
 }
 
 .content-menu {
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 15px;
