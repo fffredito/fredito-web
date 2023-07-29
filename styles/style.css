@@ -709,5 +709,9 @@ a:hover {
         width: 100%;
     }
 
+    .mobile-only {
+        display: flex;
+    }
+
 
 }
