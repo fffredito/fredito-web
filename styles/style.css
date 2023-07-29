@@ -564,16 +564,11 @@ a:hover {
         margin-bottom: 20px;
     }
 
-    .dashed-line-two {
-        border-top: 3px dotted #4da62f;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
     .content-dashed-line {
         border-top: 3px dotted #4da62f;
         margin-top: 20px;
-        width: fit-content;
+        margin-bottom: 20px;
+        min-width: fit-content;
     }
 
     .mix-pack {
