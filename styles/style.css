@@ -96,6 +96,10 @@ html {
     margin-bottom: 20px;
 }
 
+.mobile-only {
+    display: none;
+}
+
 .subheadings {
     margin: 0;
     padding: 0;
@@ -555,6 +559,12 @@ a:hover {
     }
 
     .dashed-line {
+        border-top: 3px dotted #4da62f;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .dashed-line-two {
         border-top: 3px dotted #4da62f;
         margin-top: 20px;
         margin-bottom: 20px;
