@@ -324,6 +324,7 @@ a:hover {
 
 .title-container {
     margin: 0;
+    padding: 0 0 0 10px;
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -352,9 +353,10 @@ a:hover {
 
 .track-p {
     font-size: 12px;
-    margin: 0;
-    padding-left: 0;
-    padding-top: 4px;
+    margin: 10px 0 10px 0;
+    padding: 0;
+    text-align: left;
+    line-height: 15px;
 }
 
 .landing {
@@ -402,7 +404,9 @@ a:hover {
     margin: 10px 0 0 0;
     padding: 0;
     display: flex;
+    justify-content: right;
     text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 /* #nav-icon.active .bar:nth-child(2) {
@@ -545,7 +549,7 @@ a:hover {
         flex-direction: column;
         width: fit-content;
         margin: 0;
-        padding: 20px;
+        padding: 0 20px;
 
     }
 
@@ -587,21 +591,21 @@ a:hover {
     }
 
     .mid-menu {
-        display: flex;
-        flex-direction: row;
         margin: 0;
         padding: 0;
-        
+        display: flex;
+        gap: 70px;
+        flex-direction: row;
+        justify-content: center;
     }
 
     #content-top {
-        margin-top: 10px;
+        margin: 0;
         width: auto;
     }
 
     #content {
         margin: 0;
-        margin-top: -40px;
         padding: 0;
     }
 
@@ -669,7 +673,13 @@ a:hover {
     }
 
     .content-heading {
-        display: none;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        /* line-height: 2.75rem; */
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+        text-underline-offset: 2px;
     }
 
     .tube-watch {
@@ -682,7 +692,17 @@ a:hover {
     }
 
     .landing-img {
+        margin: 0;
+        padding: 0;
         width: 80%;
         mix-blend-mode:screen;
     }
+
+    .proj-img {
+        margin: 0;
+        padding: 0;
+        width: 90%;
+    }
+
+
 }
