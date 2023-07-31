@@ -299,6 +299,7 @@ a:hover {
 }
 
 .proj-img {
+    border: 8px ridge green;
     margin: 0;
     padding: 0;
     width: 370px;
@@ -328,7 +329,7 @@ a:hover {
 
 .title-container {
     margin: 0;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 20px;
     display: flex;
     flex-direction: column;
     gap: 2px;
