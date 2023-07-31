@@ -298,6 +298,11 @@ a:hover {
     text-align: center;
 }
 
+.td-projects {
+    margin: 0;
+    padding: 0;
+}
+
 .proj-img {
     border: 8px ridge green;
     margin: 0;
@@ -305,7 +310,20 @@ a:hover {
     width: 370px;
 }
 
+.td-img {
+    border: 8px ridge green;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 .video-img {
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+}
+
+.td-img {
     margin: 0;
     padding: 0;
     object-fit: cover;
