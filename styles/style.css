@@ -117,19 +117,30 @@ html {
 }
 
 
+/* Landing Image */
 
-
-
-
-
-#nav-icon {
-    display: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    cursor: crosshair;
-    z-index: 9999;
+.landing {
+    margin: 0;
+    padding: 0;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    overflow: hidden;
 }
+
+.landing-img {
+    width: 100%;
+    mix-blend-mode: screen;
+}
+
+
+
+
+
+
+
   
 .bar {
     width: 25px;
@@ -362,19 +373,6 @@ a:hover {
     padding: 0;
     text-align: left;
     line-height: 15px;
-}
-
-.landing {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.landing-img {
-    width: 50%;
-    mix-blend-mode:screen;
 }
 
 #mixes {
