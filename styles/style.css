@@ -470,7 +470,7 @@ a:hover {
     .content-menu {
         display: flex;
         flex-direction: row;
-        column-gap: 100px;
+        column-gap: 70px;
         justify-content: space-evenly;
         align-items: center;
     }
