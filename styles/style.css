@@ -413,10 +413,6 @@ a:hover {
 /* For mobile browsing */
 
 @media only screen and (max-width: 850px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
 
     body {
         margin: 0;
@@ -427,13 +423,42 @@ a:hover {
         padding: 0;
     }
 
+
     #nav-section {
-        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
         padding: 20px;
         width: 19rem;
-        display: inline-block;
+        display: inline-flex;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .menu-options {
+        margin: 0;
+        padding: 10px;
+        display: block;
+    }
+    
+    .social-menu {
+        display: none;
+    }
+
+
+    #td-collection {
+        margin: 0;
+        padding: 25px 0;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        gap: 25px;
+    }
+
+    .td-img {
+        border: 8px ridge green;
+        margin: 0;
+        padding: 0;
+        width: 490px;
     }
 
     .content-menu {
@@ -457,25 +482,9 @@ a:hover {
         justify-content: center;
     }
 
-    .subheadings {
-        display: none;
-    }
-
-    .social-menu {
-        display: none;
-    }
 
     .link {
         letter-spacing: 1px;
-    }
-
-    #content-top {
-        display: flex;
-        flex-direction: column;
-        width: fit-content;
-        margin: 0;
-        padding: 0 20px;
-
     }
 
     .dashed-line {
@@ -616,11 +625,8 @@ a:hover {
         text-decoration: underline;
     }
 
-    .landing-img {
-        margin: 0;
-        padding: 0;
-        width: 80%;
-        mix-blend-mode:screen;
+    .landing {
+        display: none;
     }
 
     .proj-img {
