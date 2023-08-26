@@ -1,31 +1,126 @@
-@viewport {
-    width: device-width ;
-    zoom: 1.0 ;
-  }
-
-* {
+html {
     margin: 0;
     padding: 0 18px;
-}
-
-html {
     background: #050505;
 }
 
-#banner {
-    background: #5CAB46;
-    height: 1.8rem;
-    overflow: hidden;
-    color: #ffffff;
+.font-color {
+    color: #4DA62F;
     font-family: Cousine;
-    font-weight: 600;
+    font-weight: 700;
+}
+
+/* Navigation Whole Section */
+
+#nav-section {
+    width: 19rem;
+    position: sticky;
+    float: right;
+    padding: 45px 10px;
+}
+
+.dashed-line {
+    border-top: 3px dotted #4da62f;
+    margin: 20px 0;
+}
+
+/* Navigation > Logo */
+
+.logo-section {
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+}
+
+.name {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: .5rem;
+    letter-spacing: .1rem;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-transform: uppercase;
+    text-underline-offset: 2px;
+}
+
+.logo-subtitle {
+    margin: 5px;
+    font-size: 11px;
+    text-decoration-line:none;
+    text-transform: lowercase;
+}
+
+.radio-icon {
+    margin-top: -35px;
+    padding: 5px;
+    width: 20px;
+    float: right;
+    color: #4DA62F;
+}
+
+
+/* Artist description */
+
+#about-me {
+    margin: 0;
+    padding: 0;
+    text-indent: 25px;
     font-size: 12px;
 }
 
-.mobile-friendly {
+
+/* Menu */
+
+.menu-options {
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    gap: 50px;
+}
+
+.content-menu {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
+
+.social-menu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: left;
+}
+
+.arrow {
+    width: 13px;
+    padding: 0;
+}
+
+.link {
+    text-decoration: none;
+    list-style-type: none;
+    padding-left: 4px;
+    font-size: 12px;
+    letter-spacing: .03rem;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+
+
+
+
+
 
 #nav-icon {
     display: none;
@@ -45,57 +140,6 @@ html {
     transition: 0.3s;
 }
 
-#nav-menu {
-    display: none;
-}
-
-#nav-section {
-    width: 19rem;
-    float: right;
-    padding: 20px;
-    padding-top: 45px;
-    position: sticky;
-    top: 0;
-}
-
-.logo-section {
-    margin: 0;
-    padding: 0;
-    height: fit-content;
-}
-
-.radio-icon {
-    margin: 0;
-    padding: 0;
-    width: 20px;
-    float: right;
-    color: #4DA62F;
-}
-
-.font-color {
-    color: #4DA62F;
-    font-family: Cousine;
-    font-weight: 700;
-}
-
-.name {
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-    line-height: .5rem;
-    letter-spacing: .1rem;
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-transform: uppercase;
-    text-underline-offset: 2px;
-}
-
-.dashed-line {
-    border-top: 3px dotted #4da62f;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 .mobile-only {
     display: none;
 }
@@ -109,17 +153,6 @@ html {
     display: inline-block;
 }
 
-.about {
-    margin: 0;
-    padding: 0;
-    text-indent: 25px;
-    font-size: 12px;
-}
-
-#about-me {
-    margin: 0;
-    padding: 0;
-}
 
 .desc,
 .desc-mix {
@@ -127,57 +160,6 @@ html {
     line-height: 20px;
 }
 
-#nav-menu {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-}
-
-
-.social-menu {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.link {
-    text-decoration: none;
-    list-style-type: none;
-    padding-left: 4px;
-    font-size: 12px;
-    letter-spacing: .03rem;
-    display: flex;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.nav-link {
-    display: flex;
-    align-items: left;
-    
-}
-
-.full-menu {
-    margin: 0;
-    padding: 0;
-    display:flex;
-}
-
-.arrow {
-    width: 13px;
-    padding: 0;
-}
-
-.content-menu {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
 
 .active {
     text-decoration: underline;
@@ -530,9 +512,11 @@ a:hover {
 
     #nav-section {
         margin: 0;
-        padding: 20px 20px 0 20px;
-        width: fit-content;
-        position: relative;
+        padding: 20px;
+        width: 19rem;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
     }
 
     .content-menu {
