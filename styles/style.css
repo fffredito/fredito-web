@@ -419,8 +419,7 @@ a:hover {
         padding: 0;
         display: flex;
         flex-direction: column;
-        margin: 0;
-        padding: 0;
+        justify-content: center;
     }
 
 
@@ -432,6 +431,13 @@ a:hover {
         display: inline-flex;
         position: relative;
         flex-direction: column;
+    }
+
+    #video-collection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .menu-options {
