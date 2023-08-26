@@ -1,7 +1,8 @@
 html {
     margin: 0;
     padding: 0 18px;
-    background: #050505;
+    background: #0f0f0f;
+    /* background: #e5e5e5; */
 }
 
 .font-color {
@@ -10,11 +11,24 @@ html {
     font-weight: 700;
 }
 
+.content-dashed-line {
+    border-top: 3px dotted #4da62f;
+    margin-top: 20px;
+    min-width: fit-content;
+}
+
+.dashed-line {
+    border-top: 3px dotted #4da62f;
+    margin-top: 20px;
+    min-width: 100%;
+}
+
 /* Navigation Whole Section */
 
 #nav-section {
     width: 19rem;
     position: sticky;
+    top: 0;
     float: right;
     padding: 45px 10px;
 }
@@ -76,7 +90,6 @@ html {
     margin: 0;
     padding: 10px;
     display: flex;
-    gap: 50px;
 }
 
 .content-menu {
@@ -90,6 +103,7 @@ html {
 .social-menu {
     padding: 0;
     margin: 0;
+    margin-left: 50px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -136,20 +150,155 @@ html {
 }
 
 
+/* Images */
 
-
-
-
-
-  
-.bar {
-    width: 25px;
-    height: 2px;
-    border-radius: 3px;
-    background-color: #4DA62F;
-    margin-bottom: 6px;
-    transition: 0.3s;
+#image-content {
+    display: flex;
+    flex-direction: column;
+    margin-right: 345px;
+    padding: 38px 0 50px 0;
+    gap: 27px;
 }
+
+/* VISUAL WORK */
+
+#content-top {
+    margin-right: 345px;
+}
+
+#video-collection {
+    margin: 0;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.section-heading {
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+.projects {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.proj-img {
+    border: 7px ridge green;
+    margin: 0;
+    padding: 0;
+    width: 24rem;
+    height: 18rem;
+    object-fit: cover;
+}
+
+.title-container {
+    margin: 0;
+    padding: 10px 20px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.title-runtime {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+
+}
+
+.proj-title {
+    display: flex;
+    color: #4DA62F;
+    font-size: 20px;
+    font-family: Cousine;
+    letter-spacing: 3px;
+    text-decoration-line: none;
+    text-transform: uppercase;
+    margin: 3px 0 0 0;
+    padding: 0;
+    text-align: left;
+}
+
+.sub-desc {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    text-align: left;
+}
+
+.tube-watch {
+    margin: 10px 0 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.featured-track {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+}
+
+.music-icon {
+    width: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.track-p {
+    font-size: 12px;
+    margin: 10px 0 10px 0;
+    padding: 0;
+    text-align: left;
+    line-height: 15px;
+}
+
+
+/* TD Project section */
+
+#td-collection {
+    margin: 0;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.td-projects {
+    margin: 1px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.td-img {
+    border: 8px ridge green;
+    margin: 0;
+    padding: 0;
+    width: 750px;
+}
+
+
+
+
+/* Mobile UI */
 
 .mobile-only {
     display: none;
@@ -194,16 +343,6 @@ a:hover {
     text-underline-offset: 2px;
 }
 
-#content-top {
-    margin-right: 345px;
-    padding-top: 20px;
-}
-
-#image-content {
-    margin-right: 345px;
-    padding-top: 20px;
-}
-
 .content-heading {
     margin-top: 28px;
     padding: 0;
@@ -219,33 +358,6 @@ a:hover {
     gap: 15px;
 }
 
-.sticky-top {
-    display: flex;
-    flex-direction: row;
-}
-
-.content-dashed-line {
-    border-top: 3px dotted #4da62f;
-    margin-top: 20px;
-    min-width: fit-content;
-}
-
-#content {
-    display: flex;
-    padding: 38px 0 50px 0;
-    flex-direction: column;
-    gap: 27px;
-}
-
-.mid-menu {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 70px;
-    flex-direction: row;
-    justify-content: right;
-}
-
 .vid-menu-one,
 .vid-menu-two {
     margin: 0;
@@ -254,125 +366,11 @@ a:hover {
     letter-spacing: .08rem;
 }
 
-.featured-track {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    line-height: 25px;
-}
-
-.music-icon {
-    width: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-
-#visualizers {
-    flex-shrink: 0;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-}
-
-.projects {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    height: fit-content;
-    /* align-items: center;
-    justify-content: center; */
-    text-align: center;
-}
-
-.td-projects {
-    margin: 0;
-    padding: 0;
-}
-
-.proj-img {
-    border: 8px ridge green;
-    margin: 0;
-    padding: 0;
-    width: 370px;
-}
-
-.td-img {
-    border: 8px ridge green;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-.video-img {
-    margin: 0;
-    padding: 0;
-    object-fit: cover;
-}
-
-.td-img {
-    margin: 0;
-    padding: 0;
-    object-fit: cover;
-}
-
-.proj-title {
-    display: flex;
-    color: #4DA62F;
-    font-size: 17px;
-    font-family: Cousine;
-    font-display:initial;
-    letter-spacing: 2px;
-    text-decoration-line: none;
-    text-transform: uppercase;
-    margin: 3px 0 0 0;
-    padding: 0;
-   display: flex;
-   text-align: left;
-
-}
-
-.title-container {
-    margin: 0;
-    padding: 0 0 0 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.title-runtime {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
-.sub-desc {
-    margin: 6px 0 0 0;
-    padding: 0;
-    font-size: 12px;
-}
-
 .proj-desc {
     font-size: 12px;
     margin: 0;
     padding: 0;
     text-align: left;
-}
-
-.track-p {
-    font-size: 12px;
-    margin: 10px 0 10px 0;
-    padding: 0;
-    text-align: left;
-    line-height: 15px;
 }
 
 #mixes {
@@ -403,14 +401,6 @@ a:hover {
     opacity: 60%;
 }
 
-.tube-watch {
-    margin: 10px 0 0 0;
-    padding: 0;
-    display: flex;
-    justify-content: right;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-}
 
 /* #nav-icon.active .bar:nth-child(2) {
     opacity: 0;
