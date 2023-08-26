@@ -139,8 +139,8 @@ html {
 
 .landing {
     margin: 0;
-    padding: 0;
-    height: 460px;
+    padding: 10px;
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
