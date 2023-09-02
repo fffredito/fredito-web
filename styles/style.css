@@ -5,6 +5,7 @@ html {
     /* background: #e5e5e5; */
 }
 
+
 .font-color {
     color: #4DA62F;
     font-family: Cousine;
@@ -30,6 +31,13 @@ html {
     position: sticky;
     top: 0;
     float: right;
+    padding: 45px 10px;
+}
+
+#nav-section-landing {
+    margin: auto;
+    width: 19rem;
+    top: 0;
     padding: 45px 10px;
 }
 
@@ -70,7 +78,6 @@ html {
     padding: 5px;
     width: 20px;
     float: right;
-    color: #4DA62F;
 }
 
 
@@ -88,8 +95,9 @@ html {
 
 .menu-options {
     margin: 0;
-    padding: 10px;
-    display: flex;
+    padding: 0;
+    display: block;
+    gap: 20px;
 }
 
 .content-menu {
@@ -97,34 +105,36 @@ html {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    float: left;
+    gap: 10px;
 }
 
 .social-menu {
     padding: 0;
     margin: 0;
-    margin-left: 50px;
+    gap: 10px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    float: right;
 }
 
 .nav-link {
     display: flex;
-    align-items: left;
 }
 
 .arrow {
-    width: 13px;
-    padding: 0;
+    padding: 5px;
+    width: px;
+    float: right;
 }
+
 
 .link {
     text-decoration: none;
     list-style-type: none;
     padding-left: 4px;
     font-size: 12px;
-    letter-spacing: .03rem;
+    letter-spacing: .04rem;
     display: flex;
     justify-content: center;
     flex-shrink: 0;
@@ -133,6 +143,20 @@ html {
 .active {
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+/* Button */
+
+.game-button {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.game-button button {
+    background-color: black;
+    border-radius: 50px;
+    padding: 10px;
 }
 
 /* Landing Image */
@@ -297,13 +321,13 @@ html {
     display: flex;
     flex-direction: column;
     text-align: right;
+    width: 100%;
 }
 
 .td-img {
     border: 8px ridge green;
     margin: 0;
     padding: 0;
-    width: 750px;
 }
 
 
@@ -458,6 +482,15 @@ a:hover {
         flex-direction: column;
         align-items: center;
         gap: 25px;
+    }
+
+    .td-projects {
+        margin: 1px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        width: 100%;
     }
 
     .td-img {
