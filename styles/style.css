@@ -491,7 +491,7 @@ a:hover {
         border: 8px ridge green;
         margin: 0;
         padding: 0;
-        width: 41vh;
+        width: 92%;
     }
 
     .content-menu {
@@ -589,6 +589,7 @@ a:hover {
     }
 
     #content {
+        border: 1px red solid;
         margin: 0;
         padding: 0;
     }
