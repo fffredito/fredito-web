@@ -612,7 +612,7 @@ a:hover {
         font-size: 12px;
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
+        width: 320px;
     }
 
     .proj-desc,
