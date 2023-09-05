@@ -622,11 +622,8 @@ a:hover {
     }
 
     #image-content {
-        display: flex;
-        flex-direction: column;
         margin: 0;
         padding: 20px;
-        width: 41vh;
     }
 
     .desc {
