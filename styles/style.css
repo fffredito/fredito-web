@@ -518,10 +518,10 @@ a:hover {
         border: 8px ridge green;
         margin: 0;
         padding: 0;
-        width: 500px;
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 350px;
     }
 
     .content-menu {
@@ -713,6 +713,10 @@ a:hover {
 
     .mobile-only {
         display: flex;
+    }
+
+    .radio-desc {
+        display: none;
     }
 
 
