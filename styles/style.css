@@ -80,16 +80,6 @@ html {
     float: right;
 }
 
-.radio-desc {
-    display: none;
-    margin-left: 310px;
-    margin-top: -54px;
-    font-size: 12px;
-}
-.radio-link:hover+p {
-    display: block;
-}
-
 
 /* Artist description */
 
@@ -144,6 +134,11 @@ html {
 .active {
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+.icon {
+    margin-top: 5px;
+    width: 18px;
 }
 
 /* Button */
@@ -713,10 +708,6 @@ a:hover {
 
     .mobile-only {
         display: flex;
-    }
-
-    .radio-desc {
-        display: none;
     }
 
 
