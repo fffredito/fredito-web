@@ -488,6 +488,13 @@ a:hover {
         display: none;
     }
 
+    #about-me {
+        margin: 0;
+        padding: 0;
+        text-indent: 25px;
+        font-size: 12px;
+    }
+
 
     #td-collection {
         margin: 0;
