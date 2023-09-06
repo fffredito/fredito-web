@@ -509,11 +509,15 @@ a:hover {
         flex-direction: column;
     }
 
+    .td-projects h3 {
+        text-align: center;
+    }
+
     .td-img {
         border: 8px ridge green;
         margin: 0;
         padding: 0;
-        width: 75vh;
+        width: 70vh;
         display: flex;
         align-items: center;
         justify-content: center;
