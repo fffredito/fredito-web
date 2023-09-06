@@ -80,6 +80,16 @@ html {
     float: right;
 }
 
+.radio-desc {
+    display: none;
+    margin-left: 310px;
+    margin-top: -54px;
+    font-size: 12px;
+}
+.radio-link:hover+p {
+    display: block;
+}
+
 
 /* Artist description */
 
@@ -96,8 +106,6 @@ html {
 .menu-options {
     margin: 0;
     padding: 0;
-    display: block;
-    gap: 20px;
 }
 
 .content-menu {
@@ -122,17 +130,10 @@ html {
     display: flex;
 }
 
-.arrow {
-    padding: 5px;
-    width: px;
-    float: right;
-}
-
 
 .link {
     text-decoration: none;
     list-style-type: none;
-    padding-left: 4px;
     font-size: 12px;
     letter-spacing: .04rem;
     display: flex;
@@ -495,11 +496,11 @@ a:hover {
 
     #td-collection {
         margin: 0;
-        padding: 25px 0;
+        padding: 25px 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 25px;
+        gap: 20px;
     }
 
     .td-projects {
@@ -517,7 +518,6 @@ a:hover {
         border: 8px ridge green;
         margin: 0;
         padding: 0;
-        width: 70vh;
         display: flex;
         align-items: center;
         justify-content: center;
