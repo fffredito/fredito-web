@@ -129,12 +129,6 @@ html {
 
 /* Menu */
 
-.menu-options {
-    margin: 0;
-    padding: 0;
-    height: 5em;
-}
-
 .content-menu {
     margin: 0;
     padding: 0;
@@ -227,7 +221,6 @@ html {
 /* Button */
 
 .game-button {
-    margin-top: 150px;
     display: flex;
     justify-content: center;
 }
