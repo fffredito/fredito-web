@@ -1,7 +1,17 @@
+@font-face {
+    font-family: "jogan";
+    src: url('/assets/fonts/webfontkit/jogansoft-rgwky-webfont.woff2') format('woff2'),
+         url('/assets/fonts/webfontkit/jogansoft-rgwky-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html {
     margin: 0;
     padding: 0 18px;
     background: #0f0f0f;
+    
     /* background: #e5e5e5; */
 }
 
@@ -71,6 +81,7 @@ html {
     font-size: 11px;
     text-decoration-line:none;
     text-transform: lowercase;
+    font-family: "jogan";
 }
 
 .radio-icon {
@@ -88,6 +99,10 @@ html {
     padding: 0;
     text-indent: 25px;
     font-size: 12px;
+}
+
+#about-me p {
+    font-family: "jogan";
 }
 
 
@@ -117,6 +132,15 @@ html {
     float: right;
 }
 
+#social-menu {
+    margin: 50px auto;
+    text-align: center;
+}
+
+#social-menu img {
+    width: 20px;
+}
+
 .nav-link {
     display: flex;
 }
@@ -126,6 +150,7 @@ html {
     text-decoration: none;
     list-style-type: none;
     font-size: 12px;
+    font-family: "jogan";
     letter-spacing: .04rem;
     display: flex;
     justify-content: center;
@@ -133,8 +158,11 @@ html {
 }
 
 .active {
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    background-color: #4DA62F;
+    text-decoration: none;
+    font-family: "jogan";
+    font-size: 12px;
+    color: black;
 }
 
 .icon {
@@ -142,15 +170,36 @@ html {
     width: 18px;
 }
 
+#m3nu {
+    font-family: "jogan";
+}
+
 #menu-title {
-    display: none;
+    border: 1px solid #4da62f;
+    display: block;
     margin: 1px auto;
+    padding: 4px 0;
     text-align: center;
+    font-family: "jogan";
+    font-size: 12px;
 }
 
 #menu-option {
-    display: none;
+    border: 1px solid #0f0f0f;
+    padding: 6px 48.2px;
+    display: inline-block;
     margin: 1px auto;
+    text-decoration: none;
+    font-family: "jogan";
+    font-size: 12px;
+}
+
+#menu-option:hover {
+    background-color: #4DA62F;
+    text-decoration: none;
+    font-family: "jogan";
+    font-size: 12px;
+    color: black;
 }
 
 /* Button */
