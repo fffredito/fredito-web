@@ -607,7 +607,7 @@ a:hover {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 23em;
+        width: 22em;
         height: 15rem;
         object-fit: cover;
     }
