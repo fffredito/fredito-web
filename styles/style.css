@@ -698,6 +698,7 @@ a:hover {
 
     .projects {
         margin: 0;
+        margin-bottom: 40px;
         padding: 0;
         width: 41vh;
         display: flex;
