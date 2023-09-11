@@ -465,7 +465,9 @@ a:hover {
         border: 7px ridge green;
         margin: 0;
         padding: 0;
-        width: 31em;
+        max-width: 42em;
+        min-width: 22em;
+        width: 27em;
         height: 18rem;
         object-fit: cover;
     }
@@ -475,8 +477,8 @@ a:hover {
         padding: 10px 10px;
         font-size: 12px;
         max-width: 42em;
-        min-width: 32em;
-        width: 42em;
+        min-width: 22em;
+        width: 35em;
         display: flex;
         flex-direction: column;
         gap: 2px;
@@ -710,7 +712,7 @@ a:hover {
         flex-wrap: wrap;
         max-width: none;
         min-width: none;
-        width: 25em;
+        width: 29em;
     }
 
     .proj-desc,
@@ -779,7 +781,7 @@ a:hover {
         border: 7px ridge green;
         margin: 0;
         padding: 0;
-        width: 24em;
+        width: 23em;
         height: 15rem;
         object-fit: cover;
     }
