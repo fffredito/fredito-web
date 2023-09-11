@@ -447,31 +447,11 @@ a:hover {
 }
 
 
-
-@media only screen and (max-width: 1400px) {
-
-    .mix-pack {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: left;
-        justify-content: center;
-    }
-
-    .mix-covers {
-        display: inline-flex;
-        padding: 8px 8px;
-    }
-}
-
-
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1100px) {
 
     .projects {
         margin: 0;
         padding: 0;
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -481,10 +461,25 @@ a:hover {
         justify-content: center;
     }
 
-    .mix-covers {
-        display: inline-block;
-        max-width: 100%;
-        padding: 8px 8px;
+    .proj-img {
+        border: 7px ridge green;
+        margin: 0;
+        padding: 0;
+        width: 31em;
+        height: 18rem;
+        object-fit: cover;
+    }
+
+    .title-container {
+        margin: 0;
+        padding: 10px 10px;
+        font-size: 12px;
+        max-width: 42em;
+        min-width: 32em;
+        width: 42em;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
     }
 
     .mid-menu {
@@ -533,7 +528,7 @@ a:hover {
 
 /* For mobile browsing */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 890px) {
 
     body {
         margin: 10px 0;
@@ -666,21 +661,6 @@ a:hover {
         min-width: fit-content;
     }
 
-    .mix-pack {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .mix-covers {
-        display: inline-block;
-        max-width: 100%;
-        padding: 8px 8px;
-    }
-
     #visualizers {
         flex-shrink: 0;
         margin: 0;
@@ -705,7 +685,6 @@ a:hover {
     }
 
     #content {
-        border: 1px red solid;
         margin: 0;
         padding: 0;
     }
@@ -714,7 +693,6 @@ a:hover {
         margin: 0;
         margin-bottom: 40px;
         padding: 0;
-        width: 41vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -730,7 +708,9 @@ a:hover {
         font-size: 12px;
         display: flex;
         flex-wrap: wrap;
-        width: 320px;
+        max-width: none;
+        min-width: none;
+        width: 25em;
     }
 
     .proj-desc,
@@ -796,9 +776,12 @@ a:hover {
     }
 
     .proj-img {
+        border: 7px ridge green;
         margin: 0;
         padding: 0;
-        width: 320px;
+        width: 24em;
+        height: 15rem;
+        object-fit: cover;
     }
 
     .mobile-only {
