@@ -11,7 +11,7 @@ html {
     margin: 0;
     padding: 0 18px;
     background: #0f0f0f;
-    
+    cursor: default;
     /* background: #e5e5e5; */
 }
 
