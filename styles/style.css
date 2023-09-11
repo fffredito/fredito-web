@@ -607,7 +607,9 @@ a:hover {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 350px;
+        width: 23em;
+        height: 15rem;
+        object-fit: cover;
     }
 
     .content-menu {
