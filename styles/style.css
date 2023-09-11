@@ -285,8 +285,9 @@ html {
 
 .title-container {
     margin: 0;
-    padding: 10px 20px;
+    padding: 10px 10px;
     max-width: 300px;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -295,21 +296,17 @@ html {
 .title-runtime {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 5px
 
 }
 
 .proj-title {
-    display: flex;
     color: #4DA62F;
     font-size: 20px;
-    font-family: Cousine;
+    font-family: "jogan";
     letter-spacing: 3px;
     text-decoration-line: none;
     text-transform: uppercase;
-    margin: 3px 0 0 0;
+    margin: 0;
     padding: 0;
     text-align: left;
 }
@@ -318,21 +315,24 @@ html {
     margin: 0;
     padding: 0;
     font-size: 12px;
+    font-family: "jogan";
     text-align: left;
 }
 
 .proj-desc {
     font-size: 12px;
+    font-family: "jogan";
     margin: 0;
     padding: 0;
-    text-align: left;
+    text-align:justify;
+
 }
 
 .tube-watch {
     margin: 10px 0 0 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     text-decoration: underline;
     text-underline-offset: 2px;
 }
@@ -354,11 +354,12 @@ html {
 }
 
 .track-p {
+    border: 1px dotted #4DA62F;
     font-size: 12px;
-    margin: 10px 0 10px 0;
-    padding: 0;
+    padding: 3px 3px;
     text-align: left;
     line-height: 15px;
+    font-family: "jogan";
 }
 
 
