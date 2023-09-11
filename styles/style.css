@@ -22,6 +22,12 @@ html {
     font-weight: 700;
 }
 
+.font-color-alt {
+    color: #4DA62F;
+    font-family: "jogan";
+    font-weight: 700;
+}
+
 .content-dashed-line {
     border-top: 3px dotted #4da62f;
     margin-top: 20px;
@@ -94,14 +100,29 @@ html {
 
 /* Artist description */
 
-#about-me {
+.about-portfolio {
     margin: 0;
     padding: 0;
-    text-indent: 25px;
     font-size: 12px;
 }
 
-#about-me p {
+.about-portfolio p {
+    font-family: "jogan";
+}
+
+.about-me {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+.about-me p {
+    display: none;
+    font-family: "jogan";
+}
+
+.menu-title:hover + p {
+    display: block;
     font-family: "jogan";
 }
 
@@ -175,7 +196,7 @@ html {
     font-family: "jogan";
 }
 
-#menu-title {
+.menu-title {
     border: 1px solid #4da62f;
     display: block;
     margin: 1px auto;
