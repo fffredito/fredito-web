@@ -96,6 +96,7 @@ html {
 .menu-options {
     margin: 0;
     padding: 0;
+    height: 5em;
 }
 
 .content-menu {
@@ -139,6 +140,17 @@ html {
 .icon {
     margin-top: 5px;
     width: 18px;
+}
+
+#menu-title {
+    display: none;
+    margin: 1px auto;
+    text-align: center;
+}
+
+#menu-option {
+    display: none;
+    margin: 1px auto;
 }
 
 /* Button */
