@@ -784,7 +784,7 @@ a:hover {
 
     #image-content {
         margin: 0;
-        padding: 20px;
+        width: auto;
     }
 
     .desc {
