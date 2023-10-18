@@ -200,6 +200,15 @@ html {
 
 #m3nu {
     font-family: "jogan";
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.menu-options {
+    display: flex;
+    flex-flow: column nowrap;
+    column-count: 2;
+    text-align: center;
 }
 
 .menu-title {
@@ -214,9 +223,13 @@ html {
 
 #menu-option {
     border: 1px solid #0f0f0f;
-    padding: 6px 48.2px;
-    display: inline-block;
-    margin: 1px auto;
+    margin: 0 auto;
+    padding: 10px;
+    width: 130px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     font-family: "jogan";
     font-size: 12px;
@@ -287,9 +300,31 @@ html {
     gap: 25px;
 }
 
+#about-me {
+    margin: 0;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.img-width {
+    width: 100%;
+}
+
 .section-heading {
     letter-spacing: 7px;
     text-align: center;
+
+}
+
+.section-desc {
+    margin: 0;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 16px;
 }
 
 .projects {
@@ -569,13 +604,9 @@ a:hover {
         justify-content: center;
         align-items: center;
     }
-    
-    .social-menu {
-        display: none;
-    }
 
     #social-menu {
-        margin: 3px auto;
+        margin: 10px auto;
         text-align: center;
     }
     
@@ -586,8 +617,20 @@ a:hover {
 
     #about-me {
         margin: 0;
-        padding: 0;
-        text-indent: 25px;
+        padding: 25px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .menu-title {
+        border: 1px solid #4da62f;
+        display: block;
+        margin: 1px auto;
+        padding: 4px 135px;
+        text-align: center;
+        font-family: "jogan";
         font-size: 12px;
     }
 
@@ -642,11 +685,10 @@ a:hover {
     }
 
     .menu-options {
-        margin: 0;
-        padding: 0;
         display: flex;
-        flex-direction: column;
-        gap: 20px;
+        flex-flow: column nowrap;
+        column-count: 2;
+        text-align: center;
     }
     
 
