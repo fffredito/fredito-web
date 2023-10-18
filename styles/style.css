@@ -116,14 +116,26 @@ html {
     font-size: 12px;
 }
 
-.about-me p {
-    display: none;
+.about-desc {
     font-family: "jogan";
 }
 
-.menu-title:hover + p {
-    display: block;
+
+
+.about-title:hover + p {
     font-family: "jogan";
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-title {
+    border: 1px solid #4da62f;
+    margin: 1px auto;
+    padding: 4px 0;
+    text-align: center;
+    font-family: "jogan";
+    font-size: 12px;
 }
 
 
@@ -577,6 +589,11 @@ a:hover {
         padding: 0;
         text-indent: 25px;
         font-size: 12px;
+    }
+
+    .menu-title:hover + p {
+        display: block;
+        font-family: "jogan";
     }
 
 
