@@ -4,8 +4,9 @@
          url('/assets/fonts/webfontkit/jogansoft-rgwky-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Dela+Gothic+One&display=swap');
 
 html {
     margin: 0;
@@ -18,7 +19,7 @@ html {
 
 .font-color {
     color: #4DA62F;
-    font-family: Cousine;
+    font-family: 'Cousine', monospace;
     font-weight: 700;
 }
 
