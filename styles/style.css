@@ -27,6 +27,10 @@ hr {
     overflow: hidden;
 }
 
+.space {
+    display: none;
+}
+
 .font-color {
     color: #4DA62F;
     font-family: 'VT323', monospace;
@@ -518,6 +522,7 @@ header {
     padding: 10px;
 }
 
+
 /* Landing Image */
 
 
@@ -603,6 +608,10 @@ header {
         position: fixed;
         top: 61px;
         overflow: hidden;
+    }
+
+    .space {
+        display: flex;
     }
 
 
