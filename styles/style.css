@@ -813,4 +813,13 @@ header {
         text-decoration: underline;
         text-underline-offset: 2px;
     }
+
+    .td-img {
+        border: 8px ridge #4DA62F;
+        margin: 0 auto;
+        padding: 0;
+        width: 100vw;
+        height: 400px;
+        object-fit: cover;
+    }
 }
