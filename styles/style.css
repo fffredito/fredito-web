@@ -723,6 +723,7 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 
     .main-content {
@@ -819,8 +820,25 @@ header {
         border: 8px ridge #4DA62F;
         margin: 0 auto;
         padding: 0;
-        width: 100vw;
+        width: 500px;
         height: 400px;
         object-fit: cover;
+    }
+
+    #td-collection {
+        margin: 0 auto;
+        padding: 25px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .td-projects {
+        margin: 1px auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
     }
 }
