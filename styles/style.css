@@ -1,81 +1,104 @@
-@font-face {
-    font-family: "jogan";
-    src: url('/assets/fonts/webfontkit/jogansoft-rgwky-webfont.woff2') format('woff2'),
-         url('/assets/fonts/webfontkit/jogansoft-rgwky-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Broken+Fax&family=VT323&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Dela+Gothic+One&display=swap');
+/* Big picture stuff */
+
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
 
 html {
-    margin: 0;
-    padding: 0 18px;
-    background: #0f0f0f;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #0f0f0f;
     cursor: default;
-    /* background: #e5e5e5; */
 }
 
+hr {
+    color: #4DA62F;
+    border: 1px solid #4DA62F;
+    margin: 0 auto;
+    padding: 0;
+    width: inherit;
+    position: fixed;
+    left: 0;
+    top: 71px;
+    overflow: hidden;
+}
 
 .font-color {
     color: #4DA62F;
-    font-family: 'Cousine', monospace;
-    font-weight: 700;
+    font-family: 'VT323', monospace;
+    text-decoration: none;
 }
 
-.font-color-alt {
-    color: #4DA62F;
-    font-family: "jogan";
-    font-weight: 700;
+.font-color-blk {
+    color: #0f0f0f;
+    font-family: 'VT323', monospace;
+    text-decoration: none;
 }
 
-.content-dashed-line {
-    border-top: 3px dotted #4da62f;
-    margin-top: 20px;
-    min-width: fit-content;
+.active {
+    background-color: #4DA62F;
+    text-decoration: none;
+    font-size: 12px;
+    color: black;
 }
 
-.dashed-line {
-    border-top: 3px dotted #4da62f;
-    margin-top: 20px;
-    min-width: 100%;
+header {
+    background-color: #0f0f0f;
+    width: 100%;
 }
 
-/* Navigation Whole Section */
+/* Navigation Section */
 
 #nav-section {
-    width: 19rem;
-    position: sticky;
+    background-color: #0f0f0f;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
     top: 0;
-    float: right;
-    padding: 45px 10px;
+    right: 0;
+    left: 0;
+    gap: 10px;
 }
 
-#nav-section-landing {
-    margin: auto;
-    width: 19rem;
-    top: 0;
-    padding: 45px 10px;
+#name-subtitle {
+    margin: 5px auto 0 auto;
+    padding: 15px 55px;
+    height: 38px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    border-radius: 20px 20px 0 0;
+
+    background-image: url(/assets/videos/fortune.mp4);
+    background-size: cover;
+    background-position: center;
 }
 
-.dashed-line {
-    border-top: 3px dotted #4da62f;
-    margin: 20px 0;
-}
-
-/* Navigation > Logo */
+/* Logo */
 
 .logo-section {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    width: fit-content;
     height: fit-content;
 }
 
 .name {
-    margin: 0;
+    color: #0f0f0f;
+    margin: 0 auto;
     padding: 0;
-    font-size: 12px;
-    line-height: .5rem;
+    font-family: 'Cousine', monospace;
+    font-weight: 700;
+    font-size: 14px;
     letter-spacing: .1rem;
     text-decoration-line: underline;
     text-decoration-style: wavy;
@@ -84,44 +107,339 @@ html {
 }
 
 .logo-subtitle {
+    color: #0f0f0f;
     margin: 5px;
-    font-size: 11px;
+    font-size: 16px;
+    letter-spacing: .01rem;
     text-decoration-line:none;
     text-transform: lowercase;
-    font-family: "jogan";
+}
+
+.radio-link {
+    margin: 10px auto;
+    padding: 0;
 }
 
 .radio-icon {
-    margin-top: -35px;
-    padding: 5px;
+    margin: 0;
+    padding: 6px;
     width: 20px;
-    float: right;
+    background-color: #0f0f0f;
+    border: 1px solid #4DA62F;
+    border-radius: 50px;
+}
+
+.radio-icon:hover {
+    background-color: #7ac760;
+}
+
+/* Menu */
+
+.menu-options {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+#menu-option {
+    border: 1px solid #0f0f0f;
+    margin: 0 auto;
+    padding: 22px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: .8px;
+}
+
+#menu-option:hover {
+    background-color: #4DA62F;
+    text-decoration: none;
+    font-size: 16px;
+    color: #0f0f0f;
+}
+
+#social-menu {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#social-menu img {
+    padding: 0 5px;
+    width: 20px;
+}
+
+/* Main Body Content */
+
+.main-content {
+    margin: 90px auto;
+    padding: 0 20px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.title-page {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 30px;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin: 10px auto;
+    padding: 0;
+}
+
+.sub-title {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-/* Artist description */
+/* Projects */
 
-.about-portfolio {
+.sub-menu {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 110px;
+}
+
+.sub-menu a {
+    padding: 5px 30px;
+    text-decoration: none;
+    border: 1px solid #4DA62F;
+    border-radius: 50px;
+}
+
+.projects {
+    margin: 10px auto;
+    padding: 0;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.proj-img {
+    border: 7px ridge #4DA62F;
+    margin: 0 auto;
+    padding: 0;
+    width: 36rem;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.proj-img-alt {
+    border: 7px ridge #0f0f0f;
+    margin: 0 auto;
+    padding: 0;
+    width: 36rem;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.title-container {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.title-runtime {
     margin: 0;
     padding: 0;
-    font-size: 12px;
 }
 
-.about-portfolio p {
-    font-family: "jogan";
-}
-
-.about-me {
+.proj-title {
+    font-size: 45px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
     margin: 0;
     padding: 0;
-    font-size: 12px;
+    text-align: left;
 }
 
-.about-desc {
-    font-family: "jogan";
+.sub-desc {
+    margin: 0;
+    padding: 3px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.tube-watch-left {
+    margin: 10px 0 0 0;
+    padding: 0;
+    letter-spacing: .7px;
+    display: flex;
+    justify-content: left;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.tube-watch-right {
+    margin: 10px 0 0 0;
+    padding: 0;
+    letter-spacing: .7px;
+    display: flex;
+    justify-content: right;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.featured-track {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.music-icon {
+    width: 20px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.track-p {
+    border: 1px dotted #4DA62F;
+    font-size: 16px;
+    padding: 3px 3px;
+    text-align: left;
+    line-height: 15px;
+}
+
+.proj-desc {
+    font-size: 16px;
+    letter-spacing: .7px;
+    margin: 8px 0;
+    padding: 0;
+    text-align: justify;
+}
+
+#td-collection {
+    margin: 0 auto;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+}
+
+.td-projects {
+    margin: 1px auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.td-img {
+    border: 8px ridge #4DA62F;
+    margin: 0 auto;
+    padding: 0;
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
 }
 
 
+.vizs {
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.byop {
+    background-color: #4DA62F;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+
+/* Landing images */
+
+.landing-main {
+    margin: 0 auto;
+}
+
+.landing-proj {
+    margin: 1px auto;
+    padding: 0;
+    position: absolute;
+    top: 150px;
+    right: 50px;
+}
+
+.proj-gif {
+    border: 8px ridge #4DA62F;
+    margin: 0 auto;
+    padding: 0;
+    width: 700px;
+    height: 300px;
+    object-fit: cover;
+    
+}
+
+.best-albums {
+    border: 1px solid #4DA62F;
+    width: 350px;
+    height: 300px;
+    margin: 0 40px;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    overflow: scroll;
+}
+
+.per-letter {
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #4DA62F;
+}
 
 .about-title:hover + p {
     font-family: "jogan";
@@ -137,6 +455,13 @@ html {
     text-align: center;
     font-family: "jogan";
     font-size: 12px;
+}
+
+.spotify-playlist {
+    display: flex;
+    position: absolute;
+    top: 180px;
+    right: 40px;
 }
 
 
@@ -160,16 +485,6 @@ html {
     float: right;
 }
 
-#social-menu {
-    margin: 50px auto;
-    text-align: center;
-}
-
-#social-menu img {
-    padding: 0 5px;
-    width: 20px;
-}
-
 .nav-link {
     display: flex;
 }
@@ -179,69 +494,15 @@ html {
     text-decoration: none;
     list-style-type: none;
     font-size: 12px;
-    font-family: "jogan";
     letter-spacing: .04rem;
     display: flex;
     justify-content: center;
     flex-shrink: 0;
 }
 
-.active {
-    background-color: #4DA62F;
-    text-decoration: none;
-    font-family: "jogan";
-    font-size: 12px;
-    color: black;
-}
-
 .icon {
     margin-top: 5px;
     width: 18px;
-}
-
-#m3nu {
-    font-family: "jogan";
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.menu-options {
-    display: flex;
-    flex-flow: column nowrap;
-    column-count: 2;
-    text-align: center;
-}
-
-.menu-title {
-    border: 1px solid #4da62f;
-    display: block;
-    margin: 1px auto;
-    padding: 4px 0;
-    text-align: center;
-    font-family: "jogan";
-    font-size: 12px;
-}
-
-#menu-option {
-    border: 1px solid #0f0f0f;
-    margin: 0 auto;
-    padding: 10px;
-    width: 130px;
-    height: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-family: "jogan";
-    font-size: 12px;
-}
-
-#menu-option:hover {
-    background-color: #4DA62F;
-    text-decoration: none;
-    font-family: "jogan";
-    font-size: 12px;
-    color: black;
 }
 
 /* Button */
@@ -258,22 +519,6 @@ html {
 }
 
 /* Landing Image */
-
-.landing {
-    margin: 0;
-    padding: 10px;
-    height: 95vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: cover;
-    overflow: hidden;
-}
-
-.landing-img {
-    width: 100%;
-    mix-blend-mode: screen;
-}
 
 
 /* Images */
@@ -328,528 +573,253 @@ html {
     font-size: 16px;
 }
 
-.projects {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-}
-
-.proj-img {
-    border: 7px ridge green;
-    margin: 0;
-    padding: 0;
-    width: 24rem;
-    height: 18rem;
-    object-fit: cover;
-}
-
-.title-container {
-    margin: 0;
-    padding: 10px 10px;
-    max-width: 300px;
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.title-runtime {
-    margin: 0;
-    padding: 0;
-
-}
-
-.proj-title {
-    color: #4DA62F;
-    font-size: 20px;
-    font-family: "jogan";
-    letter-spacing: 3px;
-    text-decoration-line: none;
-    text-transform: uppercase;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-}
-
-.sub-desc {
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-    font-family: "jogan";
-    text-align: left;
-}
-
-.proj-desc {
-    font-size: 12px;
-    font-family: "jogan";
-    margin: 0;
-    padding: 0;
-    text-align:justify;
-
-}
-
-.tube-watch {
-    margin: 10px 0 0 0;
-    padding: 0;
-    display: flex;
-    justify-content: right;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-}
-
-.featured-track {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    line-height: 25px;
-}
-
-.music-icon {
-    width: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-.track-p {
-    border: 1px dotted #4DA62F;
-    font-size: 12px;
-    padding: 3px 3px;
-    text-align: left;
-    line-height: 15px;
-    font-family: "jogan";
-}
-
-
-/* TD Project section */
-
-#td-collection {
-    margin: 0;
-    padding: 25px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-}
-
-.td-projects {
-    margin: 1px;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    width: 100%;
-}
-
-.td-img {
-    border: 8px ridge green;
-    margin: 0;
-    padding: 0;
-}
-
-
-
-
-/* Mobile UI */
-
-.mobile-only {
-    display: none;
-}
-
-
-.desc,
-.desc-mix {
-    font-size: 12px;
-    line-height: 20px;
-}
-
-
-.vid-menu-active {
-    font-size: 20px;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-}
-
-.vid-menu-inactive {
-    font-size: 20px;
-    opacity: 60%;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-    text-underline-offset: 2px;
-}
-
-
-.vid-menu-one,
-.vid-menu-two {
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-    letter-spacing: .08rem;
-}
-
-
-@media only screen and (max-width: 1100px) {
-
-    .projects {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .proj-title {
-        justify-content: center;
-    }
-
-    .proj-img {
-        border: 7px ridge green;
-        margin: 0;
-        padding: 0;
-        max-width: 42em;
-        min-width: 22em;
-        width: 27em;
-        height: 18rem;
-        object-fit: cover;
-    }
-
-    .title-container {
-        margin: 0;
-        padding: 10px 10px;
-        font-size: 12px;
-        max-width: 42em;
-        min-width: 22em;
-        width: 35em;
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-    }
-
-    .mid-menu {
-        display: flex;
-        flex-direction: row;
-        margin: 0;
-        padding: 0;
-        
-    }
-
-    #visualizers {
-        flex-shrink: 0;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 70px;
-        padding-bottom: 40px;
-    }
-
-    #td-collection {
-        margin: 0;
-        padding: 25px 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 25px;
-    }
-
-    .td-projects {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .td-img {
-        border: 8px ridge green;
-        margin: 0;
-        padding: 0;
-        width: 75vh;
-    }
-}
-
-
-/* For mobile browsing */
 
 @media only screen and (max-width: 890px) {
 
+    *{
+        margin: 0;
+        padding: 0;
+        line-height: 1;    
+    }
+
     body {
-        margin: 10px 0;
+        margin: 10px auto;
         padding: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    header {
+        width: 100vw;
+    }
+
+    hr {
+        color: #4DA62F;
+        border: 1px solid #4DA62F;
+        margin: 0 auto;
+        padding: 0;
+        width: 100vw;
+        position: fixed;
+        top: 61px;
+        overflow: hidden;
     }
 
 
     #nav-section {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 20px;
-        width: 19rem;
-        display: inline-flex;
-        position: relative;
-        flex-direction: column;
-    }
-
-    #video-collection {
+        background-color: #0f0f0f;
+        margin: 0 auto;
+        padding: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-
-    #social-menu {
-        margin: 10px auto;
-        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
     }
     
-    #social-menu img {
-        padding: 0 10px;
-        width: 20px;
-    }
-
-    #about-me {
-        margin: 0;
-        padding: 25px 0;
+    #name-subtitle {
+        margin: 0 auto;
+        padding: 2px 0;
+        height: 57px;
+        width: 100vw;
+    
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
-
-    .menu-title {
-        border: 1px solid #4da62f;
-        display: block;
-        margin: 1px auto;
-        padding: 4px 135px;
-        text-align: center;
-        font-family: "jogan";
-        font-size: 12px;
-    }
-
-    .menu-title:hover + p {
-        display: block;
-        font-family: "jogan";
-    }
-
-
-    #td-collection {
-        margin: 0;
-        padding: 25px 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .td-projects {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .td-projects h3 {
-        text-align: center;
-    }
-
-    .td-img {
-        border: 8px ridge green;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        align-items: center;
         justify-content: center;
-        width: 22em;
-        height: 15rem;
-        object-fit: cover;
-    }
-
-    .content-menu {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        column-gap: 70px;
-        justify-content: space-evenly;
         align-items: center;
-        float: left;
-        gap: 10px;
+        border-radius: 0;
+    
+        background-image: url(/assets/videos/fortune.mp4);
+        background-size: cover;
+        background-position: center;
     }
 
-    .menu-options {
-        display: flex;
-        flex-flow: column nowrap;
-        column-count: 2;
-        text-align: center;
+    .logo-section {
+        margin: 0 auto;
+        padding: 0;
     }
     
-
-
-    .full-menu {
-        margin: 0;
+    .name {
+        color: #0f0f0f;
+        margin: 0 auto;
         padding: 0;
-    }
-
-    #nav-menu {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-
-    .link {
-        letter-spacing: 1px;
-    }
-
-    .dashed-line {
-        border-top: 3px dotted #4da62f;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .content-dashed-line {
-        border-top: 3px dotted #4da62f;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        min-width: fit-content;
-    }
-
-    #visualizers {
-        flex-shrink: 0;
-        margin: 0;
-        padding: 20px 0 40px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 70px;
-    }
-
-    .mid-menu {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 33px;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    #content-top {
-        margin: 0;
-        width: auto;
-    }
-
-    #content {
-        margin: 0;
-        padding: 0;
-    }
-
-    .projects {
-        margin: 0;
-        margin-bottom: 40px;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .proj-title {
-        justify-content: center;
-    }
-
-    .title-container {
-        margin: 0;
-        padding: 5px;
-        font-size: 12px;
-        display: flex;
-        flex-wrap: wrap;
-        max-width: none;
-        min-width: none;
-        width: 29em;
-    }
-
-    .proj-desc,
-    span {
-        font-size: 12px;
-        margin: 0;
-    }
-
-    #image-content {
-        margin: 0;
-        width: auto;
-    }
-
-    .desc {
-        font-size: 12px;
-        line-height: 20x;
-        margin-top: -30px;
-    }
-
-    .desc-mix {
-        font-size: 12px;
-        line-height: 20x;
-        margin-top: -30px;
-        margin-bottom: 30px;
-    }
-
-    .vid-menu-two {
-        text-transform: uppercase;
-        letter-spacing: .08rem;
-    }
-
-    .arrow {
-        width: 13px;
-        padding: 0;
-        display: none;
-    }
-
-    .index {
-        display: none;
-    }
-
-    .content-heading {
-        margin: 0;
-        padding: 0;
-        font-size: 12px;
-        /* line-height: 2.75rem; */
+        font-family: 'Cousine', monospace;
+        font-weight: 700;
+        font-size: 16px;
         letter-spacing: .1rem;
+        text-decoration-line: underline;
+        text-decoration-style: wavy;
         text-transform: uppercase;
         text-underline-offset: 2px;
     }
-
-    .tube-watch {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: end;
-        margin-top: 10px;
-        text-decoration: underline;
+    
+    .logo-subtitle {
+        color: #0f0f0f;
+        margin: 5px;
+        font-size: 14px;
+        letter-spacing: .01rem;
+        text-decoration-line:none;
+        text-transform: lowercase;
+    }
+    
+    .radio-icon {
+        display: none;
+        margin: 0 auto;
+        padding: 6px;
+        width: 20px;
+        background-color: #0f0f0f;
+        border-radius: 50px;
     }
 
-    .landing {
+    .menu-options {
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    #menu-option {
+        border: 1px solid #0f0f0f;
+        margin: 0 auto;
+        padding: 12px 42px;
+        text-decoration: none;
+        font-size: 16px;
+        letter-spacing: .8px;
+    }
+    
+    #menu-option:hover {
+        background-color: #4DA62F;
+        text-decoration: none;
+        font-size: 16px;
+        color: black;
+    }
+    
+    #social-menu {
+        margin: 0 auto;
+        text-align: center;
         display: none;
     }
+    
+    #social-menu img {
+        padding: 0 5px;
+        width: 20px;
+    }
 
+    .sub-menu {
+        margin: 10px auto;
+        padding: 0;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    
+    .sub-menu a {
+        margin: 0 auto;
+        padding: 5px 30px;
+        text-decoration: none;
+        border: 1px solid #4DA62F;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-content {
+        margin: 140px auto;
+        padding: 0 20px;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .title-page {
+        margin: 0 auto;
+        padding: 0;
+        font-size: 30px;
+        letter-spacing: 1px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        margin: 10px auto;
+        padding: 0;
+    }
+
+    .sub-title {
+        margin: 0 auto;
+        padding: 12px 0;
+        font-size: 40px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .desc {
+        margin: 0 auto;
+        padding: 0;
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projects {
+        margin: 10px auto;
+        padding: 0;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .proj-right {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
     .proj-img {
         border: 7px ridge green;
-        margin: 0;
+        margin: 0 auto;
         padding: 0;
-        width: 23em;
-        height: 15rem;
+        width: 500px;
+        height: 20rem;
         object-fit: cover;
     }
-
-    .mobile-only {
+    
+    .title-container {
+        margin: 0 auto;
+        padding: 0 10px;
         display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+    
+    .title-runtime {
+        margin: 0;
+        padding: 0;
     }
 
+    .tube-watch-right {
+        margin: 10px 0 0 0;
+        padding: 0;
+        letter-spacing: .7px;
+        display: flex;
+        justify-content: right;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
 }
