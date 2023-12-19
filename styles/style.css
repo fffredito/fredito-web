@@ -727,7 +727,7 @@ header {
 
     .main-content {
         margin: 0 auto;
-        width: auto;
+        width: 99%;
     }
 
     .title-page {
@@ -771,6 +771,7 @@ header {
     .projects {
         margin: 10px auto;
         padding: 0;
+        width: fit-content;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -792,7 +793,7 @@ header {
     
     .title-container {
         margin: 0 auto;
-        padding: 0 auto;
+        padding: 0 10px;
         display: flex;
         flex-direction: column;
         gap: 2px;
