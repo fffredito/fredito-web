@@ -727,6 +727,7 @@ header {
 
     .main-content {
         margin: 0 auto;
+        width: auto;
     }
 
     .title-page {
