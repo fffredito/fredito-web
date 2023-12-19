@@ -786,7 +786,7 @@ header {
         border: 7px ridge green;
         margin: 0 auto;
         padding: 0;
-        width: 500px;
+        width: 90%;
         height: 20rem;
         object-fit: cover;
     }
