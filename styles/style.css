@@ -771,7 +771,7 @@ header {
     .projects {
         margin: 10px auto;
         padding: 0;
-        width: fit-content;
+        width: 100%;
         display: flex;
         flex-direction: column;
         text-align: center;
