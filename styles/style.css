@@ -716,7 +716,7 @@ header {
     
     .sub-menu a {
         margin: 0 auto;
-        padding: 5px 30px;
+        padding: 5px auto;
         text-decoration: none;
         border: 1px solid #4DA62F;
         border-radius: 50px;
