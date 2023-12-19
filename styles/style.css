@@ -393,13 +393,8 @@ header {
     gap: 30px;
 }
 
-.byop {
-    background-color: #4DA62F;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+.disp {
+    display: none;
 }
 
 
@@ -767,6 +762,10 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .disp {
+        display: flex;
     }
 
     .desc {
