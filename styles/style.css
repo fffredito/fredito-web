@@ -624,7 +624,7 @@ header {
         margin: 0 auto;
         padding: 2px 0;
         height: 57px;
-        width: 100vw;
+        width: 100%;
     
         display: flex;
         justify-content: center;
