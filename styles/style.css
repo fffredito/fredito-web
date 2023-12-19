@@ -765,6 +765,7 @@ header {
         font-weight: 300;
         letter-spacing: 1px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     }
