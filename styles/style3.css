@@ -31,7 +31,7 @@ html {
 .bit-border {
     margin: 0 auto;
     position: relative;
-    top: -60px;
+    top: 100px;
     animation-delay: 2s;
     animation: fade 1.5s ease-in-out 0s forwards;
 }
@@ -442,6 +442,9 @@ html {
 .landing-main {
     margin: 0 auto;
     margin-top: -100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .landing-video {
@@ -470,9 +473,10 @@ html {
 
 .bit-box-logo {
     margin: 0 auto;
-    position: relative;
-    top: 0;
-    left: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     animation: fade 1.5s ease-in-out 0s forwards;
 }
@@ -898,3 +902,4 @@ html {
     top: -10px;
     z-index: 4;
 }
+
