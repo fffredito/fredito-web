@@ -85,7 +85,6 @@ a:visited {
     background-position: center;
     object-fit: cover;
     position: absolute;
-    display: flex;
     z-index: -1;
 }
 
