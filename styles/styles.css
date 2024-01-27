@@ -225,7 +225,8 @@ a:visited {
     .background-img {
         width: 100%;
         height: 4000px;
-        background-position: bottom;
+        background-position: top;
+        transform: rotateX(180deg);
     }
 
     .background-img-me {
