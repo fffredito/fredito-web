@@ -272,7 +272,7 @@ a:visited {
         display: flex;
         flex-direction: column;
         top: 150px;
-        gap: 30px;
+        gap: 50px;
     }
 
     .projects-left {
