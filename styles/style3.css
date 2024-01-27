@@ -72,9 +72,8 @@ html {
 .name {
     color: #0f0f0f;
     margin: 0 auto;
-    font-family: 'Cousine', monospace;
-    font-weight: 700;
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 18px;
     letter-spacing: .1rem;
     line-height: 20px;
 
