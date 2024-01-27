@@ -230,9 +230,9 @@ a:visited {
     }
 
     .background-img-me {
-        height: 170dvh;
+        height: 250dvh;
         background-image: url(/assets/images/me-1.jpg);
-        background-position: center;
+        background-position: 33%;
     }
 
     .titlebanner {
