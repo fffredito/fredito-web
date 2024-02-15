@@ -235,7 +235,8 @@ footer {
 @media only screen and (max-width: 740px) {
 
     .background-img {
-        height: 1000px;
+        height: 5300px;
+        object-fit: fill;
         background-image: url(/assets/images/scanned-img/tree-2.jpg);
         background-position: 60% top;
     }
