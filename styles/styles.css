@@ -288,7 +288,7 @@ footer {
     .projs-flow {
         display: flex;
         flex-direction: column;
-        top: 150px;
+        top: 100px;
         gap: 50px;
     }
 
