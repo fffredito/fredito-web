@@ -249,7 +249,7 @@ footer {
     }
 
     .titlebanner {
-        width: 350px;
+        width: 320px;
     }
 
     .subtitle {
@@ -262,7 +262,7 @@ footer {
 
     .contact {
         position: relative;
-        top: 50px;
+        top: 0;
         left: 5%;
     }
 
