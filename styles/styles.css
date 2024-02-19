@@ -2,18 +2,31 @@ body {
     margin: 0 auto;
 }
 
-#basegrid {
+.bg-img {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.bg-img img {
+    width: 100%;
+    height: 480dvh;
+    object-fit: center;
+}
+
+#base-grid {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 
 .titlebanner {
-    width: 620px;
+    margin: 0 auto;
+    width: 590px;
     padding: 10px;
     position: relative;
     background-color: white;
-    top: 50px;
+    top: 30px;
 }
 
 .item {
@@ -78,27 +91,17 @@ a:visited {
     margin-block-start: 0;
 }
 
-.background-img {
+.background-portrait {
     width: 100%;
-    height: 3200px;
-    background-image: url(/assets/images/scanned-img/tree-2.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     object-fit: cover;
     position: absolute;
-    z-index: -1;
+    z-index: -2;
 }
 
-.background-img-me {
+.background-portrait img {
     width: 100%;
-    height: 1150px;
-    background-image: url(/assets/images/me-1.jpg);
-    background-size: cover;
-    background-position: center;
+    height: 1300px;
     object-fit: cover;
-    position: absolute;
-    display: flex;
     z-index: -2;
 }
 
@@ -227,8 +230,8 @@ footer {
 
 @media screen and (max-width: 1100px) {
 
-    .background-img-me {
-        height: 1300px;
+    .background-portrait img {
+        height: 1550px;
     }
 }
 
@@ -240,11 +243,11 @@ footer {
         background-image: url(/assets/images/scanned-img/tree-2.jpg);
         background-position: 60% top;
     }
-
-    .background-img-me {
-        height: 1680px;
-        background-image: url(/assets/images/me-1.jpg);
-        background-position: 35% top;
+    
+    .background-portrait img {
+        height: 1550px;
+        object-fit: cover;
+        z-index: -2;
     }
 
     .titlebanner {
