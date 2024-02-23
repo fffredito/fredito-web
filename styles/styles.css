@@ -247,6 +247,15 @@ footer {
 
 @media only screen and (max-width: 740px) {
 
+    .prj-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        width: 600px;
+    }
+
+    .prj-item {
+        width: 350px;
+    }
+
     .background-portrait {
         background-position: center;
         background-repeat: repeat;
