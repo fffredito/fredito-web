@@ -71,14 +71,14 @@ body, html {
 }
 
 a:visited {
-    color: green;
+    color: #4DA62F;
     background-color: transparent;
     text-decoration: underline;
 }
 
 .link {
     font-family: 'DM Mono', monospace;
-    color: green;
+    color: #4DA62F;
     background-color: transparent;
     text-decoration: underline;
 }
@@ -140,49 +140,43 @@ a:visited {
     z-index: -3;
 }
 
-.projs-flow {
+/* Project Grid */
+
+.prj-grid {
     margin: 0 auto;
+    padding: 2px;
     display: grid;
-    grid-template-columns: 1fr auto;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
     position: relative;
-    top: 120px;
-    gap: 80px;
+    top: 100px;
 }
 
-
-.projects-left {
-    margin: 0;
-    padding: 10px;
+.prj-item {
+    border: 1px solid #4DA62F;
+    margin: 0 auto;
+    padding: 12px;
+    width: 300px;
+    height: fit-content;
     background-color: white;
-    width: fit-content;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+    border-radius: 2px;
 }
 
-.projects-right {
-    margin: 0;
-    padding: 10px;
-    background-color: white;
-    width: fit-content;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.proj-img {
+.prj-item .prj-img {
     margin: 0 auto;
     padding: 0;
-    width: 400px;
-    height: 300px;
+}
+
+.prj-item .prj-img img {
+    width: 100%;
+    height: 200px;
     object-fit: cover;
 }
 
-.title-container {
+.prj-title {
     margin: 0 auto;
-    width: 400px;
+    width: fit-content;
 }
 
 .title-runtime {
