@@ -248,8 +248,8 @@ footer {
 @media only screen and (max-width: 740px) {
 
     .prj-grid {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        width: 600px;
+        grid-template-columns: 1fr;
+        width: fit-content;
     }
 
     .prj-item {
