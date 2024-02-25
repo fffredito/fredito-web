@@ -211,18 +211,43 @@
                 </section>
             </section>
 
+            <section class="prj-item">
+                <section class="prj-img">
+                    <img id="gif"
+                        src="https://media.giphy.com/media/dx5LodWhFMWNlKSTl8/giphy.gif"
+                        alt="" loading="lazy" />
+                </section>
+
+                <section class="prj-info">
+                    <h4 class="prj-title">fly,man</h4>
+                    <p class="date-length"></p>
+                </section>
+            </section>
+
         </section>
 
-        <div style="height: 200px;"></div>
+        <div id="load-more"> load more </div>
 
     </section>
 
-    <script>
-        // Get the GIF element
-        var gif = document.getElementById('gif');
+    <div style="height: 160px;"></div>
 
-        // Stop autoplay
-        gif.removeAttribute('autoplay');
+    <script>
+
+        let loadMoreBtn = document.querySelector('#load-more');
+        let currentItem = 3;
+
+        loadMoreBtn.onclick = () => {
+            let boxes = [...document.querySelectorAll('.prj-grid .prj-item')];
+            for (var i = currentItem; i < currentItem + 3; i++) {
+                boxes[i].style.display = 'inline-block';
+            }
+            currentItem += 3;
+
+            if (currentItem >= boxes.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+        };
     </script>
 </body>
 

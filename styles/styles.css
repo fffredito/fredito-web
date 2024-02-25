@@ -1,6 +1,5 @@
 body, html {
     margin: 0 auto;
-    height: 100%;
 }
 
 .bg-img {
@@ -161,6 +160,13 @@ a:visited {
     height: fit-content;
     background-color: white;
     border-radius: 2px;
+    display: none;
+}
+
+.prj-grid .prj-item:nth-child(1),
+.prj-grid .prj-item:nth-child(2),
+.prj-grid .prj-item:nth-child(3) {
+    display: inline-block;
 }
 
 .prj-item .prj-img {
@@ -244,8 +250,27 @@ footer {
     top: 500px;
 }
 
-.viz {
-    visibility: hidden;
+#load-more {
+    margin: 0 auto;
+    margin-top: 150px;
+    width: 100px;
+    padding: 13px 30px;
+    border: 1px solid #4DA62F;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    
+    font-family: 'DM Mono', monospace;
+    font-size: 16px;
+    background-color: #4DA62F;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#load-more:hover {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 2px;
 }
 
 @media only screen and (max-width: 740px) {
