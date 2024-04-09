@@ -28,20 +28,20 @@
     <section class="landing">
 
         <section class="landing-banner">
-            <h1 class="title">
-                <a href="index.html" target="_self" class="link"><strong>fr-world</strong></a>: <span> visual projects by <a href="about.html" target="_self" class="link">fredo</a>
+            <h1 class="title" id="landing-banner-sp">
+                <a href="index.html" target="_self" class="link"><strong>fr-world</strong></a>: proyectos visuales de <a href="about.html" target="_self" class="link">fredo</a>
                 <img src="assets/images/noun-star-white.svg" alt="eight-bit style stars" style="margin: 0; margin-left: -2px; margin-top: 2px; padding: 0; width: 19px; position: absolute; fill: white;">
             </h1>
-            <h1 class="title hidden">
-                <a href="index.html" target="_self" class="link"><strong>fr-world</strong></a>: proyectos visuales de <a href="about.html" target="_self" class="link">fredo</a>
+            <h1 class="title hidden" id="landing-banner-en">
+                <a href="index.html" target="_self" class="link"><strong>fr-world</strong></a>: <span> visual projects by <a href="about.html" target="_self" class="link">fredo</a>
                 <img src="assets/images/noun-star-white.svg" alt="eight-bit style stars" style="margin: 0; margin-left: -2px; margin-top: 2px; padding: 0; width: 19px; position: absolute; fill: white;">
             </h1>
         </section>
 
         <section class="landing-welcome">
             <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-                <button id="enter">enter</button>
-                <h3 class="font">**best experienced on <em>chrome</em> or <em>firefox</em> browsers**</h3>
+                <button id="enter">entrar</button>
+                <h3 class="font">**mejor experiencia usando <em>chrome</em> o <em>firefox</em>**</h3>
             </div>
         </section>
 
@@ -359,19 +359,21 @@
 
         };
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const videos = document.querySelectorAll('.video');
+        if (window.innerWidth > 740) {
+            document.addEventListener('DOMContentLoaded', function () {
+                const videos = document.querySelectorAll('.video');
 
-            videos.forEach(video => {
-                video.addEventListener('mouseenter', function () {
-                    video.play();
-                });
+                videos.forEach(video => {
+                    video.addEventListener('mouseenter', function () {
+                        video.play();
+                    });
 
-                video.addEventListener('mouseleave', function () {
-                    video.pause();
+                    video.addEventListener('mouseleave', function () {
+                        video.pause();
+                    });
                 });
             });
-        });
+        }
 
         const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
@@ -383,17 +385,32 @@
             });
         }
 
+        // Header language change
         const englishHeading = document.getElementById('english-header');
         const spanishHeading = document.getElementById('spanish-header');
 
-        englishHeading.addEventListener('mouseover', () => {
+        englishHeading.addEventListener('click', () => {
             englishHeading.classList.add('hidden');
             spanishHeading.classList.remove('hidden');
         });
 
-        spanishHeading.addEventListener('mouseout', () => {
+        spanishHeading.addEventListener('click', () => {
             spanishHeading.classList.add('hidden');
             englishHeading.classList.remove('hidden');
+        });
+
+        // Landing header
+        const englishLanding = document.getElementById('landing-banner-en');
+        const spanishLanding = document.getElementById('landing-banner-sp');
+
+        englishLanding.addEventListener('click', () => {
+            englishLanding.classList.add('hidden');
+            spanishLanding.classList.remove('hidden');
+        });
+
+        spanishLanding.addEventListener('click', () => {
+            spanishLanding.classList.add('hidden');
+            englishLanding.classList.remove('hidden');
         });
 
         // document.addEventListener("DOMContentLoaded", function() {
