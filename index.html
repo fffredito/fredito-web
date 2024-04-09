@@ -25,11 +25,33 @@
         </video>
     </section>
 
+    <section class="landing">
+
+        <section class="landing-banner">
+            <h1 class="title">
+                <a href="index.html" target="_self" class="link"><strong>fr-world</strong></a>: <span> visual projects by <a href="about.html" target="_self" class="link">fredo</a>
+                <img src="assets/images/noun-star-white.svg" alt="eight-bit style stars" style="margin: 0; margin-left: -2px; margin-top: 2px; padding: 0; width: 19px; position: absolute; fill: white;">
+            </h1>
+            <h1 class="title hidden">
+                <a href="index.html" target="_self" class="link"><strong>fr-world</strong></a>: proyectos visuales de <a href="about.html" target="_self" class="link">fredo</a>
+                <img src="assets/images/noun-star-white.svg" alt="eight-bit style stars" style="margin: 0; margin-left: -2px; margin-top: 2px; padding: 0; width: 19px; position: absolute; fill: white;">
+            </h1>
+        </section>
+
+        <section class="landing-welcome">
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <button id="enter">enter</button>
+                <h3 class="font">**best experienced on <em>chrome</em> or <em>firefox</em> browsers**</h3>
+            </div>
+        </section>
+
+    </section>
+
     <section id="base-grid">
 
-        <section class="titlebanner">
+        <section class="title-banner">
             <h1 class="title" id="english-header">
-                <a href="index.html" target="_self" class="link"><strong>fr-world</strong></a>: visual projects by <a href="about.html" target="_self" class="link">fredo</a>
+                <a href="index.html" target="_self" class="link"><strong>fr-world</strong></a>: <span> visual projects by <a href="about.html" target="_self" class="link">fredo</a>
                 <img src="assets/images/noun-star-white.svg" alt="eight-bit style stars" style="margin: 0; margin-left: -2px; margin-top: 2px; padding: 0; width: 19px; position: absolute; fill: white;">
             </h1>
             <h1 class="title hidden" id="spanish-header">
@@ -311,6 +333,15 @@
 
 
     <script>
+
+        const enterButton = document.getElementById('enter');
+        const landingSection = document.querySelector('.landing');
+        const contentSection = document.getElementById('base-grid');
+
+        enterButton.addEventListener('click', () => {
+            landingSection.style.display = 'none';
+            contentSection.style.display = 'flex';
+        });
 
         let loadMoreBtn = document.querySelector('#load-more');
         let currentItem = 6;
