@@ -32,11 +32,6 @@
                     style="margin: 0; margin-left: -2px; margin-top: 2px; padding: 0; width: 19px; position: absolute; fill: white;">
             </h1>
         </section>
-        <!-- <section class="item" style="margin: 0 auto; top: 170px;">
-            <h1 class="title" style="font-size: 31.921593px; line-height: 36.396875px;">
-                visualizrs
-            </h1>
-        </section> -->
 
         <section class="contact-card">
             <h2> say hi:
@@ -66,7 +61,9 @@
 
             <section class="prj-item">
                 <section class="prj-img">
-                    <img src="assets/videos/lostatsea_1.mp4" alt="" loading="lazy" />
+                    <video id="prj-vid" muted playsinline loop>
+                        <source src="assets/videos/lostatsea_1.mp4" type="video/mp4" />
+                    </video>
                 </section>
 
                 <section class="prj-info">
@@ -240,7 +237,25 @@
             if (currentItem >= boxes.length) {
                 loadMoreBtn.style.display = 'none';
             }
+    
         };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const videoContainer = document.querySelector(".prj-img");
+            const video = document.getElementById("prj-vid");
+
+            videoContainer.addEventListener("mouseenter", function() {
+                video.play();
+                videoContainer.classList.add("play");
+            });
+
+            videoContainer.addEventListener("mouseleave", function() {
+                video.pause();
+                video.currentTime = 0;
+                videoContainer.classList.remove("play");
+            });
+        });
+
     </script>
 </body>
 
