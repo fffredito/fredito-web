@@ -49,7 +49,7 @@
             <!-- Projects start -->
             <section class="prj-item">
                 <section class="prj-img">
-                    <video autoplay muted playsinline loop>
+                    <video class="video" muted playsinline loop>
                         <source src="assets/videos/webm/purple-treees.webm" type="video/webm" loading="lazy" /></video>
                 </section>
 
@@ -61,7 +61,7 @@
 
             <section class="prj-item">
                 <section class="prj-img">
-                    <video autoplay muted playsinline loop>
+                    <video class="video" muted playsinline loop>
                         <source src="assets/videos/webm/flyman-music.webm" type="video/webm" loading="lazy" /></video>
                 </section>
 
@@ -73,7 +73,7 @@
 
             <section class="prj-item">
                 <section class="prj-img">
-                    <video autoplay muted playsinline loop>
+                    <video class="video" muted playsinline loop>
                         <source src="assets/videos/webm/little-dreamr.webm" type="video/mp4" />
                     </video>
                 </section>
@@ -91,7 +91,7 @@
 
             <section class="prj-item">
                 <section class="prj-img">
-                    <video autoplay muted playsinline loop>
+                    <video class="video" muted playsinline loop>
                         <source src="assets/videos/webm/space-man.webm" type="video/mp4" />
                     </video>
                 </section>
@@ -111,7 +111,7 @@
 
             <section class="prj-item">
                 <section class="prj-img">
-                    <video autoplay muted playsinline loop>
+                    <video class="video" muted playsinline loop>
                         <source src="assets/videos/webm/el-santo_1.webm" type="video/mp4" />
                     </video>
                 </section>
@@ -131,7 +131,7 @@
 
             <section class="prj-item">
                 <section class="prj-img">
-                    <video autoplay muted playsinline loop>
+                    <video class="video" muted playsinline loop>
                         <source src="assets/videos/webm/wavyboxy.webm" type="video/mp4" />
                     </video>
                 </section>
@@ -146,7 +146,7 @@
 
             <section class="prj-item">
                 <section class="prj-img">
-                    <video autoplay muted playsinline loop>
+                    <video class="video" muted playsinline loop>
                         <source src="assets/videos/webm/frosty.webm" type="video/mp4" />
                     </video>
                 </section>
@@ -161,7 +161,7 @@
 
             <section class="prj-item">
                 <section class="prj-img">
-                    <video autoplay muted playsinline loop>
+                    <video class="video" muted playsinline loop>
                         <source src="assets/videos/webm/bloom.webm" type="video/mp4" />
                     </video>
                 </section>
@@ -174,7 +174,7 @@
 
             <section class="prj-item">
                 <section class="prj-img">
-                    <video autoplay muted playsinline loop>
+                    <video class="video" muted playsinline loop>
                         <source src="assets/videos/webm/colins.webm" type="video/mp4" />
                     </video>
                 </section>
@@ -187,7 +187,7 @@
 
             <section class="prj-item">
                 <section class="prj-img">
-                    <video autoplay muted playsinline loop>
+                    <video class="video" muted playsinline loop>
                         <source src="assets/videos/webm/black-rivr.webm" type="video/mp4" />
                     </video>
                 </section>
@@ -200,7 +200,7 @@
 
             <section class="prj-item">
                 <section class="prj-img">
-                    <video autoplay muted playsinline loop>
+                    <video class="video" muted playsinline loop>
                         <source src="assets/videos/webm/rainbow-road.webm" type="video/mp4" />
                     </video>
                 </section>
@@ -213,7 +213,7 @@
 
             <section class="prj-item">
                 <section class="prj-img">
-                    <video autoplay muted playsinline loop>
+                    <video class="video" muted playsinline loop>
                         <source src="assets/videos/webm/clementines.webm" type="video/mp4" />
                     </video>
                 </section>
@@ -226,7 +226,7 @@
 
             <section class="prj-item">
                 <section class="prj-img">
-                    <video autoplay muted playsinline loop>
+                    <video class="video" muted playsinline loop>
                         <source src="assets/videos/webm/gaming.webm" type="video/mp4" />
                     </video>
                 </section>
@@ -239,7 +239,7 @@
 
             <section class="prj-item">
                 <section class="prj-img">
-                    <video autoplay muted playsinline loop>
+                    <video class="video" muted playsinline loop>
                         <source src="assets/videos/webm/butterfly.webm" type="video/mp4" />
                     </video>
                 </section>
@@ -252,7 +252,7 @@
 
             <section class="prj-item">
                 <section class="prj-img">
-                    <video autoplay muted playsinline loop>
+                    <video class="video" muted playsinline loop>
                         <source src="assets/videos/webm/spiral-wv.webm" type="video/mp4" />
                     </video>
                 </section>
@@ -265,7 +265,7 @@
 
             <section class="prj-item">
                 <section class="prj-img">
-                    <video autoplay muted playsinline loop>
+                    <video class="video" muted playsinline loop>
                         <source src="assets/videos/webm/glitchy.webm" type="video/mp4" />
                     </video>
                 </section>
@@ -301,6 +301,21 @@
             }
     
         };
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const videos = document.querySelectorAll('.video');
+
+            videos.forEach(video => {
+                video.addEventListener('mouseenter', function () {
+                    video.play();
+                });
+
+                video.addEventListener('mouseleave', function () {
+                    video.pause();
+                });
+            });
+        });
+
 
         // document.addEventListener("DOMContentLoaded", function() {
         //     const videoContainer = document.querySelector("#prj1");
