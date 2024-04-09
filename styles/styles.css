@@ -157,7 +157,6 @@ body, html {
     padding: 0;
     width: 300px;
     height: 240px;
-    overflow: hidden;
     box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
 }
 
@@ -167,29 +166,6 @@ body, html {
     object-fit: cover;
 }
 
-    .prj-img:hover video {
-        
-    }
-
-#prj-vid {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-    #prj1:hover video {
-        transform: scale(1.1);
-    }
-
-.prj-item .prj-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.prj-item .prj-img:hover img {
-    transform: scale(1.1);
-}
 
 .prj-info {
     margin: 0 auto;
