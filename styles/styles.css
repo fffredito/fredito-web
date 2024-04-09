@@ -145,7 +145,10 @@ body, html {
 
 .prj-grid .prj-item:nth-child(1),
 .prj-grid .prj-item:nth-child(2),
-.prj-grid .prj-item:nth-child(3) {
+.prj-grid .prj-item:nth-child(3),
+.prj-grid .prj-item:nth-child(4),
+.prj-grid .prj-item:nth-child(5),
+.prj-grid .prj-item:nth-child(6) {
     display: inline-block;
 }
 
@@ -158,13 +161,19 @@ body, html {
     box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
 }
 
+.prj-img video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 #prj-vid {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
-    .prj-img:hover video {
+    #prj1:hover video {
         transform: scale(1.1);
     }
 
@@ -267,12 +276,12 @@ body, html {
     cursor: pointer;
 }
 
-#load-more:hover {
-    color: white;
-    background-color: black;
-    border: 1px solid black;
-    border-radius: 2px;
-}
+    #load-more:hover {
+        color: white;
+        background-color: black;
+        border: 1px solid black;
+        border-radius: 2px;
+    }
 
 @media only screen and (max-width: 1200px) {
     .prj-grid {
