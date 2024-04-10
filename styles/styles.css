@@ -374,6 +374,8 @@ footer h4 {
     padding: 5px;
     white-space: nowrap;
     position: relative;
+    border-right: black 10px solid;
+    border-left: black 10px solid;
 }
 
 .marquee-text {
@@ -384,7 +386,7 @@ footer h4 {
 }
 @keyframes marquee {
     0% {
-        transform: translateX(10%); /* Start from right edge */
+        transform: translateX(1%); /* Start from right edge */
     }
     100% {
         transform: translateX(-100%);
