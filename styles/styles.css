@@ -49,7 +49,7 @@ body, html {
     position: relative;
     color: white;
     background-color: black;
-    top: 30px;
+    top: 50px;
 }
 
 .landing-banner {
@@ -59,7 +59,7 @@ body, html {
     position: relative;
     color: white;
     background-color: black;
-    top: 30px;
+    top: 50px;
 }
     .landing-banner .title {
         font-family: 'DM Mono', monospace;
@@ -85,8 +85,8 @@ body, html {
 
 .landing-welcome {
     margin: 0 auto;
-    width: 200px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     padding: 10px;
     position: relative;
     display: flex;
@@ -367,6 +367,38 @@ footer h4 {
     mix-blend-mode: difference;
 }
 
+.marquee-container {
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.marquee-text {
+    display: inline-block;
+    width: fit-content;
+    animation: marquee 40s linear infinite;
+    text-transform: uppercase;
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(10%); /* Start from right edge */
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+    @media only screen and (max-width: 740px) {
+        .marquee-text {
+            font-size: 10px;
+        
+            animation: marquee 50s linear infinite;
+        }
+    }
+
     @media only screen and (max-width: 740px) {
         footer h4 {
             mix-blend-mode: difference;
@@ -393,7 +425,7 @@ footer h4 {
 @media only screen and (max-width: 740px) {
 
     .contact-card {
-        top: 50px;
+        top: 70px;
         left: 15px;
     }
 

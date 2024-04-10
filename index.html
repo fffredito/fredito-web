@@ -25,6 +25,14 @@
         </video>
     </section>
 
+    <div style="width: 100%; position: fixed; top: 0; z-index: 1;" offset="0%">
+        <div class="marquee-container font" id="marqueeContainer">
+            <div class="marquee-text font" id="marqueeText">
+                HI HELLO WELCOME TO MY PORTFOLIO&nbsp; &nbsp;HOPE YOU ARE HAVING A WONDERFUL DAY&nbsp; &nbsp;INSIDE YOU WILL FIND COLORFUL EXPERIMENTS CREATED (mostly) USING TOUCHDESIGNER&nbsp; &nbsp;ENJOY&nbsp; &nbsp;LET'S COLLABORATE ON SOME FUN VISUALS&nbsp; &nbsp;
+            </div>
+        </div>
+    </div>
+
     <section class="landing">
 
         <section class="landing-banner">
@@ -340,6 +348,23 @@
 
     <script>
 
+        const originalMarquee = document.getElementById("marqueeText");
+        const marqueeContainer = document.getElementById("marqueeContainer");
+
+        function duplicateMarquee() {
+            // Clone the original marquee text
+            const clonedMarquee = originalMarquee.cloneNode(true);
+            // Append the cloned marquee after the last marquee
+            marqueeContainer.appendChild(clonedMarquee);
+        }
+
+        // Duplicate the marquee 4 times
+        for (let i = 0; i < 4; i++) {
+            duplicateMarquee();
+}
+
+
+        // Landing into main content
         const enterButton = document.getElementById('enter');
         const landingSection = document.querySelector('.landing');
         const contentSection = document.getElementById('base-grid');
@@ -349,6 +374,7 @@
             contentSection.style.display = 'flex';
         });
 
+        // Load more content button
         let loadMoreBtn = document.querySelector('#load-more');
         let currentItem = 6;
 

@@ -22,6 +22,14 @@
         <img src="/assets/images/me-1.jpg" alt="">
     </section>
 
+    <div style="width: 100%; position: fixed; top: 0; z-index: 1;" offset="0%">
+        <div class="marquee-container font" id="marqueeContainer">
+            <div class="marquee-text font" id="marqueeText">
+                HI HELLO WELCOME TO MY PORTFOLIO&nbsp; &nbsp;HOPE YOU ARE HAVING A WONDERFUL DAY&nbsp; &nbsp;INSIDE YOU WILL FIND COLORFUL EXPERIMENTS CREATED (mostly) USING TOUCHDESIGNER&nbsp; &nbsp;ENJOY&nbsp; &nbsp;LET'S COLLABORATE ON SOME FUN VISUALS&nbsp; &nbsp;
+            </div>
+        </div>
+    </div>
+
     <section id="basegrid" style="height: 900px;">
 
         <section class="title-banner">
@@ -90,12 +98,12 @@
         const englishHeading = document.getElementById('english-header');
         const spanishHeading = document.getElementById('spanish-header');
 
-        englishHeading.addEventListener('mouseover', () => {
+        englishHeading.addEventListener('click', () => {
             englishHeading.classList.add('hidden');
             spanishHeading.classList.remove('hidden');
         });
 
-        spanishHeading.addEventListener('mouseout', () => {
+        spanishHeading.addEventListener('click', () => {
             spanishHeading.classList.add('hidden');
             englishHeading.classList.remove('hidden');
         });
