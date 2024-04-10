@@ -371,11 +371,11 @@ footer h4 {
     overflow: hidden;
     background-color: black;
     color: white;
-    padding: 5px;
+    padding: 4px;
     white-space: nowrap;
     position: relative;
-    border-right: black 10px solid;
-    border-left: black 10px solid;
+    border-right: rgb(0, 0, 0) 10px solid;
+    border-left: rgb(0, 0, 0) 10px solid;
 }
 
 .marquee-text {
@@ -395,8 +395,7 @@ footer h4 {
 
     @media only screen and (max-width: 740px) {
         .marquee-text {
-            font-size: 10px;
-        
+            font-size: 9px;
             animation: marquee 50s linear infinite;
         }
     }
