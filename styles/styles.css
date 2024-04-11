@@ -1,20 +1,13 @@
 body, html {
     margin: 0 auto;
     background-color: transparent;
-    animation: fadeBackground 4s;
-    animation-fill-mode: forwards;
 }
-
-    @keyframes fadeBackground {
-        from { opacity: 0%; }
-        to {opacity: 100%; }
-    }
 
 .marquee,
 .landing {
-    animation: fadeContent 5s;
+    animation: fadeContent 4s;
     animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation-delay: 1s;
     opacity: 0%;
 }
 
