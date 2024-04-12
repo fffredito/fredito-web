@@ -15,7 +15,7 @@ for (let i = 0; i < 4; i++) {
 
 // Landing into main content
 const enterButton = document.getElementById("enter");
-const landingSection = document.querySelector(".landing-content");
+const landingSection = document.getElementById("landing-content");
 const contentSection = document.getElementById("main-grid");
 
 enterButton.addEventListener("click", () => {
@@ -23,22 +23,23 @@ enterButton.addEventListener("click", () => {
   contentSection.style.display = "flex";
 });
 
-// Load more content button
-let loadMoreBtn = document.querySelector("#load-more");
-let currentItem = 6;
+// // Load more content button
+// let loadMoreBtn = document.querySelector("#load-more");
+// let currentItem = 6;
 
-loadMoreBtn.onclick = () => {
-  let boxes = [...document.querySelectorAll(".prj-item")];
-  for (var i = currentItem; i < currentItem + 6 && i < boxes.length; i++) {
-    boxes[i].style.display = "inline-block";
-  }
-  currentItem += 6;
+// loadMoreBtn.onclick = () => {
+//   let boxes = [...document.querySelectorAll(".prj-item")];
+//   for (var i = currentItem; i < currentItem + 6 && i < boxes.length; i++) {
+//     boxes[i].style.display = "inline-block";
+//   }
+//   currentItem += 6;
 
-  if (currentItem >= boxes.length) {
-    loadMoreBtn.style.display = "none";
-  }
-};
+//   if (currentItem >= boxes.length) {
+//     loadMoreBtn.style.display = "none";
+//   }
+// };
 
+// VIDEO LOOPS ON HOVER
 document.addEventListener("DOMContentLoaded", function () {
   const videos = document.querySelectorAll(".video");
 
@@ -86,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Event listener for scroll events
     window.addEventListener("scroll", handleVideoPlayback);
+      videos.autoplay = true;
   }
 });
 
@@ -153,15 +155,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function isSafari() {
-  const ua = navigator.userAgent.toLowerCase();
-  return ua.indexOf("safari") !== -1 && ua.indexOf("chrome") === -1;
-}
-
-if (isSafari()) {
-  const bgVideo = document.getElementById('bgVideo');
-  bgVideo.style.display = 'none'; // Hide the video on Safari
-}
+// if (isSafari()) {
+//   const bgVideo = document.getElementById('bgVideo');
+//   bgVideo.style.display = 'none'; // Hide the video on Safari
+// }
 
 if (isSafari()) {
   const carouselContainer = document.getElementById("carouselContainer");

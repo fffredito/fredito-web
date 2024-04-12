@@ -18,7 +18,7 @@ html {
 /* BACKGROUND IMAGE */
 .bg-img {
   background-position: center;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -35,7 +35,6 @@ html {
 .bg-img video {
   width: 100%;
   height: 100%;
-  position: fixed;
   object-fit: cover;
 }
 
@@ -53,14 +52,14 @@ html {
   height: 100%;
   background-size: cover;
   background-position: center;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 
 /* SCROLLING BANNER */
 .marquee {
   animation: marquee-div 1s ease-in-out 0.5s forwards;
   position: fixed;
-  top: -34px;
+  top: -38px;
   animation-iteration-count: 1;
 }
 
@@ -77,15 +76,16 @@ html {
   overflow: hidden;
   background-color: black;
   color: white;
-  padding: 3px;
+  padding: 5px;
   white-space: nowrap;
-  position: relative;
   border-right: rgb(0, 0, 0) 10px solid;
   border-left: rgb(0, 0, 0) 10px solid;
 }
 
 .marquee-text {
   display: inline-block;
+  justify-content: center;
+  align-items: center;
   width: fit-content;
   animation: marquee 40s linear infinite;
   text-transform: uppercase;
@@ -110,15 +110,15 @@ html {
 }
 
 /* LANDING PAGE */
-.landing-content {
-  animation: fadeContent 2s 1s forwards;
-  opacity: 0%;
+#landing-content {
+  animation: fadeContent 2s 1s forwards ;
+  opacity: 0;
   position: relative;
   top: 30px;
 }
 
 @media only screen and (max-width: 740px) {
-  .landing-content {
+  #landing-content {
     top: 0;
   }
 }
@@ -141,6 +141,13 @@ html {
   background-color: black;
   top: 50px;
 }
+
+    @media only screen and (max-width: 740px) {
+        .landing-banner {
+        width: 88%;
+        }
+    }
+    
 .landing-banner .title {
   font-family: var(--baseline-ff);
   font-weight: var(--baseline-fw);
@@ -185,7 +192,7 @@ html {
   justify-content: center;
   text-align: center;
 
-  font-family: "DM Mono", monospace;
+  font-family: var(--baseline-ff);
   font-size: 15px;
   background-color: white;
   border-radius: 2px;
@@ -228,10 +235,6 @@ html {
   .title-banner {
     width: 88%;
   }
-
-  .landing-banner {
-    width: 88%;
-  }
 }
 
 .title-banner .title {
@@ -255,6 +258,13 @@ html {
   position: relative;
   top: 80px;
   left: 8%;
+}
+
+@media only screen and (max-width: 740px) {
+    .contact-card {
+      top: 70px;
+      left: 15px;
+    }
 }
 
 @media only screen and (max-width: 740px) {
@@ -282,15 +292,34 @@ html {
   text-decoration: underline;
 }
 
-a:hover {
-  color: white;
+    a:hover {
+    color: white;
+    }
+
+    a:visited {
+    color: #4da62f;
+    background-color: transparent;
+    text-decoration: underline;
+    }
+
+.cursor-div {
+    position: absolute;
+    left: 10px;
+    top: -30px;
 }
 
-a:visited {
-  color: #4da62f;
-  background-color: transparent;
-  text-decoration: underline;
-}
+.cursor-text {
+    position: absolute;
+    pointer-events: none;
+    white-space: nowrap;
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+  }
 
 .bg-me {
   background-position: center;
@@ -310,6 +339,8 @@ a:visited {
   overflow: hidden;
 }
 
+
+
 .bg-me img {
   width: 100%;
   height: 100%;
@@ -318,8 +349,24 @@ a:visited {
   transform: scale(1.3);
 }
 
-/* Project Grid */
+    @media only screen and (max-width: 1200px) {
+        .bg-me img {
+            height: 100%;
+            object-position: 10% 60%;
+            transform: scale(1.3);
+        }
+    }
 
+    @media only screen and (max-width: 740px) {
+        .bg-me img {
+          width: 100%;
+          height: 110%;
+          object-position: 30%;
+          transform: scale(1.3);
+        }
+      }
+
+/* PROJECT GRID LAYOUT */
 .prj-grid {
   margin: 0 auto;
   padding: 2px;
@@ -329,7 +376,30 @@ a:visited {
   max-width: 1100px;
   position: relative;
   top: 100px;
+  /* animation: content-fade 3s ease-in forwards;
+  animation-iteration-count: 1; */
 }
+
+    @media only screen and (max-width: 1200px) {
+    .prj-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    }
+
+    @media only screen and (max-width: 740px) {
+        .prj-grid {
+            grid-template-columns: 1fr;
+            width: fit-content;
+        }
+    }
+    @keyframes content-fade {
+        from {
+            transform: translateY(100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
 
 .prj-item {
   border: 1px solid #4da62f;
@@ -339,8 +409,14 @@ a:visited {
   height: fit-content;
   background-color: black;
   border-radius: 2px;
-  display: none;
 }
+
+    @media only screen and (max-width: 740px) {
+        .prj-item {
+            width: 350px;
+        }
+    }
+
 
 .prj-grid .prj-item:nth-child(1),
 .prj-grid .prj-item:nth-child(2),
@@ -360,6 +436,14 @@ a:visited {
   min-height: 240px;
 }
 
+    @media only screen and (max-width: 740px) {
+        .prj-img {
+        width: 350px;
+        height: 280px;
+        object-fit: cover;
+        }
+    }
+
 .prj-img video {
   width: 100%;
   height: 100%;
@@ -367,6 +451,13 @@ a:visited {
   object-fit: cover;
   cursor: crosshair;
 }
+
+    @media only screen and (max-width: 740px) {
+        .video {
+            width: 100%;
+            background-color: white;
+        }
+    }
 
 .prj-info {
   margin: 0 auto;
@@ -419,6 +510,12 @@ a:visited {
   border-radius: 2px;
 }
 
+    @media only screen and (max-width: 1200px) {
+        .about-container {
+            margin: 0 20px;
+        }
+    }
+
 .about-info {
   margin: 0 auto;
   padding: 10px;
@@ -426,6 +523,18 @@ a:visited {
   color: white;
   background-color: black;
   width: fit-content;
+}
+
+@media only screen and (max-width: 740px) {
+    .about-info {
+      margin: 0;
+      padding: 10px;
+      width: fit-content;
+      position: relative;
+      top: -30px;
+      display: flex;
+      flex-direction: column;
+    }
 }
 
 .about-container .about-info p {
@@ -468,115 +577,23 @@ footer {
   justify-content: center;
   align-items: center;
   position: relative;
+  mix-blend-mode: difference;
 }
 
 footer h4 {
   padding: 30px;
   color: white;
   mix-blend-mode: difference;
+  font-family: var(--baseline-ff);
+  font-weight: var(--baseline-fw);
+  font-size: 11px;
+  letter-spacing: 1px;
 }
 
 @media only screen and (max-width: 740px) {
   footer h4 {
     mix-blend-mode: difference;
+    text-align: center;
   }
 }
 
-@media only screen and (max-width: 1200px) {
-  .prj-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .about-container {
-    margin: 0 20px;
-  }
-
-  .bg-me img {
-    height: 100%;
-    object-position: 10% 60%;
-    transform: scale(1.3);
-  }
-}
-
-@media only screen and (max-width: 740px) {
-  .contact-card {
-    top: 70px;
-    left: 15px;
-  }
-
-  .prj-grid {
-    grid-template-columns: 1fr;
-    width: fit-content;
-  }
-
-  .prj-item {
-    width: 350px;
-  }
-
-  .prj-item .prj-img {
-    width: 350px;
-    height: 280px;
-  }
-
-  .video {
-    width: 100%;
-    background-color: white;
-  }
-
-  .bg-me {
-    background-position: center;
-    background-repeat: repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-
-    z-index: -1;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .bg-me img {
-    width: 100%;
-    height: 110%;
-    object-position: 30%;
-    transform: scale(1.3);
-  }
-
-  .titlebanner {
-    width: 320px;
-  }
-
-  .about-container {
-    margin: 0 20px;
-  }
-
-  .about-info {
-    margin: 0;
-    padding: 10px;
-    width: fit-content;
-    position: relative;
-    top: -30px;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.cursor-text {
-  position: absolute;
-  display: none;
-  pointer-events: none;
-  white-space: nowrap;
-  background-color: black;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-}
