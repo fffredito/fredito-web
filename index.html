@@ -25,13 +25,15 @@
         </video>
     </section>
 
-    <div class="marquee" style="width: 100%; position: fixed; top: 0; z-index: 1;" offset="0%">
-        <div class="marquee-container font" id="marqueeContainer">
+    <div class="marquee" style="width: 100%; position: fixed; z-index: 1;" offset="0%">
+        <div class="marquee-container" id="marqueeContainer">
             <div class="marquee-text font" id="marqueeText">
-                HI HELLO WELCOME TO MY PORTFOLIO&nbsp; &nbsp;HOPE YOU ARE HAVING A WONDERFUL DAY&nbsp; &nbsp;INSIDE YOU WILL FIND COLORFUL EXPERIMENTS CREATED (mostly) USING TOUCHDESIGNER&nbsp; &nbsp;ENJOY&nbsp; &nbsp;LET'S COLLABORATE ON SOME FUN VISUALS&nbsp; &nbsp;
+                HI HELLO WELCOME TO MY PORTFOLIO&nbsp; &nbsp;HOPE YOU ARE HAVING A WONDERFUL DAY&nbsp; &nbsp;ENJOY&nbsp; &nbsp;LET'S COLLABORATE ON SOME FUN VISUALS&nbsp; &nbsp;
             </div>
         </div>
     </div>
+
+    
 
     <section class="landing">
 
@@ -49,11 +51,12 @@
         <section class="landing-welcome">
             <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
                 <button id="enter">entrar</button>
-                <h3 class="font">**mejor experiencia usando <em>chrome</em> o <em>firefox</em>**</h3>
+                <h3 class="font" style="font-size: 9px;"><em>chrome</em> or <em>firefox</em> recommended</h3>
             </div>
         </section>
 
     </section>
+
 
     <section id="base-grid">
 
@@ -79,8 +82,7 @@
         </section>
 
 
-        <h3 class="contact-card hover-info" style="font-family: 'DM Mono', monospace; font-weight: 400; font-size: 10px;">*hover
-            over image for motion</h3>
+        <h3 id="cursorText" class="cursor-text contact-card" style="font-family: 'DM Mono', monospace; font-weight: 400; font-size: 10px; left: 10px; top: 0;">hover over image for motion</h3>
 
         <section class="prj-grid">
             <!-- Projects start -->
@@ -338,135 +340,13 @@
         <div style="height: 150px;"></div>
 
         <footer>
-            <h4 class="font">© 2024 WILFREDO HERRERA. ALL RIGHTS RESERVED</h4>
+            <h4 class="font" style="font-size: 11px;">© 2024 WILFREDO HERRERA. ALL RIGHTS RESERVED</h4>
         </footer>
 
     </section>
-
     
-
-
-    <script>
-
-        const originalMarquee = document.getElementById("marqueeText");
-        const marqueeContainer = document.getElementById("marqueeContainer");
-
-        function duplicateMarquee() {
-            // Clone the original marquee text
-            const clonedMarquee = originalMarquee.cloneNode(true);
-            // Append the cloned marquee after the last marquee
-            marqueeContainer.appendChild(clonedMarquee);
-        }
-
-        // Duplicate the marquee 4 times
-        for (let i = 0; i < 4; i++) {
-            duplicateMarquee();
-}
-
-
-        // Landing into main content
-        const enterButton = document.getElementById('enter');
-        const landingSection = document.querySelector('.landing');
-        const contentSection = document.getElementById('base-grid');
-
-        enterButton.addEventListener('click', () => {
-            landingSection.style.display = 'none';
-            contentSection.style.display = 'flex';
-        });
-
-        // Load more content button
-        let loadMoreBtn = document.querySelector('#load-more');
-        let currentItem = 6;
-
-        loadMoreBtn.onclick = () => {
-            let boxes = [...document.querySelectorAll('.prj-item')];
-            for (var i = currentItem; i < currentItem + 6 && i < boxes.length; i++) {
-                boxes[i].style.display = 'inline-block';
-            }
-            currentItem += 6;
-
-            if (currentItem >= boxes.length) {
-                loadMoreBtn.style.display = 'none';
-            }
-
-        };
-
-            document.addEventListener('DOMContentLoaded', function () {
-                const videos = document.querySelectorAll('.video');
-
-                videos.forEach(video => {
-                    video.addEventListener('mouseenter', function () {
-                        video.play();
-                    });
-
-                    video.addEventListener('mouseleave', function () {
-                        video.pause();
-                    });
-                });
-            });
- 
-
-        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-        if (isSafari) {
-            const videos = document.querySelectorAll('.video');
-            videos.forEach(video => {
-                video.setAttribute('playsinline', '');
-                video.setAttribute('muted', '');
-            });
-        }
-
-        // Header language change
-        const englishHeading = document.getElementById('english-header');
-        const spanishHeading = document.getElementById('spanish-header');
-
-        englishHeading.addEventListener('click', () => {
-            englishHeading.classList.add('hidden');
-            spanishHeading.classList.remove('hidden');
-        });
-
-        spanishHeading.addEventListener('click', () => {
-            spanishHeading.classList.add('hidden');
-            englishHeading.classList.remove('hidden');
-        });
-
-        // Landing header
-        const englishLanding = document.getElementById('landing-banner-en');
-        const spanishLanding = document.getElementById('landing-banner-sp');
-
-        englishLanding.addEventListener('click', () => {
-            englishLanding.classList.add('hidden');
-            spanishLanding.classList.remove('hidden');
-        });
-
-        spanishLanding.addEventListener('click', () => {
-            spanishLanding.classList.add('hidden');
-            englishLanding.classList.remove('hidden');
-        });
-
-        // Mobile project images
-        if (window.innerWidth > 768) {
-            const projectImage = document.getElementsByClassName('prj-img');
-
-            projectImage.addEventListener('play', () => {
-                projectImage.classList.add('hidden');
-            });
-
-            const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-            if (isSafari) {
-                const videos = document.querySelectorAll('.video');
-                videos.forEach(video => {
-                    video.setAttribute('playsinline', '');
-                    video.setAttribute('muted', '');
-                    video.setAttribute('autoplay', '');
-                });
-            }
-        }
-
-        
-
-    </script>
+    
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>

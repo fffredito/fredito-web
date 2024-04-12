@@ -3,17 +3,26 @@ body, html {
     background-color: transparent;
 }
 
-.marquee,
 .landing {
-    animation: fadeContent 4s;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation: fadeContent 4s 1s forwards;
     opacity: 0%;
 }
 
     @keyframes fadeContent {
         from { opacity: 0%; }
         to {opacity: 100%; }
+    }
+
+.marquee {
+    animation: marquee-div 2s ease-in-out 3s forwards;
+    position: fixed;
+    top: -34px;
+    animation-iteration-count: 1
+}
+
+    @keyframes marquee-div {
+        from { top: -30px; }
+        to { top: 0; }
     }
 
 .hidden {
@@ -23,7 +32,6 @@ body, html {
 .font {
     font-family: 'DM Mono', monospace;
     font-weight: 400;
-    font-size: 11px;
 }
 
 .bg-img {
@@ -109,6 +117,7 @@ body, html {
     top: 200px;
     color: white;
     background-color: black;
+    border-radius: 5px;
 }
 
 #enter {
@@ -125,7 +134,6 @@ body, html {
     font-size: 15px;
     background-color: white;
     border-radius: 2px;
-    cursor: pointer;
 }
 
     #enter:hover {
@@ -133,6 +141,7 @@ body, html {
         background-color: #4DA62F;
         border: 1px solid black;
         border-radius: 2px;
+        cursor: pointer;
     }
 
 
@@ -384,7 +393,7 @@ footer h4 {
     overflow: hidden;
     background-color: black;
     color: white;
-    padding: 4px;
+    padding: 3px;
     white-space: nowrap;
     position: relative;
     border-right: rgb(0, 0, 0) 10px solid;
@@ -396,6 +405,7 @@ footer h4 {
     width: fit-content;
     animation: marquee 40s linear infinite;
     text-transform: uppercase;
+    font-size: 11px
 }
 @keyframes marquee {
     0% {
@@ -409,9 +419,10 @@ footer h4 {
     @media only screen and (max-width: 740px) {
         .marquee-text {
             font-size: 9px;
-            animation: marquee 50s linear infinite;
+            animation: marquee 30s linear infinite;
         }
     }
+
 
     @media only screen and (max-width: 740px) {
         footer h4 {
@@ -460,6 +471,7 @@ footer h4 {
     .video {
         width: 100%;
         background-color: white;
+    }
 
     .bg-me {
         background-position: center;
@@ -503,4 +515,19 @@ footer h4 {
         display: flex;
         flex-direction: column;
     }
+}
+
+
+.cursor-text {
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    white-space: nowrap;
+    background-color: black
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 9999;
+    transform: translate(-50%, -50%); 
 }
