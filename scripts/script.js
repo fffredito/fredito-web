@@ -124,42 +124,50 @@ document.addEventListener("DOMContentLoaded", () => {
   const cursorText = document.getElementById("cursorText");
   let timer;
 
-  const isMobile = window.innerWidth <= 768; // Adjust the threshold as needed for mobile detection
+  // Adjust the threshold for mobile detection as needed
+  const isMobile = window.innerWidth <= 768;
 
   if (!isMobile) {
     document.addEventListener("mousemove", (e) => {
       const isOverVideo = e.target instanceof HTMLVideoElement; // Check if the cursor is over a video element
 
       if (!isOverVideo) {
+        // Display cursorText and move it with the cursor
         cursorText.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-
         clearTimeout(timer);
-        cursorText.style.display = "none";
+        cursorText.style.display = "none"; // Hide cursorText initially
 
         timer = setTimeout(() => {
-          cursorText.style.display = "block";
+          cursorText.style.display = "block"; // Show cursorText after a delay
         }, 1200); // Adjust the timeout (in milliseconds) as needed
       } else {
         clearTimeout(timer);
-        cursorText.style.display = "none"; // Hide text when over a video element
+        cursorText.style.display = "none"; // Hide cursorText when over a video element
       }
+    });
 
-      window.addEventListener("scroll", () => {
-        const scrollX = window.scrollX;
-        const scrollY = window.scrollY;
-
-        cursorText.style.left = `${scrollX}px`;
-        cursorText.style.top = `${scrollY}px`;
-      });
+    // Adjust cursorText position when the page is scrolled
+    window.addEventListener("scroll", () => {
+      const scrollX = window.scrollX;
+      const scrollY = window.scrollY;
+      cursorText.style.left = `${scrollX}px`;
+      cursorText.style.top = `${scrollY}px`;
     });
   }
 });
 
-// if (isSafari()) {
-//   const bgVideo = document.getElementById('bgVideo');
-//   bgVideo.style.display = 'none'; // Hide the video on Safari
-// }
+// ESTABLISH SAFARI BROWSER USER
+function isSafari() {
+  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+}
 
+// DISABLE VIDEO BG FOR SAFARI
+if (isSafari()) {
+  const bgVideo = document.getElementById('bgVideo');
+  bgVideo.style.display = 'none'; // Hide the video on Safari
+}
+
+// SHOW BG IMAGE INSTEAD OF VIDEO ON SAFARI
 if (isSafari()) {
   const carouselContainer = document.getElementById("carouselContainer");
   carouselContainer.innerHTML = `
