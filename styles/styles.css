@@ -523,7 +523,7 @@ footer h4 {
     display: none;
     pointer-events: none;
     white-space: nowrap;
-    background-color: black
+    background-color: black;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;

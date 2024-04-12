@@ -139,6 +139,14 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             cursorText.style.display = "none"; // Hide text when over a video element
         }
+
+        window.addEventListener("scroll", () => {
+            const scrollX = window.pageXOffset;
+            const scrollY = window.pageYOffset;
+      
+            cursorText.style.left = `${scrollX}px`;
+            cursorText.style.top = `${scrollY}px`;
+          });
         });
     }
 });
