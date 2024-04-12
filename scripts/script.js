@@ -124,31 +124,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!isMobile) {
         document.addEventListener("mousemove", (e) => {
-        // Check if the cursor is over a video element
-        const isOverVideo = e.target instanceof HTMLVideoElement;
+            const isOverVideo = e.target instanceof HTMLVideoElement; // Check if the cursor is over a video element
     
-        if (!isOverVideo) {
-            cursorText.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-    
-            clearTimeout(timer);
-            cursorText.style.display = "block";
-    
-            timer = setTimeout(() => {
-            cursorText.style.display = "none";
-            }, 1000); // Adjust the timeout (in milliseconds) as needed
-        } else {
-            cursorText.style.display = "none"; // Hide text when over a video element
-        }
+            if (!isOverVideo) {
+                cursorText.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        
+                clearTimeout(timer);
+                cursorText.style.display = "none";
+        
+                timer = setTimeout(() => {
+                    cursorText.style.display = "block";
+                }, 1200); // Adjust the timeout (in milliseconds) as needed
+            } else {
+                clearTimeout(timer);
+                cursorText.style.display = "none"; // Hide text when over a video element
+            }
 
-        window.addEventListener("scroll", () => {
-            const scrollX = window.pageXOffset;
-            const scrollY = window.pageYOffset;
-      
-            cursorText.style.left = `${scrollX}px`;
-            cursorText.style.top = `${scrollY}px`;
-          });
+            window.addEventListener("scroll", () => {
+                const scrollX = window.scrollX;
+                const scrollY = window.scrollY;
+        
+                cursorText.style.left = `${scrollX}px`;
+                cursorText.style.top = `${scrollY}px`;
+            });
         });
     }
 });
+
   
   

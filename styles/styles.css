@@ -4,7 +4,7 @@ body, html {
 }
 
 .landing {
-    animation: fadeContent 4s 1s forwards;
+    animation: fadeContent 2s 1s forwards;
     opacity: 0%;
 }
 
