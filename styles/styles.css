@@ -12,7 +12,7 @@ html {
 }
 
 .hidden {
-    display: var(--hidden);
+  display: var(--hidden);
 }
 
 /* BACKGROUND IMAGE */
@@ -39,9 +39,26 @@ html {
   object-fit: cover;
 }
 
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full height of viewport */
+  overflow: hidden;
+}
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+}
+
 /* SCROLLING BANNER */
 .marquee {
-  animation: marquee-div 2s ease-in-out 1s forwards;
+  animation: marquee-div 1s ease-in-out 0.5s forwards;
   position: fixed;
   top: -34px;
   animation-iteration-count: 1;
@@ -79,7 +96,7 @@ html {
 @media only screen and (max-width: 740px) {
   .marquee-text {
     font-size: 9px;
-    animation: marquee 30s linear infinite;
+    animation: marquee 60s linear infinite;
   }
 }
 
@@ -215,52 +232,6 @@ html {
   .landing-banner {
     width: 88%;
   }
-}
-
-.landing-welcome {
-  margin: 0 auto;
-  width: 150px;
-  height: 150px;
-  padding: 10px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  top: 200px;
-  color: white;
-  background-color: black;
-  border-radius: 5px;
-}
-
-.landing-welcome div h3 {
-  font-family: var(--baseline-ff);
-  font-weight: var(--baseline-fw);
-  font-size: 9px;
-}
-
-#enter {
-  margin: 0 auto;
-  margin-top: 5px;
-  padding: 13px 30px;
-  border: 1px solid #4da62f;
-  color: black;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-
-  font-family: "DM Mono", monospace;
-  font-size: 15px;
-  background-color: white;
-  border-radius: 2px;
-}
-
-#enter:hover {
-  color: black;
-  background-color: #4da62f;
-  border: 1px solid black;
-  border-radius: 2px;
-  cursor: pointer;
 }
 
 .title-banner .title {
