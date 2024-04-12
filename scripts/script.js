@@ -94,26 +94,6 @@ spanishLanding.addEventListener('click', () => {
     englishLanding.classList.remove('hidden');
 });
 
-// Mobile project images
-// if (window.innerWidth > 768) {
-//     const projectImage = document.getElementsByClassName('prj-img');
-
-//     projectImage.addEventListener('play', () => {
-//         projectImage.classList.add('hidden');
-//     });
-
-//     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-//     if (isSafari) {
-//         const videos = document.querySelectorAll('.video');
-//         videos.forEach(video => {
-//             video.setAttribute('playsinline', '');
-//             video.setAttribute('muted', '');
-//             video.setAttribute('autoplay', '');
-//         });
-//     }
-// }
-
 
 // CURSOR EFFECT
 document.addEventListener("DOMContentLoaded", () => {
