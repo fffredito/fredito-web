@@ -53,18 +53,44 @@ document.addEventListener('DOMContentLoaded', function () {
             video.pause();
         });
     });
+
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+        const videos = document.querySelectorAll('.video');
+
+        // Function to check if an element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to handle video play/pause based on viewport visibility
+        function handleVideoPlayback() {
+            videos.forEach(video => {
+                if (isInViewport(video)) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+    }
+
+    // Initial check when DOM content is loaded
+    handleVideoPlayback();
+
+    // Event listener for scroll events
+    window.addEventListener('scroll', handleVideoPlayback);
+    }
+
+
 });
 
-
-const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-if (isSafari) {
-    const videos = document.querySelectorAll('.video');
-    videos.forEach(video => {
-        video.setAttribute('playsinline', '');
-        video.setAttribute('muted', '');
-    });
-}
 
 // Header language change
 const englishHeading = document.getElementById('english-header');
