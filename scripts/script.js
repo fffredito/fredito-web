@@ -1,19 +1,34 @@
+// MARQUEE
 const originalMarquee = document.getElementById("marqueeText");
 const marqueeContainer = document.getElementById("marqueeContainer");
 
 function duplicateMarquee() {
   // Clone the original marquee text
   const clonedMarquee = originalMarquee.cloneNode(true);
-  // Append the cloned marquee after the last marquee
-  marqueeContainer.appendChild(clonedMarquee);
+  // Insert the cloned marquee after the original marquee
+  originalMarquee.parentNode.insertBefore(clonedMarquee, originalMarquee.nextSibling);
+  // Start the animation for the new marquee
+  startMarqueeAnimation(clonedMarquee);
 }
 
-// Duplicate the marquee 4 times
-for (let i = 0; i < 4; i++) {
+function startMarqueeAnimation(element) {
+  const animationDuration = 70; // Duration of the animation in seconds
+  element.style.animation = `marquee ${animationDuration}s linear infinite`;
+}
+
+// Duplicate the marquee and start the animation for each clone
+function loopMarquee() {
   duplicateMarquee();
+  // Remove the first marquee after the animation starts to keep the container clean
+  marqueeContainer.removeChild(marqueeContainer.firstElementChild);
 }
 
-// Landing into main content
+// Set interval to loop the marquee
+setInterval(loopMarquee, 1000); // Repeat every 40 seconds (duration of one full loop)
+
+
+
+// LANDING INTO MAIN CONTENT
 const enterButton = document.getElementById("enter");
 const landingSection = document.getElementById("landing-content");
 const contentSection = document.getElementById("main-grid");
