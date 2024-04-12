@@ -16,8 +16,8 @@ for (let i = 0; i < 4; i++) {
 
 // Landing into main content
 const enterButton = document.getElementById('enter');
-const landingSection = document.querySelector('.landing');
-const contentSection = document.getElementById('base-grid');
+const landingSection = document.querySelector('.landing-content');
+const contentSection = document.getElementById('main-grid');
 
 enterButton.addEventListener('click', () => {
     landingSection.style.display = 'none';
