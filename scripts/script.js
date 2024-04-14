@@ -1,30 +1,27 @@
 // MARQUEE
-const originalMarquee = document.getElementById("marqueeText");
-const marqueeContainer = document.getElementById("marqueeContainer");
+// function repeatText() {
+//   // Get the paragraph element
+//   const paragraph = document.querySelector('.marquee-text');
 
-function duplicateMarquee() {
-  // Clone the original marquee text
-  const clonedMarquee = originalMarquee.cloneNode(true);
-  // Insert the cloned marquee after the original marquee
-  originalMarquee.parentNode.insertBefore(clonedMarquee, originalMarquee.nextSibling);
-  // Start the animation for the new marquee
-  startMarqueeAnimation(clonedMarquee);
-}
+//   // Get the text content of the paragraph
+//   const textContent = paragraph.textContent.trim();
 
-function startMarqueeAnimation(element) {
-  const animationDuration = 70; // Duration of the animation in seconds
-  element.style.animation = `marquee ${animationDuration}s linear infinite`;
-}
+//   // Create a new paragraph element
+//   const newParagraph = document.createElement('p');
+//   newParagraph.classList.add('marquee-text');
+//   newParagraph.textContent = textContent;
 
-// Duplicate the marquee and start the animation for each clone
-function loopMarquee() {
-  duplicateMarquee();
-  // Remove the first marquee after the animation starts to keep the container clean
-  marqueeContainer.removeChild(marqueeContainer.firstElementChild);
-}
+//   // Append the new paragraph after the existing one
+//   paragraph.parentNode.appendChild(newParagraph);
 
-// Set interval to loop the marquee
-setInterval(loopMarquee, 1000); // Repeat every 40 seconds (duration of one full loop)
+//   // Repeat the process after a delay (adjust the delay as needed)
+//   setTimeout(repeatText, 1000); // Repeat every 1 second (1000 milliseconds)
+// }
+
+// // Start the repeating process when the document is ready
+// document.addEventListener('DOMContentLoaded', function() {
+//   repeatText();
+// });
 
 
 
