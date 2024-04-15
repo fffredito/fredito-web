@@ -301,6 +301,10 @@ html {
   letter-spacing: -1px;
   font-size: 30px;
 }
+.title h1 a {
+    color: var(--primary-color);
+    font-weight: 700;
+}
 
 /* .cursor-div {
   position: absolute;
@@ -414,7 +418,7 @@ html {
   gap: 30px 10px;
   max-width: 1100px;
   position: relative;
-  top: 80px;
+  top: 70px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -427,6 +431,7 @@ html {
   .prj-grid {
     grid-template-columns: 1fr;
     width: fit-content;
+    top: 40px;
   }
 }
 
@@ -529,7 +534,7 @@ html {
 .about-container {
   margin: 0 auto;
   position: relative;
-  top: 20px;
+  top: 50px;
   border-radius: 2px;
 }
 
@@ -543,7 +548,7 @@ html {
 .about-info {
   font-family: var(--baseline-ff);
   margin: 0 auto;
-  padding: 2px 10px;
+  padding: 10px;
   max-width: 900px;
   color: white;
   background-color: black;
@@ -566,6 +571,7 @@ html {
   font-family: var(--baseline-ff);
   font-weight: 400;
   word-wrap: break-word;
+  padding: 0 10px;
 }
 
 .about-info p iframe {
@@ -577,9 +583,12 @@ html {
   flex-direction: row;
   justify-content: right;
   gap: 4px;
+  position: relative;
+  right: 100px;
+  top: -20px;
 }
 
-.about-info span img {
+.about-info div p span img {
   width: 20px;
   position: relative;
   top: -2px;
@@ -705,16 +714,21 @@ footer {
 footer h4 {
   padding: 30px;
   color: white;
-  mix-blend-mode: difference;
   font-family: var(--baseline-ff);
   font-weight: var(--baseline-fw);
   font-size: 11px;
   letter-spacing: 1px;
 }
 
+footer h4 a img {
+    mix-blend-mode: screen;
+    position: relative;
+    top: 2px;
+}
+
 @media only screen and (max-width: 740px) {
   footer h4 {
-    mix-blend-mode: difference;
+    mix-blend-mode: color;
     text-align: center;
     font-size: 9px;
   }
