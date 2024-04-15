@@ -1,39 +1,13 @@
-// MARQUEE
-// function repeatText() {
-//   // Get the paragraph element
-//   const paragraph = document.querySelector('.marquee-text');
-
-//   // Get the text content of the paragraph
-//   const textContent = paragraph.textContent.trim();
-
-//   // Create a new paragraph element
-//   const newParagraph = document.createElement('p');
-//   newParagraph.classList.add('marquee-text');
-//   newParagraph.textContent = textContent;
-
-//   // Append the new paragraph after the existing one
-//   paragraph.parentNode.appendChild(newParagraph);
-
-//   // Repeat the process after a delay (adjust the delay as needed)
-//   setTimeout(repeatText, 1000); // Repeat every 1 second (1000 milliseconds)
-// }
-
-// // Start the repeating process when the document is ready
-// document.addEventListener('DOMContentLoaded', function() {
-//   repeatText();
-// });
-
-
 
 // LANDING INTO MAIN CONTENT
-const enterButton = document.getElementById("enter");
-const landingSection = document.getElementById("landing-content");
-const contentSection = document.getElementById("main-grid");
+// const enterButton = document.getElementById("enter");
+// const landingSection = document.getElementById("landing-content");
+// const contentSection = document.getElementById("main-grid");
 
-enterButton.addEventListener("click", () => {
-  landingSection.style.display = "none";
-  contentSection.style.display = "flex";
-});
+// enterButton.addEventListener("click", () => {
+//   landingSection.style.display = "none";
+//   contentSection.style.display = "flex";
+// });
 
 // // Load more content button
 // let loadMoreBtn = document.querySelector("#load-more");
@@ -104,32 +78,35 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Header language change
-const englishHeading = document.getElementById("english-header");
-const spanishHeading = document.getElementById("spanish-header");
+const englishHeader = document.getElementById("english-header");
+const spanishHeader = document.getElementById("spanish-header");
 
-englishHeading.addEventListener("click", () => {
-  englishHeading.classList.add("hidden");
-  spanishHeading.classList.remove("hidden");
+englishHeader.addEventListener("click", () => {
+  englishHeader.classList.add("hidden");
+  spanishHeader.classList.remove("hidden");
 });
 
-spanishHeading.addEventListener("click", () => {
-  spanishHeading.classList.add("hidden");
-  englishHeading.classList.remove("hidden");
+spanishHeader.addEventListener("click", () => {
+  spanishHeader.classList.add("hidden");
+  englishHeader.classList.remove("hidden");
 });
 
-// Landing header
-const englishLanding = document.getElementById("landing-banner-en");
-const spanishLanding = document.getElementById("landing-banner-sp");
 
-englishLanding.addEventListener("click", () => {
-  englishLanding.classList.add("hidden");
-  spanishLanding.classList.remove("hidden");
+
+// PRJ DETAILS TRANSLATION
+const enDetails = document.getElementById("prj-details-en");
+const spDetails = document.getElementById("prj-details-sp");
+
+enDetails.addEventListener("click", () => {
+  enDetails.classList.add("hidden");
+  spDetails.classList.remove("hidden");
 });
 
-spanishLanding.addEventListener("click", () => {
-  spanishLanding.classList.add("hidden");
-  englishLanding.classList.remove("hidden");
+spDetails.addEventListener("click", () => {
+  spDetails.classList.add("hidden");
+  enDetails.classList.remove("hidden");
 });
+
 
 // CURSOR EFFECT
 document.addEventListener("DOMContentLoaded", () => {
