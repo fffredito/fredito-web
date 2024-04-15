@@ -302,7 +302,7 @@ html {
   font-size: 30px;
 }
 
-.cursor-div {
+/* .cursor-div {
   position: absolute;
   left: 100px;
   top: -110px;
@@ -321,9 +321,10 @@ html {
   font-family: var(--baseline-ff);
   font-weight: var(--baseline-fw);
   font-size: 10px;
-  display: var(--hidden);
   position: absolute;
-}
+  opacity: 0; /* Initially hidden */
+    transition: transform 0.2s ease, opacity 0.2s ease; /
+} */
 
 /* BACKGROUND IMAGE FOR ABOUT PAGE */
 .bg-me {

@@ -25,35 +25,62 @@
 //   }
 // };
 
+// document.addEventListener("DOMContentLoaded", function() {
+//   const cursorText = document.querySelector(".cursor-text");
+//   let timer;
+
+//   function showCursorText() {
+//     cursorText.style.display = "block";
+//     clearTimeout(timer);
+//   }
+
+//   function hideCursorText() {
+//     cursorText.style.display = "none";
+//     clearTimeout(timer);
+//   }
+
+//   function isCursorActive() {
+//     return document.activeElement === document.body;
+//   }
+
+//   document.addEventListener("mousemove", function() {
+//     if (isCursorActive()) {
+//       showCursorText();
+//       timer = setTimeout(hideCursorText, 2000); // 2-second delay before hiding
+//     } else {
+//       hideCursorText();
+//     }
+//   });
+
+//   document.addEventListener("mouseleave", function() {
+//     showCursorText();
+//   });
+// });
+
 document.addEventListener("DOMContentLoaded", function() {
-  const cursorText = document.querySelector(".cursor-text");
+  const cursorObject = document.getElementById("cursorText");
   let timer;
 
-  function showCursorText() {
-    cursorText.style.display = "block";
-    clearTimeout(timer);
+  function isCursorOverVideo(e) {
+    const element = document.elementFromPoint(e.clientX, e.clientY);
+    return element.tagName === 'VIDEO';
   }
 
-  function hideCursorText() {
-    cursorText.style.display = "none";
-    clearTimeout(timer);
-  }
-
-  function isCursorActive() {
-    return document.activeElement === document.body;
-  }
-
-  document.addEventListener("mousemove", function() {
-    if (isCursorActive()) {
-      showCursorText();
-      timer = setTimeout(hideCursorText, 2000); // 2-second delay before hiding
+  document.addEventListener("mousemove", function(e) {
+    clearTimeout(timer); // Clear any existing timer
+    if (!isCursorOverVideo(e)) {
+      timer = setTimeout(() => {
+        cursorObject.style.display = "block";
+        cursorObject.style.left = e.clientX + "px";
+        cursorObject.style.top = e.clientY + "px";
+      }, 1000); // Delay of 500 milliseconds (0.5 seconds)
     } else {
-      hideCursorText();
+      cursorObject.style.display = "none";
     }
   });
 
   document.addEventListener("mouseleave", function() {
-    showCursorText();
+    cursorObject.style.display = "none";
   });
 });
 
