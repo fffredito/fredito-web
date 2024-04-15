@@ -267,6 +267,13 @@ html {
   border-radius: 50%;
 }
 
+@media only screen and (max-width: 740px) {
+    .back-button {
+        top: -65px;
+        left: 315px;
+      }
+}
+
 .title-banner {
   margin: 0 auto;
   width: 650px;
@@ -355,6 +362,7 @@ html {
 
 .proj-details-container {
   display: block;
+  width: fit-content;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -571,7 +579,9 @@ html {
 
 .about-info div .image-circle {
   border: 10px solid var(--primary-color);
-  display: flex;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   flex-direction: column;
   justify-content: center;
   width: 660px;
@@ -580,29 +590,16 @@ html {
   overflow: hidden;
   position: relative;
   border-radius: 2px;
+  object-fit: cover;
+  object-position: left 25%;
 }
 
 @media only screen and (max-width: 740px) {
   .about-info div .image-circle {
     width: 260px;
+    height: 240px;
     overflow: hidden;
-  }
-}
-
-.image-circle {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 300px;
-  object-fit: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  object-position: left 25%;
-}
-
-@media only screen and (max-width: 740px) {
-  .image-circle {
+    object-fit: cover;
     object-position: 50%;
     transform: scale(1.2);
   }
