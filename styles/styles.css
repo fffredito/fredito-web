@@ -236,8 +236,6 @@ html {
   display: flex;
   flex-direction: column;
   position: relative;
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
 }
 
 .header-title {
@@ -249,6 +247,11 @@ html {
   gap: 10px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#language-switch {
+    font-family: var(--baseline-ff);
+    font-size: 30px;
 }
 
 .back-button {
@@ -301,12 +304,11 @@ html {
 
 .cursor-div {
   position: absolute;
-  left: 14px;
-  top: -120px;
+  left: 100px;
+  top: -110px;
 }
 
 .cursor-text {
-  position: absolute;
   pointer-events: none;
   white-space: nowrap;
   background-color: black;
@@ -316,6 +318,11 @@ html {
   font-size: 14px;
   z-index: 9999;
   transform: translate(-50%, -50%);
+  font-family: var(--baseline-ff);
+  font-weight: var(--baseline-fw);
+  font-size: 10px;
+  display: var(--hidden);
+  position: absolute;
 }
 
 /* BACKGROUND IMAGE FOR ABOUT PAGE */
@@ -522,7 +529,7 @@ html {
 .about-container {
   margin: 0 auto;
   position: relative;
-  top: 0;
+  top: 20px;
   border-radius: 2px;
 }
 

@@ -25,6 +25,38 @@
 //   }
 // };
 
+document.addEventListener("DOMContentLoaded", function() {
+  const cursorText = document.querySelector(".cursor-text");
+  let timer;
+
+  function showCursorText() {
+    cursorText.style.display = "block";
+    clearTimeout(timer);
+  }
+
+  function hideCursorText() {
+    cursorText.style.display = "none";
+    clearTimeout(timer);
+  }
+
+  function isCursorActive() {
+    return document.activeElement === document.body;
+  }
+
+  document.addEventListener("mousemove", function() {
+    if (isCursorActive()) {
+      showCursorText();
+      timer = setTimeout(hideCursorText, 2000); // 2-second delay before hiding
+    } else {
+      hideCursorText();
+    }
+  });
+
+  document.addEventListener("mouseleave", function() {
+    showCursorText();
+  });
+});
+
 // VIDEO LOOPS ON HOVER
 document.addEventListener("DOMContentLoaded", function () {
   const videos = document.querySelectorAll(".video");
@@ -42,8 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const isMobile = window.innerWidth <= 768;
 
   if (isMobile) {
-    const videos = document.querySelectorAll(".video");
-
     // Function to check if an element is in the viewport
     function isInViewport(element) {
       const rect = element.getBoundingClientRect();
@@ -77,6 +107,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
+
+
 // Header language change
 const englishHeader = document.getElementById("english-header");
 const spanishHeader = document.getElementById("spanish-header");
@@ -89,6 +122,32 @@ englishHeader.addEventListener("click", () => {
 spanishHeader.addEventListener("click", () => {
   spanishHeader.classList.add("hidden");
   englishHeader.classList.remove("hidden");
+});
+
+const enTitleAbout = document.getElementById("english-header-about");
+const spTitleAbout = document.getElementById("spanish-header-about");
+
+enTitleAbout.addEventListener("click", () => {
+  enTitleAbout.classList.add("hidden");
+  spTitleAbout.classList.remove("hidden");
+});
+
+spTitleAbout.addEventListener("click", () => {
+  spTitleAbout.classList.add("hidden");
+  enTitleAbout.classList.remove("hidden");
+});
+
+const enAbout = document.getElementById("about-me-en");
+const spAbout = document.getElementById("about-me-sp");
+
+enAbout.addEventListener("click", () => {
+  enAbout.classList.add("hidden");
+  spAbout.classList.remove("hidden");
+});
+
+spAbout.addEventListener("click", () => {
+  spAbout.classList.add("hidden");
+  enAbout.classList.remove("hidden");
 });
 
 
