@@ -322,8 +322,7 @@ html {
   font-weight: var(--baseline-fw);
   font-size: 10px;
   position: absolute;
-  opacity: 0; /* Initially hidden */
-    transition: transform 0.2s ease, opacity 0.2s ease; /
+  opacity: 0; /* Initially hidden
 } */
 
 /* BACKGROUND IMAGE FOR ABOUT PAGE */
