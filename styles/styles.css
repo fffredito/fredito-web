@@ -547,6 +547,7 @@ html {
   max-width: 900px;
   color: white;
   background-color: black;
+  line-height: 1.5;
 }
 
 @media only screen and (max-width: 740px) {
