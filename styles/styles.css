@@ -152,6 +152,12 @@ html {
   margin-right: auto;
 }
 
+@media only screen and (max-width: 740px) {
+  .header-title {
+    margin-top: 90px;
+  }
+}
+
 .header-title a img {
   mix-blend-mode: color-burn;
   padding: 10px;
@@ -184,7 +190,7 @@ html {
 
 @media only screen and (max-width: 740px) {
   .title-banner {
-    width: 200px;
+    width: 210px;
     text-align: center;
   }
 
@@ -660,12 +666,14 @@ footer h4 {
   font-weight: var(--baseline-fw);
   font-size: 11px;
   letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 footer h4 a img {
   mix-blend-mode: screen;
-  position: relative;
-  top: 2px;
 }
 
 @media only screen and (max-width: 740px) {
@@ -687,13 +695,15 @@ footer h4 a img {
   align-items: center;
   bottom: 0;
   border: 0.6px solid #4da62f;
-  padding: 0 5px;
+  background-color: #4da62f;
+  padding: 0 1px;
   border-radius: 20px;
   font-family: var(--baseline-ff);
 }
 
 .build-credit h3 {
   padding: 0 10px;
+  font-weight: 550;
 }
 
 .build-credit img {
@@ -703,7 +713,7 @@ footer h4 a img {
 
 @media only screen and (max-width: 740px) {
   .build-credit {
-    width: 150px;
+    width: 170px;
     text-align: center;
     position: relative;
   }
