@@ -183,7 +183,7 @@ html {
   justify-content: center;
   align-items: center;
   hyphens: manual;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   font-size: 27px;
 }
 
@@ -665,7 +665,7 @@ footer h4 {
   }
 }
 
-.build-credit-wrapper {
+/* .build-credit-wrapper {
   margin-bottom: 50px;
 }
 
@@ -704,7 +704,7 @@ footer h4 {
     justify-content: center;
     align-items: center;
   }
-}
+} */
 
 .about-wrapper {
   background-image: url("/assets/images/me-1.jpg");
