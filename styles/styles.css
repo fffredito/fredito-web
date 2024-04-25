@@ -170,21 +170,20 @@ html {
   flex-direction: column;
   width: fit-content;
   padding: -1px 10px;
-  color: white;
   background-color: white;
 }
 
 .title h1 {
   color: black;
   font-family: var(--baseline-ff);
-  font-weight: 300;
+  font-weight: 500;
   word-wrap: break-word;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   hyphens: manual;
-  letter-spacing: 1px;
+  letter-spacing: .5px;
   font-size: 27px;
 }
 
@@ -349,22 +348,6 @@ html {
   }
 }
 
-.collection-header-wrapper {
-  margin: 0 auto;
-  padding: 10px;
-}
-
-@media only screen and (max-width: 740px) {
-  .collection-header-wrapper {
-    padding: 0 50px;
-  }
-}
-
-.collection-header {
-  font-family: var(--baseline-ff);
-  font-weight: 800;
-}
-
 /* PROJECT GRID LAYOUT */
 .prj-grid {
   margin: 0 auto;
@@ -514,6 +497,10 @@ html {
   }
 }
 
+.about-header {
+  padding: 10px;
+}
+
 .about-info p {
   font-family: var(--baseline-ff);
   font-weight: 400;
@@ -538,7 +525,7 @@ html {
 .about-info div p span img {
   width: 20px;
   position: relative;
-  top: -2px;
+  top: -1px;
 }
 
 .about-info div .image-circle {
@@ -656,7 +643,6 @@ footer {
   justify-content: center;
   align-items: center;
   position: relative;
-  mix-blend-mode: difference;
 }
 
 footer h4 {
@@ -672,13 +658,8 @@ footer h4 {
   gap: 10px;
 }
 
-footer h4 a img {
-  mix-blend-mode: screen;
-}
-
 @media only screen and (max-width: 740px) {
   footer h4 {
-    mix-blend-mode: color;
     text-align: center;
     font-size: 9px;
   }
@@ -697,18 +678,18 @@ footer h4 a img {
   border: 0.6px solid #4da62f;
   background-color: #4da62f;
   padding: 0 1px;
-  border-radius: 20px;
+  border-radius: 17px;
   font-family: var(--baseline-ff);
 }
 
 .build-credit h3 {
   padding: 0 10px;
-  font-weight: 550;
+  font-weight: 400;
 }
 
 .build-credit img {
-  width: 7.5px;
-  padding: 0 4px;
+  width: 10px;
+  padding: 0 2px;
 }
 
 @media only screen and (max-width: 740px) {

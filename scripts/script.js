@@ -25,37 +25,37 @@
 //   }
 // };
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   const cursorText = document.querySelector(".cursor-text");
-//   let timer;
+document.addEventListener("DOMContentLoaded", function() {
+  const cursorText = document.querySelector(".cursor-text");
+  let timer;
 
-//   function showCursorText() {
-//     cursorText.style.display = "block";
-//     clearTimeout(timer);
-//   }
+  function showCursorText() {
+    cursorText.style.display = "block";
+    clearTimeout(timer);
+  }
 
-//   function hideCursorText() {
-//     cursorText.style.display = "none";
-//     clearTimeout(timer);
-//   }
+  function hideCursorText() {
+    cursorText.style.display = "none";
+    clearTimeout(timer);
+  }
 
-//   function isCursorActive() {
-//     return document.activeElement === document.body;
-//   }
+  function isCursorActive() {
+    return document.activeElement === document.body;
+  }
 
-//   document.addEventListener("mousemove", function() {
-//     if (isCursorActive()) {
-//       showCursorText();
-//       timer = setTimeout(hideCursorText, 2000); // 2-second delay before hiding
-//     } else {
-//       hideCursorText();
-//     }
-//   });
+  document.addEventListener("mousemove", function() {
+    if (isCursorActive()) {
+      showCursorText();
+      timer = setTimeout(hideCursorText, 2000); // 2-second delay before hiding
+    } else {
+      hideCursorText();
+    }
+  });
 
-//   document.addEventListener("mouseleave", function() {
-//     showCursorText();
-//   });
-// });
+  document.addEventListener("mouseleave", function() {
+    showCursorText();
+  });
+});
 
 document.addEventListener("DOMContentLoaded", function() {
   const cursorObject = document.getElementById("cursorText");
