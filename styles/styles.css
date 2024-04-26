@@ -1,5 +1,6 @@
 :root {
   --baseline-ff: "DM Mono", monospace;
+  --alt-ff: "Jersey 10", sans-serif;
   --baseline-fw: 400;
   --primary-color: #4da62f;
   --hidden: none;
@@ -93,9 +94,11 @@ html {
 .marquee-text {
   white-space: nowrap; /* Prevent text from wrapping */
   text-transform: uppercase;
-  font-family: var(--baseline-ff);
-  font-size: 1vw;
+  font-family: var(--alt-ff);
+  font-weight: 300;
+  font-size: 1.5em;
   color: white;
+  letter-spacing: 2px;
 }
 
 @keyframes marquee {
@@ -114,7 +117,7 @@ html {
   }
 
   .marquee-text {
-    font-size: 16px;
+    font-size: 22px;
   }
 }
 
@@ -145,14 +148,13 @@ html {
 }
 
 .content-header-wrapper {
-  margin-top: ;
-  font-family: var(--baseline-ff);
+  margin-top: 50px;
+  font-family: var(--alt-ff);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 30px;
   color: white;
-  mix-blend-mode: difference;
 }
 
 
@@ -164,6 +166,7 @@ html {
   text-align: center;
   position: relative;
   left: 40px;
+  background-color: black;
   mix-blend-mode: difference;
 }
 
@@ -186,7 +189,12 @@ html {
 
 @media only screen and (max-width: 740px) {
   .header-title {
-    margin-top: 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100px;
   }
 
   .c-head-text {
@@ -200,44 +208,40 @@ html {
   display: flex;
   flex-direction: column;
   width: fit-content;
-  padding: -1px 10px;
+  padding: 0 10px;
+  
 }
 
 .title {
+  padding: 15px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .title h1 {
-  color: white;
-  font-family: var(--baseline-ff);
+  color: black;
+  font-family: var(--alt-ff);
   font-weight: 500;
-  word-wrap: break-word;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  hyphens: manual;
   letter-spacing: 0.5px;
-  font-size: 27px;
+  font-size: 25px;
   border-radius: 2px;
   padding: 3px;
   gap: 5px;
   mix-blend-mode: difference;
+  background-color: white;
   line-height: 20px;
 
 }
 
 .title h4 {
   color: white;
-  font-family: var(--baseline-ff);
+  font-family: var(--alt-ff);
   font-weight: 500;
   word-wrap: break-word;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
-  top: -60px;
+  top: -30px;
   letter-spacing: 0.5px;
   font-size: 12px;
   mix-blend-mode: difference;
@@ -274,6 +278,9 @@ html {
   .title h1 {
     flex-direction: column;
     gap: 30px;
+    font-size: 40px;
+    line-height: 30px;
+    padding: 10px;
   }
   
   .title h4  {
@@ -284,7 +291,7 @@ html {
 }
 
 .title h1 img {
-  width: 70px;
+  width: 20px;
   padding: 3px 5px;
   border-radius: 50%;
   
@@ -410,7 +417,7 @@ html {
   align-items: center;
   text-align: left;
   padding: 10px;
-  font-family: var(--baseline-ff);
+  font-family: var(--alt-ff);
   font-weight: var(--baseline-fw);
   font-size: 14px;
 }
@@ -504,7 +511,7 @@ html {
 .prj-info {
   margin: 0 auto;
   width: 100%;
-  font-family: var(--baseline-ff);
+  font-family: var(--alt-ff);
 }
 
 .prj-title {
@@ -514,6 +521,7 @@ html {
   font-size: 20px;
   font-weight: 500;
   font-style: italic;
+  letter-spacing: 2px;
 
   text-decoration-line: underline;
   text-transform: uppercase;
@@ -525,7 +533,8 @@ html {
 .date-length {
   margin: 0 auto;
   padding: 0;
-  font-size: 11px;
+  font-size: 13px;
+  letter-spacing: 2px;
   color: white;
 }
 
@@ -558,7 +567,7 @@ html {
   font-family: var(--baseline-ff);
   margin: 0 auto;
   padding: 10px;
-  max-width: 900px;
+  max-width: 890px;
   color: white;
   background-color: black;
   line-height: 1.5;
@@ -578,6 +587,8 @@ html {
 
 .about-header {
   padding: 10px;
+  font-family: var(--alt-ff);
+  letter-spacing: 1.5px;
 }
 
 #about-me-sp div {
@@ -612,10 +623,12 @@ html {
 }
 
 .about-info p {
-  font-family: var(--baseline-ff);
+  font-family: var(--alt-ff);
   font-weight: 400;
   word-wrap: break-word;
   padding: 0 10px;
+  font-size: 22px;
+  letter-spacing: 1.4px;
 }
 
 .about-info p iframe {
@@ -672,7 +685,7 @@ html {
   top: 130px;
   right: 0;
   text-wrap: wrap;
-  padding: 10px 40px;
+  padding: 10px 20px;
   color: white;
   background-color: black;
 }
@@ -681,15 +694,17 @@ html {
   display: flex;
   flex-direction: column;
   width: fit-content;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 18px;
-  font-family: var(--baseline-ff);
+  font-family: var(--alt-ff);
   font-weight: 400;
+  letter-spacing: 1px;
   word-wrap: break-word;
   margin: 0 auto;
   text-align: right;
   position: relative;
   gap: 3px;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 740px) {
@@ -709,7 +724,7 @@ html {
 }
 
 .link {
-  font-family: "DM Mono", monospace;
+  font-family: var(--alt-ff);
   font-weight: 400;
   color: #4da62f;
   text-decoration: underline;
@@ -760,10 +775,10 @@ footer {
 footer h4 {
   padding: 30px;
   color: white;
-  font-family: var(--baseline-ff);
+  font-family: var(--alt-ff);
   font-weight: var(--baseline-fw);
   font-size: 11px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -826,7 +841,8 @@ footer h4 a img {
 
 .about-wrapper {
   background-image: url("/assets/images/me-1.jpg");
-  height: 1400px;
+  height: 1550px;
+  top: 0;
 }
 
 @media only screen and (max-width: 740px) {

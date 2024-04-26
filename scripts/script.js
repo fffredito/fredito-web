@@ -231,52 +231,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// ESTABLISH SAFARI BROWSER USER
-function isSafari() {
-  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-}
-
-// DISABLE VIDEO BG FOR SAFARI
-if (isSafari()) {
-  const bgVideo = document.getElementById('bgVideo');
-  bgVideo.style.display = 'none'; // Hide the video on Safari
-}
-
 // SHOW BG IMAGE INSTEAD OF VIDEO ON SAFARI
-if (isSafari()) {
-  const carouselContainer = document.getElementById("carouselContainer");
-  carouselContainer.innerHTML = `
-      <div class="carousel-image" style="background-image: url('/assets/images/scanned-img/flower-1.jpg');"></div>
-      <div class="carousel-image" style="background-image: url('/assets/images/scanned-img/tree-1.jpg');"></div>
-      <div class="carousel-image" style="background-image: url('/assets/images/scanned-img/tree-2.jpg');"></div>
-    `;
+ // Check if the browser is Safari
+ const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-  const images = carouselContainer.querySelectorAll(".carousel-image");
-  const bgVideo = document.getElementById("bgVideo");
-  let currentIndex = 0;
-
-  function showImage(index) {
-    images.forEach((image, i) => {
-      if (i === index) {
-        image.style.opacity = "1";
-      } else {
-        image.style.opacity = "0";
-      }
-    });
-    bgVideo.style.display = "none";
-  }
-
-  function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
-  }
-
-  setInterval(nextImage, 9000); // Change image every 9 seconds
-} else {
-  // Handle other browsers or provide a fallback
-  console.log("This feature is only supported on Safari.");
+ // If the browser is Safari, add the fallback image before the video
+ if (isSafari()) {
+  const videoElement = document.getElementById('videoElement');
+  const fallbackImage = new Image();
+  fallbackImage.src = 'path/to/your/fallback-image.jpg'; // Replace with the path to your fallback image
+  fallbackImage.alt = 'Fallback Image';
+  fallbackImage.style.display = 'none'; // Hide the image initially
+  videoElement.parentNode.insertBefore(fallbackImage, videoElement);
+  
+  // Pause the video and show the fallback image
+  videoElement.style.display = 'none';
+  fallbackImage.style.display = 'block';
 }
-
 
 
 // ABOUT LINK SCROLL DOWN
