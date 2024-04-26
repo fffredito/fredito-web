@@ -198,6 +198,11 @@ html {
     width: 100px;
   }
 
+  .content-header-wrapper {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+
   .c-head-text {
     letter-spacing: 18px;
     left: 14px;
