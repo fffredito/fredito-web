@@ -276,3 +276,22 @@ if (isSafari()) {
   // Handle other browsers or provide a fallback
   console.log("This feature is only supported on Safari.");
 }
+
+
+
+// ABOUT LINK SCROLL DOWN
+function scrollToAbout(elementId) {
+  var element = document.getElementById(elementId);
+  if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+// VIS LINK SCROLL UP
+document.getElementById("vis").addEventListener("click", function(event) {
+  event.preventDefault(); // Prevents the default behavior of the link
+  var targetElement = document.getElementById("targetElement");
+  if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+  }
+});
