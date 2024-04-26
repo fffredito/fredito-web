@@ -161,13 +161,6 @@ html {
   mix-blend-mode: difference;
 }
 
-@media only screen and (max-width: 740px) {
-  .c-head-text {
-    letter-spacing: 1.1em;
-    left: 12px;
-  }
-}
-
 #about-grid {
   margin: 0 auto;
   display: flex;
@@ -188,6 +181,11 @@ html {
 @media only screen and (max-width: 740px) {
   .header-title {
     margin-top: 90px;
+  }
+
+  .c-head-text {
+    letter-spacing: 18px;
+    left: 14px;
   }
 }
 
@@ -220,7 +218,7 @@ html {
   padding: 3px;
   gap: 5px;
   mix-blend-mode: difference;
-  line-height: 18px;
+  line-height: 20px;
 
 }
 
@@ -233,7 +231,7 @@ html {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: -55px;
+  top: -60px;
   letter-spacing: 0.5px;
   font-size: 12px;
   mix-blend-mode: difference;
@@ -262,13 +260,20 @@ html {
 
 @media only screen and (max-width: 740px) {
   .title-banner {
-    width: 210px;
+    width: fit-content;
     text-align: center;
   }
 
   .title h1 {
-    flex-direction: row;
+    flex-direction: column;
+    gap: 30px;
   }
+  
+  .title h4  {
+    top: -146px;
+  }
+
+
 }
 
 .title h1 img {
