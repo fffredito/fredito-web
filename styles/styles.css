@@ -124,7 +124,7 @@ html {
   flex-direction: column;
   position: relative;
   opacity: 0;
-  animation: fadeIn 3s ease-in forwards;
+  animation: fadeIn 1s 1s ease-in forwards;
 }
 
 @keyframes fadeIn {
@@ -145,7 +145,7 @@ html {
 }
 
 .content-header-wrapper {
-  margin-top: 100px;
+  margin-top: ;
   font-family: var(--baseline-ff);
   display: flex;
   justify-content: center;
@@ -464,6 +464,7 @@ html {
 @media only screen and (max-width: 740px) {
   .prj-item {
     width: 350px;
+    background-color: rgba(0, 0, 0, 100%);
   }
 }
 
@@ -693,16 +694,17 @@ html {
 
 @media only screen and (max-width: 740px) {
   .contact-card {
+    width: 100px;
     top: 50px;
-    left: 15px;
     position: relative;
   }
 
   .contact-card div {
-    display: block;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    line-height: 25px;
+    font-size: 20px;
   }
 }
 
@@ -829,6 +831,6 @@ footer h4 a img {
 
 @media only screen and (max-width: 740px) {
   .about-wrapper {
-    height: 1600px;
+    height: 1750px;
   }
 }
