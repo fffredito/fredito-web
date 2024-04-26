@@ -149,6 +149,7 @@ html {
 
 .content-header-wrapper {
   margin-top: 50px;
+  margin-bottom: -30px;
   font-family: var(--alt-ff);
   display: flex;
   justify-content: center;
@@ -167,6 +168,7 @@ html {
   position: relative;
   left: 40px;
   mix-blend-mode: difference;
+  font-size: 28px;
 }
 
 #about-grid {
@@ -220,7 +222,7 @@ html {
 }
 
 .title h1 {
-  color: black;
+  color: white;
   font-family: var(--alt-ff);
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -229,7 +231,7 @@ html {
   padding: 3px;
   gap: 5px;
   mix-blend-mode: difference;
-  background-color: white;
+  background-color: black;
   line-height: 20px;
 
 }
@@ -563,7 +565,7 @@ html {
 }
 
 .about-info {
-  font-family: var(--baseline-ff);
+  font-family: var(--alt-ff);
   margin: 0 auto;
   padding: 10px;
   max-width: 890px;
@@ -592,6 +594,10 @@ html {
 
 #about-me-sp div {
   display: flex;
+}
+
+#about-me-sp div h2 {
+  margin: 0 auto;
 }
 
 #about-me-sp div h3 {
