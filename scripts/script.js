@@ -266,3 +266,28 @@ document.getElementById("vis").addEventListener("click", function(event) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
   }
 });
+
+function toggleDivs() {
+  var div1 = document.getElementById("content");
+  var div2 = document.getElementById("images");
+
+  if (div1.style.display === "none") {
+    div1.style.display = "block";
+    div2.style.display = "none";
+  } else {
+    div1.style.display = "none";
+    div2.style.display = "block";
+  }
+}
+
+function goBack() {
+  var div1 = document.getElementById("content");
+  var div2 = document.getElementById("images");
+
+  if (window.innerWidth <= 760) {
+    div1.style.display = "flex";
+  } else {
+    div1.style.display = "grid";
+  }
+  div2.style.display = "none";
+}
