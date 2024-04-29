@@ -207,6 +207,7 @@ html {
 }
 
 .bio-img a {
+  color: white;
   mix-blend-mode: difference;
 }
 .bio-img a p {
