@@ -149,7 +149,7 @@ html {
 .bio-header {
   border: #4da62f solid 3px;
   width: 295px;
-  height: 290px;
+  height: 295px;
   padding: 0 15px;
   font-family: var(--alt-ff);
 }
@@ -161,7 +161,7 @@ html {
 
   .bio-header {
     width: 295px;
-    height: 290px;
+    height: 295px;
   }
 }
 
@@ -169,7 +169,7 @@ html {
   border: #4da62f solid 3px;
   position: absolute;
   width: 325px;
-  height: 290px;
+  height: 295px;
   background-color: white;
   mix-blend-mode: difference;
   z-index: -1;
@@ -372,7 +372,7 @@ html {
 /* ----------------------- VIZS ----------------------- */
 
 .vis-wrapper {
-  margin-top: -20px;
+  margin-top: -25px;
   width: fit-content;
   height: fit-content;
   margin-right: auto;
