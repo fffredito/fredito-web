@@ -1,31 +1,4 @@
-
-// LANDING INTO MAIN CONTENT
-// const enterButton = document.getElementById("enter");
-// const landingSection = document.getElementById("landing-content");
-// const contentSection = document.getElementById("main-grid");
-
-// enterButton.addEventListener("click", () => {
-//   landingSection.style.display = "none";
-//   contentSection.style.display = "flex";
-// });
-
-// // Load more content button
-// let loadMoreBtn = document.querySelector("#load-more");
-// let currentItem = 6;
-
-// loadMoreBtn.onclick = () => {
-//   let boxes = [...document.querySelectorAll(".prj-item")];
-//   for (var i = currentItem; i < currentItem + 6 && i < boxes.length; i++) {
-//     boxes[i].style.display = "inline-block";
-//   }
-//   currentItem += 6;
-
-//   if (currentItem >= boxes.length) {
-//     loadMoreBtn.style.display = "none";
-//   }
-// };
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const cursorText = document.querySelector(".cursor-text");
   let timer;
 
@@ -43,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     return document.activeElement === document.body;
   }
 
-  document.addEventListener("mousemove", function() {
+  document.addEventListener("mousemove", function () {
     if (isCursorActive()) {
       showCursorText();
       timer = setTimeout(hideCursorText, 2000); // 2-second delay before hiding
@@ -52,21 +25,21 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  document.addEventListener("mouseleave", function() {
+  document.addEventListener("mouseleave", function () {
     showCursorText();
   });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const cursorObject = document.getElementById("cursorText");
   let timer;
 
   function isCursorOverVideo(e) {
     const element = document.elementFromPoint(e.clientX, e.clientY);
-    return element.tagName === 'VIDEO';
+    return element.tagName === "VIDEO";
   }
 
-  document.addEventListener("mousemove", function(e) {
+  document.addEventListener("mousemove", function (e) {
     clearTimeout(timer); // Clear any existing timer
     if (!isCursorOverVideo(e)) {
       timer = setTimeout(() => {
@@ -79,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  document.addEventListener("mouseleave", function() {
+  document.addEventListener("mouseleave", function () {
     cursorObject.style.display = "none";
   });
 });
@@ -130,53 +103,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Event listener for scroll events
     window.addEventListener("scroll", handleVideoPlayback);
-      videos.autoplay = true;
+    videos.autoplay = true;
   }
 });
-
-
-
-
-// Header language change
-const englishHeader = document.getElementById("english-header");
-const spanishHeader = document.getElementById("spanish-header");
-
-englishHeader.addEventListener("click", () => {
-  englishHeader.classList.add("hidden");
-  spanishHeader.classList.remove("hidden");
-});
-
-spanishHeader.addEventListener("click", () => {
-  spanishHeader.classList.add("hidden");
-  englishHeader.classList.remove("hidden");
-});
-
-const enTitleAbout = document.getElementById("english-header-about");
-const spTitleAbout = document.getElementById("spanish-header-about");
-
-enTitleAbout.addEventListener("click", () => {
-  enTitleAbout.classList.add("hidden");
-  spTitleAbout.classList.remove("hidden");
-});
-
-spTitleAbout.addEventListener("click", () => {
-  spTitleAbout.classList.add("hidden");
-  enTitleAbout.classList.remove("hidden");
-});
-
-const enAbout = document.getElementById("about-me-en");
-const spAbout = document.getElementById("about-me-sp");
-
-enAbout.addEventListener("click", () => {
-  enAbout.classList.add("hidden");
-  spAbout.classList.remove("hidden");
-});
-
-spAbout.addEventListener("click", () => {
-  spAbout.classList.add("hidden");
-  enAbout.classList.remove("hidden");
-});
-
 
 
 // PRJ DETAILS TRANSLATION
@@ -192,7 +121,6 @@ spDetails.addEventListener("click", () => {
   spDetails.classList.add("hidden");
   enDetails.classList.remove("hidden");
 });
-
 
 // CURSOR EFFECT
 document.addEventListener("DOMContentLoaded", () => {
@@ -232,41 +160,41 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // SHOW BG IMAGE INSTEAD OF VIDEO ON SAFARI
- // Check if the browser is Safari
- const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+// Check if the browser is Safari
+const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
- // If the browser is Safari, add the fallback image before the video
- if (isSafari()) {
-  const videoElement = document.getElementById('videoElement');
+// If the browser is Safari, add the fallback image before the video
+if (isSafari()) {
+  const videoElement = document.getElementById("videoElement");
   const fallbackImage = new Image();
-  fallbackImage.src = 'path/to/your/fallback-image.jpg'; // Replace with the path to your fallback image
-  fallbackImage.alt = 'Fallback Image';
-  fallbackImage.style.display = 'none'; // Hide the image initially
+  fallbackImage.src = "path/to/your/fallback-image.jpg"; // Replace with the path to your fallback image
+  fallbackImage.alt = "Fallback Image";
+  fallbackImage.style.display = "none"; // Hide the image initially
   videoElement.parentNode.insertBefore(fallbackImage, videoElement);
-  
+
   // Pause the video and show the fallback image
-  videoElement.style.display = 'none';
-  fallbackImage.style.display = 'block';
+  videoElement.style.display = "none";
+  fallbackImage.style.display = "block";
 }
 
-
-// ABOUT LINK SCROLL DOWN
+// ---------------------- ABOUT LINK SCROLL DOWN
 function scrollToAbout(elementId) {
   var element = document.getElementById(elementId);
   if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }
 
-// VIS LINK SCROLL UP
-document.getElementById("vis").addEventListener("click", function(event) {
+// ---------------------- VIS LINK SCROLL UP ------------------
+document.getElementById("vis").addEventListener("click", function (event) {
   event.preventDefault(); // Prevents the default behavior of the link
   var targetElement = document.getElementById("targetElement");
   if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+    targetElement.scrollIntoView({ behavior: "smooth" });
   }
 });
 
+// ---------------------- GO TO IMAGES / AND BACK -------------
 function toggleDivs() {
   var div1 = document.getElementById("content");
   var div2 = document.getElementById("images");

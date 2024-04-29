@@ -17,7 +17,7 @@ html {
 }
 
 .hidden {
-  display: var(--hidden)
+  display: var(--hidden);
 }
 
 @media only screen and (max-width: 740px) {
@@ -246,7 +246,7 @@ html {
   height: 270px;
   padding: 0 15px;
   font-family: var(--alt-ff);
-  overflow-y: scroll;
+  overflow: auto;
   mix-blend-mode: difference;
 }
 
@@ -261,12 +261,12 @@ html {
     justify-content: center;
     align-items: center;
     width: 350px;
-    height: 430px;
+    height: fit-content;
   }
 
   .border-wrapper {
     width: 380px;
-    height: 430px;
+    height: 1196px;
   }
 
   .section-header-container h2 {
@@ -278,6 +278,10 @@ html {
     font-size: 10px;
   }
 
+  .arrow-down {
+    display: none;
+    width: fit-content;
+  }
 }
 
 .section-header {
@@ -298,7 +302,20 @@ html {
   letter-spacing: 2px;
 }
 
+.arrow-down {
+  width: fit-content;
+  position: relative;
+  top: -14px;
+  left: 300px;
+}
+
 /* ----------------------- SOCIALS ----------------------- */
+
+.social-container {
+  width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+}
 
 .social-header {
   border: #4da62f solid 3px;
@@ -337,6 +354,10 @@ html {
 }
 
 @media only screen and (max-width: 740px) {
+  .social-container {
+    margin: 0 auto;
+  }
+
   .social-header {
     width: 335px;
     height: 120px;
@@ -377,20 +398,21 @@ html {
   color: white;
 }
 
-
 @media only screen and (max-width: 740px) {
   .vis-wrapper {
     margin: 0 auto;
+    margin-top: 0;
   }
 
   .border-wrapper-3 {
     width: 380px;
-    height: 490px;
+    height: 6360px;
   }
-  
+
   .visuals {
     width: 350px;
-    height: 490px;
+    height: 6360px;
+    overflow: none;
   }
 
   .visuals div {
@@ -578,7 +600,6 @@ a:visited {
   }
 }
 
-
 .interests-info-wrapper div {
   color: white;
   letter-spacing: 1px;
@@ -632,21 +653,11 @@ a:visited {
 
   .go-back {
     color: black;
-    background-color:white;
+    background-color: white;
   }
 }
 
-
-
-
-
-
-
-
-
 /* -----------------------  ----------------------- */
-
-
 
 .menu-wrapper {
   margin: 5px 0;
@@ -669,8 +680,6 @@ a:visited {
 .menu-wrapper a img {
   width: 30px;
 }
-
-
 
 .proj-details-container {
   display: block;
