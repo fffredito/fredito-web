@@ -265,6 +265,11 @@ html {
     height: fit-content;
   }
 
+  .about-desc {
+    position: relative;
+    top: -20px;
+  }
+
   .border-wrapper {
     width: 380px;
     height: 1196px;
