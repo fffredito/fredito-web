@@ -328,6 +328,9 @@ html {
   width: 295px;
   height: 120px;
   padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
   font-family: var(--alt-ff);
 }
 
@@ -342,9 +345,10 @@ html {
 }
 
 .socials {
+  margin-top: 5px;
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 10px;
+  gap: 12px 3px;
 }
 
 .socials div {
