@@ -25,7 +25,23 @@ html {
     display: var(--hidden);
   }
 }
-/* BACKGROUND IMAGE */
+/* ----------------------   BACKGROUND IMAGE */
+
+#bgVideo::-webkit-media-controls-start-playback-button {
+  display: none;
+}
+
+#bgVideo::-webkit-media-controls {
+  display: none !important;
+  visibility: hidden;
+}
+
+#bgVideo::-webkit-media-controls-enclosure {
+  width: 0px !important;
+  height: 0px !important;
+}
+
+
 .bg-img {
   background-position: center;
   background-repeat: no-repeat;
@@ -35,7 +51,7 @@ html {
   background-size: cover;
   user-select: none;
 
-  z-index: -1;
+  z-index: -3;
 
   position: fixed;
   width: 100%;
@@ -792,13 +808,18 @@ footer h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  text-align: center;
 }
 
-footer h4 a img {
-  margin: 0 auto;
-  position: relative;
-  top: 1.5px;
+footer h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: var(--alt-ff);
+  font-weight: var(--baseline-fw);
+  font-size: 11px;
+
 }
 
 @media only screen and (max-width: 740px) {
