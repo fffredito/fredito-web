@@ -219,3 +219,27 @@ function goBack() {
   }
   div2.style.display = "none";
 }
+
+
+//  -------------------- 
+
+// Get the video and image elements
+const video = document.getElementById('bgVideo');
+const img = document.querySelector('.bg-img');
+
+// Function to toggle the "hidden" class based on the page width
+function toggleHiddenClass() {
+    if (window.innerWidth < 740) {
+        video.classList.add('hidden');
+        img.classList.remove('hidden');
+    } else {
+        video.classList.remove('hidden');
+        img.classList.add('hidden');
+    }
+}
+
+// Initial call to toggleHiddenClass to set the initial state
+toggleHiddenClass();
+
+// Add an event listener for window resize to update the classes
+window.addEventListener('resize', toggleHiddenClass);
