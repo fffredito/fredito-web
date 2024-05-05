@@ -411,13 +411,15 @@ a:visited {
     content: "visualizrs";
     margin: 15px 0;
     display: flex;
-    color: black;
+    color: white;
     justify-content: right;
+    text-align: center;
     position: relative;
     top: -50px;
     left: 10px;
     letter-spacing: 20px;
     font-size: 28px;
+    mix-blend-mode: overlay;
   }
 
   .prj-grid {
@@ -596,13 +598,14 @@ a:visited {
     content: "about fredito";
     margin: 15px 0;
     display: flex;
-    color: black;
+    color: white;
     justify-content: right;
     position: relative;
     top: -12px;
     left: 10px;
     letter-spacing: 10px;
     font-size: 28px;
+    mix-blend-mode: overlay;
   }
 
   .about-desc {
@@ -612,8 +615,7 @@ a:visited {
   }
 
   .about-desc p {
-    color: white;
-    background-color: black;
+    color: black;
     padding: 10px;
   }
 
