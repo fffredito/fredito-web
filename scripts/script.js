@@ -195,18 +195,60 @@ document.getElementById("vis").addEventListener("click", function (event) {
 });
 
 // ---------------------- GO TO IMAGES / AND BACK -------------
-function toggleDivs() {
+function toggleImgs() {
   var div1 = document.getElementById("content");
   var div2 = document.getElementById("images");
+  var div3 = document.getElementById("mobileMenu");
 
   if (div1.style.display === "none") {
     div1.style.display = "block";
     div2.style.display = "none";
+    div3.style.display = "none";
   } else {
     div1.style.display = "none";
     div2.style.display = "block";
+    div3.style.display = "none";
   }
 }
+
+function toggleVis() {
+  var bio = document.getElementById("bioHeader");
+  var vis = document.getElementById("visContainer");
+  var menu = document.getElementById("mobileMenu");
+  var contact = document.getElementById("socialContainer");
+
+  if (vis.style.display === "none" || vis.style.display === "") {
+    bio.style.display = "none";
+    vis.style.display = "block";
+    menu.style.display = "none";
+    contact.style.display = "none";
+  } else {
+    vis.style.display = "none";
+    bio.style.display = "block";
+    menu.style.display = "block";
+    contact.style.display = "block";
+  }
+}
+
+function toggleAbout() {
+  var bio = document.getElementById("bioHeader");
+  var about = document.getElementById("aboutContainer");
+  var menu = document.getElementById("mobileMenu");
+  var contact = document.getElementById("socialContainer");
+
+  if (about.style.display === "none" || about.style.display === "") {
+    bio.style.display = "none";
+    about.style.display = "block";
+    menu.style.display = "none";
+    contact.style.display = "none";
+  } else {
+    about.style.display = "none";
+    bio.style.display = "block";
+    menu.style.display = "block";
+    contact.style.display = "block";
+  }
+}
+
 
 function goBack() {
   var div1 = document.getElementById("content");
@@ -220,5 +262,3 @@ function goBack() {
   div2.style.display = "none";
 }
 
-
-//  ------------------

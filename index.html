@@ -52,12 +52,12 @@
     </div>
 
     <div id="content" class="content-wrapper">
-        <div class="bio-header-container">
+        <div id="bioHeader" class="bio-header-container">
             <div class="border-wrapper-1"></div>
             <div class="bio-header">
                 <section class="title-banner">
                     <div class="title">
-                        <h1>fred0.net &#9787;
+                        <h1>fred0.net <span>&#9787;</span>
                         </h1>
                     </div>
                 </section>
@@ -67,7 +67,7 @@
                             <img src="assets/images/me-cropped.jpg" alt="" width="200" height="200"
                                 style="object-fit: cover;">
                         </div>
-                        <a href="#" onclick="toggleDivs()">
+                        <a href="#" onclick="toggleImgs()">
                             <p>view more images</p>
                         </a>
                     </div>
@@ -89,7 +89,12 @@
             </div>
         </div>
 
-        <div class="vis-wrapper">
+        <div id="visContainer" class="vis-wrapper">
+            <div class="go-to">
+                <a href="#" onclick="toggleVis()">
+                    <p>go back</p>
+                </a>
+            </div>
             <div class="border-wrapper-3"></div>
             <div class="visuals">
                 <section class="prj-grid">
@@ -363,7 +368,7 @@
             </div>
         </div>
 
-        <div class="social-container">
+        <div id="socialContainer" class="social-container">
             <div class="border-wrapper-2"></div>
             <div class="social-header">
                 <section class="title-banner">
@@ -404,7 +409,12 @@
 
         <div></div>
 
-        <div class="about-wrapper">
+        <div id="aboutContainer" class="about-wrapper">
+            <div class="go-to">
+                <a href="#" onclick="toggleAbout()">
+                    <p>go back</p>
+                </a>
+            </div>
             <div class="border-wrapper"></div>
             <div class="about">
                 <div class="about-desc">
@@ -500,6 +510,15 @@
                 </section>
             </div>
         </div> -->
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu-wrapper">
+        <div>
+            <ul class="mobile-menu">
+                <li><a href="#" onclick="toggleVis()">visualizers</a></li>
+                <li><a href="#" onclick="toggleAbout()">about</a></li>
+              </ul>
+        </div>
     </div>
 
     <div id="images" class="hidden" style="margin-top: 30px;">

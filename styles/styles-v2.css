@@ -34,6 +34,10 @@ a:visited {
   .mobile-hidden {
     display: var(--hidden);
   }
+
+  .link {
+    color: white;
+  }
 }
 /* ------------ background image ------------ */
 
@@ -135,6 +139,7 @@ a:visited {
 
 @media only screen and (max-width: 740px) {
   .content-wrapper {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -184,6 +189,11 @@ a:visited {
   mix-blend-mode: difference;
 }
 
+.title h1 span {
+  position: relative;
+  top: 2px;
+}
+
 .img-with-facts {
   display: flex;
   flex-direction: row;
@@ -229,6 +239,10 @@ a:visited {
 
 /* ------------------ vizs ------------------ */
 
+.go-to {
+  display: var(--hidden);
+}
+
 .vis-wrapper {
   width: fit-content;
   height: fit-content;
@@ -262,7 +276,7 @@ a:visited {
   display: flex;
   justify-content: center;
   letter-spacing: 20px;
-  font-size: 28px;
+  font-size: 25px;
 }
 
 .prj-grid {
@@ -353,18 +367,38 @@ a:visited {
 }
 
 @media only screen and (max-width: 740px) {
+  .go-to {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    color: white;
+    font-family: var(--alt-ff);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: 25px;
+    background-color: black;
+    width: 100px;
+    height: 40px;
+  }
   .vis-wrapper {
     margin: 0 auto;
     margin-top: 0;
+    display: var(--hidden);
   }
 
   .border-wrapper-3 {
+    display: var(--hidden);
     width: 23.9em;
     height: 6360px;
   }
 
   .visuals {
-    width: 22em;
+    border: #4da62f solid 0;
+    width: fit-content;
     height: 6360px;
     overflow: none;
     display: flex;
@@ -377,6 +411,7 @@ a:visited {
     content: "visualizrs";
     margin: 15px 0;
     display: flex;
+    color: black;
     justify-content: right;
     position: relative;
     top: -50px;
@@ -394,12 +429,12 @@ a:visited {
 
   .prj-item {
     margin-top: -45px;
-    width: 320px;
+    width: 330px;
     background-color: rgba(0, 0, 0, 100%);
   }
 
   .prj-img {
-    width: 320px;
+    width: 330px;
     height: 280px;
     object-fit: cover;
   }
@@ -462,17 +497,27 @@ a:visited {
 @media only screen and (max-width: 740px) {
   .social-container {
     margin: 0 auto;
-    background-color: black;
-  }
-
-  .social-header {
-    width: 335px;
-    height: 120px;
+    margin-top: -8px;
+    background-color: white;
   }
 
   .border-wrapper-2 {
-    width: 365px;
+    width: 330px;
     height: 120px;
+  }
+
+  .social-header {
+    width: 300px;
+    height: 120px;
+  }
+
+  .socials div {
+    mix-blend-mode: none;
+  }
+
+  .socials div a {
+    text-decoration: none;
+    color: lightblue;
   }
 }
 
@@ -507,13 +552,12 @@ a:visited {
 }
 
 .about::before {
-  content: "about";
-  margin-top: 10px;
+  content: "about fredito";
   margin-left: 6px;
   color: white;
   font-family: var(--alt-ff);
   font-weight: 500;
-  letter-spacing: 1.4px;
+  letter-spacing: 1px;
   font-size: 25px;
 }
 
@@ -533,7 +577,9 @@ a:visited {
 @media only screen and (max-width: 740px) {
   .about-wrapper {
     margin: 0 auto;
-    background-color: black;
+    margin-top: -15px;
+    display: var(--hidden);
+    color: black;
   }
 
   .about {
@@ -541,23 +587,42 @@ a:visited {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 350px;
+    width: 360px;
     height: fit-content;
+    mix-blend-mode: normal;
+    border: 0;
   }
   .about::before {
-    content: "about";
-    margin-top: 5px;
-    margin-bottom: 20px;
+    content: "about fredito";
+    margin: 15px 0;
+    display: flex;
+    color: black;
+    justify-content: right;
+    position: relative;
+    top: -12px;
+    left: 10px;
+    letter-spacing: 10px;
+    font-size: 28px;
   }
 
   .about-desc {
     position: relative;
     top: -20px;
+    background-color: transparent;
+  }
+
+  .about-desc p {
+    color: white;
+    background-color: black;
+    padding: 10px;
   }
 
   .border-wrapper {
     width: 380px;
-    height: 1436px;
+    height: 1457px;
+    mix-blend-mode: difference;
+    background-color: transparent;
+    border: 0;
   }
 
   .section-header-container h2 {
@@ -667,8 +732,52 @@ a:visited {
   }
 }
 
-/* -------------- footer ---------------- */
+/* ------------------ mobile menu ---------------- */
 
+.mobile-menu-wrapper {
+  display: var(--hidden);
+}
+
+@media only screen and (max-width: 740px) {
+  .mobile-menu-wrapper {
+    display: flex;
+    font-family: var(--alt-ff);
+    font-size: 1.6em;
+    margin-top: -25px;
+  }
+
+  .mobile-menu-wrapper div {
+    padding: 0;
+    width: 370px;
+    margin-top: 18px;
+    margin-left: -9px;
+  }
+
+  .mobile-menu {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .mobile-menu li {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .mobile-menu li a {
+    border: 1px solid #4da62f;
+    background-color: #4da62f;
+    width: 300px;
+    padding: 10px;
+    list-style-type: none;
+    text-decoration: none;
+  }
+}
+
+/* ----------------- footer ---------------- */
 
 footer {
   display: flex;
