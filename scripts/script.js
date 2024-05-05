@@ -196,20 +196,36 @@ document.getElementById("vis").addEventListener("click", function (event) {
 
 // ---------------------- GO TO IMAGES / AND BACK -------------
 function toggleImgs() {
-  var div1 = document.getElementById("content");
-  var div2 = document.getElementById("images");
-  var div3 = document.getElementById("mobileMenu");
+  var content = document.getElementById("content");
+  var bio = document.getElementById("bioHeader");
+  var img = document.getElementById("images");
+  var menu = document.getElementById("mobileMenu");
+  var contact = document.getElementById("socialContainer");
 
-  if (div1.style.display === "none") {
-    div1.style.display = "block";
-    div2.style.display = "none";
-    div3.style.display = "none";
+  if (img.style.display === "none" || img.style.display === "") {
+    content.style.display = "none";
+    bio.style.display = "none";
+    img.style.display = "block";
+    menu.style.display = "none";
+    contact.style.display = "none";
   } else {
-    div1.style.display = "none";
-    div2.style.display = "block";
-    div3.style.display = "none";
+    content.style.display = "grid";
+    if (window.innerWidth < 740) {
+      content.style.gridTemplateColumns = "auto";
+    } else {
+      content.style.gridTemplateColumns = "auto auto";
+    }
+    img.style.display = "none";
+    bio.style.display = "block";
+    if (window.innerWidth < 740) {
+      menu.style.display = "block";
+    } else {
+      menu.style.display = "none";
+    }
+    contact.style.display = "block";
   }
 }
+
 
 function toggleVis() {
   var bio = document.getElementById("bioHeader");
