@@ -107,7 +107,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
 // PRJ DETAILS TRANSLATION
 const enDetails = document.getElementById("prj-details-en");
 const spDetails = document.getElementById("prj-details-sp");
@@ -226,45 +225,119 @@ function toggleImgs() {
   }
 }
 
+// function toggleVis() {
+//   var bio = document.getElementById("bioHeader");
+//   var vis = document.getElementById("visContainer");
+//   var menu = document.getElementById("mobileMenu");
+//   var contact = document.getElementById("socialContainer");
+
+//   if (vis.style.display === "none" || vis.style.display === "") {
+//     bio.style.display = "none";
+//     vis.style.display = "block";
+//     menu.style.display = "none";
+//     contact.style.display = "none";
+//   } else {
+//     vis.style.display = "none";
+//     bio.style.display = "block";
+//     menu.style.display = "block";
+//     contact.style.display = "block";
+//   }
+// }
+
+// function toggleProj() {
+//   var bio = document.getElementById("bioHeader");
+//   var projects = document.getElementById("projectContainer");
+//   var menu = document.getElementById("mobileMenu");
+//   var contact = document.getElementById("socialContainer");
+
+//   if (projects.style.display === "none" || projects.style.display === "") {
+//     bio.style.display = "none";
+//     projects.style.display = "block";
+//     menu.style.display = "none";
+//     contact.style.display = "none";
+//   } else {
+//     projects.style.display = "none";
+//     bio.style.display = "block";
+//     menu.style.display = "block";
+//     contact.style.display = "block";
+//   }
+// }
+
+// function toggleAbout() {
+//   var bio = document.getElementById("bioHeader");
+//   var about = document.getElementById("aboutContainer");
+//   var menu = document.getElementById("mobileMenu");
+//   var contact = document.getElementById("socialContainer");
+
+//   if (about.style.display === "none" || about.style.display === "") {
+//     bio.style.display = "none";
+//     about.style.display = "block";
+//     menu.style.display = "none";
+//     contact.style.display = "none";
+//   } else {
+//     about.style.display = "none";
+//     bio.style.display = "block";
+//     menu.style.display = "block";
+//     contact.style.display = "block";
+//   }
+// }
 
 function toggleVis() {
+  var visElement = document.getElementById("visContainer");
   var bio = document.getElementById("bioHeader");
-  var vis = document.getElementById("visContainer");
   var menu = document.getElementById("mobileMenu");
   var contact = document.getElementById("socialContainer");
 
-  if (vis.style.display === "none" || vis.style.display === "") {
+  if (visElement.style.display === "block") {
+    visElement.style.display = "none";
+    bio.style.display = "block";
+    menu.style.display = "flex";
+    contact.style.display = "block";
+  } else {
+    visElement.style.display = "block";
     bio.style.display = "none";
-    vis.style.display = "block";
     menu.style.display = "none";
     contact.style.display = "none";
-  } else {
-    vis.style.display = "none";
-    bio.style.display = "block";
-    menu.style.display = "block";
-    contact.style.display = "block";
   }
 }
+
+// function toggleProj() {
+//   var projElement = document.getElementById("projectContainer");
+//   var bio = document.getElementById("bioHeader");
+//   var menu = document.getElementById("mobileMenu");
+//   var contact = document.getElementById("socialContainer");
+
+//   if (projElement.style.display === "block") {
+//     projElement.style.display = "none";
+//     bio.style.display = "block";
+//     menu.style.display = "block";
+//     contact.style.display = "block";
+//   } else {
+//     projElement.style.display = "block";
+//     bio.style.display = "none";
+//     menu.style.display = "none";
+//     contact.style.display = "none";
+//   }
+// }
 
 function toggleAbout() {
+  var aboutElement = document.getElementById("aboutContainer");
   var bio = document.getElementById("bioHeader");
-  var about = document.getElementById("aboutContainer");
   var menu = document.getElementById("mobileMenu");
   var contact = document.getElementById("socialContainer");
 
-  if (about.style.display === "none" || about.style.display === "") {
+  if (aboutElement.style.display === "block") {
+    aboutElement.style.display = "none";
+    bio.style.display = "block";
+    menu.style.display = "flex";
+    contact.style.display = "block";
+  } else {
+    aboutElement.style.display = "block";
     bio.style.display = "none";
-    about.style.display = "block";
     menu.style.display = "none";
     contact.style.display = "none";
-  } else {
-    about.style.display = "none";
-    bio.style.display = "block";
-    menu.style.display = "block";
-    contact.style.display = "block";
   }
 }
-
 
 function goBack() {
   var div1 = document.getElementById("content");
@@ -277,4 +350,3 @@ function goBack() {
   }
   div2.style.display = "none";
 }
-
