@@ -16,64 +16,63 @@
         href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Rubik+Mono+One&family=VT323&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="/styles/styles-v2.css">
 </head>
 
 <body>
     <div id="background">
-        <video class="background__video" autoplay muted playsinline loop disablepictureinpicture
+        <video class="background__video" id="bgVideo" autoplay muted playsinline loop disablepictureinpicture
             poster="assets/images/scanned-img/flower-1-inverted.png">
             <source src="assets/videos/bg-video-compressed.mp4" type="video/mp4" />
         </video>
     </div>
 
     <div class="marquee" lang="en">
-        <div class="marquee__text">
-            <span class="marquee__text-string">&nbsp; Howdy Cowboy &nbsp; Welcome to the candy factory &nbsp; Take a
-                look around &nbsp;
+        <div class="marquee-inner">
+            <span class="marquee-text">&nbsp; Howdy &nbsp; Welcome to the candy factory &nbsp; Take a look around &nbsp;
                 Many visuals to
                 satisfy the sweet-tooth &nbsp; Let your brain tune in &nbsp;
             </span>
-            <span class="marquee__text-string">&nbsp; Howdy Cowboy &nbsp; Welcome to the candy factory &nbsp; Take a
-                look around &nbsp;
+            <span class="marquee-text">&nbsp; Howdy &nbsp; Welcome to the candy factory &nbsp; Take a look around &nbsp;
                 Many visuals to
                 satisfy the sweet-tooth &nbsp; Let your brain tune in &nbsp;
             </span>
         </div>
-        <div class="marquee__text" aria-hidden="true">
-            <span class="marquee__text-string">&nbsp; Howdy Cowboy &nbsp; Welcome to the candy factory &nbsp; Take a
-                look around &nbsp;
+        <div class="marquee-inner" aria-hidden="true">
+            <span class="marquee-text">&nbsp; Howdy &nbsp; Welcome to the candy factory &nbsp; Take a look around &nbsp;
                 Many visuals to
                 satisfy the sweet-tooth &nbsp; Let your brain tune in &nbsp;
             </span>
-            <span class="marquee__text-string">&nbsp; Howdy Cowboy &nbsp; Welcome to the candy factory &nbsp; Take a
-                look around &nbsp;
+            <span class="marquee-text">&nbsp; Howdy &nbsp; Welcome to the candy factory &nbsp; Take a look around &nbsp;
                 Many visuals to
                 satisfy the sweet-tooth &nbsp; Let your brain tune in &nbsp;
             </span>
         </div>
     </div>
 
-    <div id="content-block" class="content">
-        <div id="profile-header" class="content__profile-wrapper">
-            <div class="content__profile--border"></div>
-            <div class="content__profile">
-                <div class="content__profile__header">
-                    <h1>fr3d0.net <span>&#9787;</span>
-                    </h1>
-                </div>
-                <div class="content__profile__body">
-                    <div class="content__profile__body__img">
-                        <img src="assets/images/me-cropped.jpg" alt="" width="200" height="200">
+    <div id="content" class="content-wrapper">
+        <div id="bioHeader" class="bio-header-container">
+            <div class="border-wrapper-1"></div>
+            <div class="bio-header">
+                <section class="title-banner">
+                    <div class="title">
+                        <h1>fred0.net <span>&#9787;</span>
+                        </h1>
+                    </div>
+                </section>
+                <section class="img-with-facts">
+                    <div class="bio-img">
+                        <div>
+                            <img src="assets/images/me-cropped.jpg" alt="" width="200" height="200"
+                                style="object-fit: cover;">
+                        </div>
                         <a href="#" onclick="toggleImgs()">
                             <p>view more images</p>
                         </a>
                     </div>
-                    <div class="content__profile__body__desc">
+                    <div class="bio-desc">
                         <p>
-                            visual artist,
-                            <br>
-                            editor,
+                            visual artist /
                             <br>
                             web dev enthusiast
                             <br>
@@ -85,27 +84,19 @@
                         </p>
                     </div>
 
-                </div>
+                </section>
             </div>
         </div>
-        <div class="mobile__scroll-down">
-            <p>&#9759;</p>
-        </div>
 
-        <div id="visContainer" class="content__vis-wrapper">
-            <!-- <div class="go-to">
+        <div id="visContainer" class="vis-wrapper">
+            <div class="go-to">
                 <a href="#" onclick="toggleVis()">
                     <p>go back</p>
                 </a>
-            </div> -->
-            <div class="content__vis--border"></div>
-            <div class="content__vis">
-                <div class="content__vis__header">
-                    <h2>visualizrs</h2>
-                    <p>these visuals were crafted while exploring digital video mixing techniques using touchdesigner
-                        software.</p>
-                </div>
-                <section class="content__vis--grid">
+            </div>
+            <div class="border-wrapper-3"></div>
+            <div class="visuals">
+                <section class="prj-grid">
                     <section class="content__vis--grid__item">
                         <section class="content__vis--grid__item__img">
                             <video class="video" preload="auto" muted playsinline loop
@@ -148,11 +139,12 @@
                         <section class="content__vis--grid__item__info">
                             <h4 class="content__vis--grid__item__info__title">Lost at sea</h4>
                             <p class="content__vis--grid__item__info__date">2O23</p>
-                            <!-- <p class="prj-desc">
+
+                            <p class="prj-desc">
                                 Sink into the depths of the ocean. Part of the HYPERLIFE gallery exhibit at the Brick
                                 Aux,
                                 Brooklyn NY on August 17th.
-                            </p> -->
+                            </p>
                         </section>
                     </section>
 
@@ -171,10 +163,10 @@
                             </h4>
                             <p class="content__vis--grid__item__info__date">(5 min) 2O23</p>
 
-                            <!-- <p class="prj-desc">
+                            <p class="prj-desc">
                                 An astronaut tries to save his crewmembers from a failing ship in
                                 this remix of Antonio Margheriti's <em>Space-Men</em> from 1960.
-                            </p> -->
+                            </p>
                         </section>
                     </section>
 
@@ -192,11 +184,11 @@
                                 <a href="https://youtu.be/ErilhrNfDMo" target="_blank" class="link">El Santo</a>
                             </h4>
                             <p class="content__vis--grid__item__info__date">(5 min) 2O23</p>
-                            <!-- 
+
                             <p class="prj-desc">
                                 Luchador superstar El Santo battles his foes thru a technicolor lo-fi
                                 kaleidoscope of color and violence.
-                            </p> -->
+                            </p>
                         </section>
                     </section>
 
@@ -375,57 +367,56 @@
             </div>
         </div>
 
+        <div id="socialContainer" class="social-container">
+            <div class="border-wrapper-2"></div>
+            <div class="social-header">
+                <section class="title-banner">
+                    <div class="title">
+                        <h1>contacting fredito
+                        </h1>
+                    </div>
+                </section>
+                <section class="socials-wrapper">
+                    <div class="socials">
+                        <div>
+                            <img src="assets/images/icons/email-96-white.png" alt="" width="19" height="19">
+                            <a href="mailto:fredo25w@gmail.com" target="_blank" class="link">e-mail</a>
+                        </div>
+                        <div>
+                            <img src="assets/images/icons/insta-96-white.png" alt="" width="19" height="19">
+                            <a href="https://www.instagram.com/bebofrik/" target="_blank" class="link">instagram</a>
+                        </div>
+                        <div>
+                            <img src="assets/images/icons/youtube-96-white.png" alt="" width="19" height="19">
+                            <a href="https://www.youtube.com/channel/UC5oNJt-0mgmcMfv42GhqxZA" target="_blank"
+                                class="link">youtube</a>
+                        </div>
+                        <div>
+                            <img src="assets/images/icons/clapperboard-96.png" alt="" width="19" height="19">
+                            <a href="https://letterboxd.com/spookyfr/" target="_blank" class="link">letterboxd</a>
+                        </div>
+                        <div>
+                            <img src="assets/images/icons/radio-96-white.png" alt="" width="19" height="19">
+                            <a href="https://www.mixcloud.com/fr_radio/" target="_blank" class="link">radio
+                                programme</a>
+                        </div>
+                    </div>
 
-        <div id="socialContainer" class="content__socials-wrapper">
-            <div class="content__socials--border"></div>
-            <div class="content__socials">
-                <div class="content__socials__header">
-                    <h1>contacting fredito
-                    </h1>
-                </div>
-                <div class="content__socials__info">
-                    <div>
-                        <img src="assets/images/icons/email-96-white.png" alt="" width="19" height="19">
-                        <a href="mailto:fredo25w@gmail.com" target="_blank" class="link">e-mail</a>
-                    </div>
-                    <div>
-                        <img src="assets/images/icons/insta-96-white.png" alt="" width="19" height="19">
-                        <a href="https://www.instagram.com/bebofrik/" target="_blank" class="link">instagram</a>
-                    </div>
-                    <div>
-                        <img src="assets/images/icons/youtube-96-white.png" alt="" width="19" height="19">
-                        <a href="https://www.youtube.com/channel/UC5oNJt-0mgmcMfv42GhqxZA" target="_blank"
-                            class="link">youtube</a>
-                    </div>
-                    <div>
-                        <img src="assets/images/icons/clapperboard-96.png" alt="" width="19" height="19">
-                        <a href="https://letterboxd.com/spookyfr/" target="_blank" class="link">letterboxd</a>
-                    </div>
-                    <div>
-                        <img src="assets/images/icons/radio-96-white.png" alt="" width="19" height="19">
-                        <a href="https://www.mixcloud.com/fr_radio/" target="_blank" class="link">radio
-                            program</a>
-                    </div>
-                </div>
-
+                </section>
             </div>
         </div>
 
         <div></div>
 
-        <div id="aboutContainer" class="content__about-wrapper">
-            <!-- <div class="go-to">
+        <div id="aboutContainer" class="about-wrapper">
+            <div class="go-to">
                 <a href="#" onclick="toggleAbout()">
                     <p>go back</p>
                 </a>
-            </div> -->
-            <div class="content__about-border"></div>
-            <div class="content__about">
-                <div class="content__about__header">
-                    <h1>about fredito
-                    </h1>
-                </div>
-                <div class="content__about-desc">
+            </div>
+            <div class="border-wrapper"></div>
+            <div class="about">
+                <div class="about-desc">
                     <p>
                         WILFREDO HERRERA originates from the vibrant island of Puerto Rico from Cuban immigrants. As a
                         person who enjoys learning new technologies, Fredo has delved into different mediums (like
@@ -484,12 +475,52 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- <div class="interests-container">
+            <div class="border-wrapper-4"></div>
+            <div class="interests-header">
+                <section class="title-banner">
+                    <div class="title">
+                        <h1>fredo's interests
+                        </h1>
+                    </div>
+                </section>
+                <section class="interests-info-wrapper">
+                    <div>
+                        <h4>Music:</h4>
+                        <p>The Night Chancers &lpar;2020&rpar; by Baxter Dury, The Awakening &lpar;1970&rpar; by Ahmad
+                            Jamal Trio, Cupid Deluxe &lpar;2013&rpar; by Blood Orange,
+                            Erotic Probiotic 2 &lpar;2023&rpar; by Nourished by Time,
+                            Crying &lpar;1961&rpar; by Roy Orbison,
+                            Band on the Run &lpar;1973&rpar; by Wings... </p>
+                    </div>
+                    <div>
+                        <h4>Movies:</h4>
+                        <p>Peter Greenaway's <em>The Cook, the Thief, His Wife & Her Lover &lpar;1989&rpar;</em>
+                            <br>
+                            Wong Kar-wai's <em>In the Mood for Love</em> &lpar;2000&rpar;
+                            <br>
+                            David Cronenberg's <em>Videodrome</em> &lpar;1983&rpar;
+                            <br>
+                            Jonathan Demme's <em>Stop Making Sense</em> &lpar;1984&rpar;...
+                        </p>
+                    </div>
+
+                </section>
+            </div>
+        </div> -->
     </div>
-   
-    <div id="projectContainer" class="content__prjs-wrapper">
-        <div class="content__prjs-border"></div>
-        <div class="content__prjs">
-            <section class="content__prjs--grid">
+
+    <div id="projectContainer" class="prjs-wrapper">
+        <div class="go-to">
+            <a href="#" onclick="toggleVis()">
+                <p>go back</p>
+            </a>
+        </div>
+        <div class="border-wrapper-5"></div>
+        <div class="projects-container">
+            <section class="prj-grid-b">
 
                 <section class="content__vis--grid__item-b">
                     <section class="content__vis--grid__item__img-b">
@@ -503,7 +534,8 @@
                     <section class="content__vis--grid__item__info-b">
                         <h4 class="content__vis--grid__item__info__title-b">Thunder by Pyramid Thieves- music video</h4>
                         <p class="content__vis--grid__item__info__date-b">2O19</p>
-                        <p class="content__vis--grid__item__info__date-b">&#9758; MY ROLE: Director, Editor, Gaffer, VFX</p>
+                        <p class="content__vis--grid__item__info__date-b">&#9758; MY ROLE: Director, Editor, Gaffer, VFX
+                        </p>
                     </section>
                 </section>
 
@@ -525,7 +557,8 @@
 
                 <section class="content__vis--grid__item-b">
                     <section class="content__vis--grid__item__img-b">
-                        <iframe class="video" src="https://player.vimeo.com/video/95069208?h=24a0d99a29&title=0&byline=0&portrait=0" width="640" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="video" src="https://player.vimeo.com/video/95069208?h=24a0d99a29&byline=0"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                     </section>
 
                     <section class="content__vis--grid__item__info-b">
@@ -537,6 +570,15 @@
                 </section>
 
             </section>
+        </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu-wrapper">
+        <div>
+            <ul class="mobile-menu">
+                <li><a href="#" onclick="toggleVis()">visualizers</a></li>
+                <li><a href="#" onclick="toggleAbout()">about</a></li>
+            </ul>
         </div>
     </div>
 

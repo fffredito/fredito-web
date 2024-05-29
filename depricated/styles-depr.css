@@ -41,7 +41,6 @@ html {
   height: 0px !important;
 }
 
-
 .bg-img {
   background-position: center;
   background-repeat: no-repeat;
@@ -174,7 +173,6 @@ html {
   color: white;
 }
 
-
 .c-head-text {
   letter-spacing: 3em;
   display: flex;
@@ -231,7 +229,6 @@ html {
   flex-direction: column;
   width: fit-content;
   padding: 0 10px;
-  
 }
 
 .title {
@@ -254,7 +251,6 @@ html {
   mix-blend-mode: difference;
   background-color: black;
   line-height: 20px;
-
 }
 
 .title h4 {
@@ -267,7 +263,6 @@ html {
   letter-spacing: 0.5px;
   font-size: 12px;
   mix-blend-mode: difference;
-
 }
 
 .title h2 {
@@ -304,21 +299,17 @@ html {
     line-height: 30px;
     padding: 10px;
   }
-  
-  .title h4  {
+
+  .title h4 {
     top: -146px;
   }
-
-
 }
 
 .title h1 img {
   width: 20px;
   padding: 3px 5px;
   border-radius: 50%;
-  
 }
-
 
 .title h1 a {
   color: var(--primary-color);
@@ -476,7 +467,7 @@ html {
   }
 }
 
-.prj-item {
+.content__vis--grid__item {
   border: 1px solid var(--primary-color);
   margin: 0 auto;
   padding: 12px;
@@ -486,18 +477,18 @@ html {
   border-radius: 2px;
 }
 
-.prj-item:hover{
+.content__vis--grid__item:hover {
   background-color: rgba(0, 0, 0, 100%);
 }
 
 @media only screen and (max-width: 740px) {
-  .prj-item {
+  .content__vis--grid__item {
     width: 350px;
     background-color: rgba(0, 0, 0, 100%);
   }
 }
 
-.prj-img {
+.content__vis--grid__item__img {
   margin-bottom: 5px;
   padding: 0;
   width: 300px;
@@ -507,21 +498,20 @@ html {
 }
 
 @media only screen and (max-width: 740px) {
-  .prj-img {
+  .content__vis--grid__item__img {
     width: 350px;
     height: 280px;
     object-fit: cover;
   }
 }
 
-.prj-img video {
+.content__vis--grid__item__img video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   cursor: crosshair;
 }
-
 
 @media only screen and (max-width: 740px) {
   .video {
@@ -530,13 +520,13 @@ html {
   }
 }
 
-.prj-info {
+.content__vis--grid__item__info {
   margin: 0 auto;
   width: 100%;
   font-family: var(--alt-ff);
 }
 
-.prj-title {
+.content__vis--grid__item__info__title {
   margin: 0;
   margin-bottom: 8px;
   padding: 0;
@@ -552,7 +542,7 @@ html {
   color: white;
 }
 
-.date-length {
+.content__vis--grid__item__info__date {
   margin: 0 auto;
   padding: 0;
   font-size: 13px;
@@ -819,7 +809,6 @@ footer h5 {
   font-family: var(--alt-ff);
   font-weight: var(--baseline-fw);
   font-size: 11px;
-
 }
 
 @media only screen and (max-width: 740px) {
