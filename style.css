@@ -359,7 +359,9 @@ body {
     display: hidden;
   }
   .content__vis--grid {
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: -7px;
     gap: 10px;
   }
 }
