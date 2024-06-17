@@ -14,8 +14,13 @@ body {
   background-color: whitesmoke;
 }
 
-.for-desktop__main {
+.for--desktop__main,
+.for--mobile__main {
   background-color: whitesmoke;
+}
+
+#for--mobile {
+  display: none;
 }
 
 .bg-container video {
@@ -32,9 +37,19 @@ body {
   background-color: #74c043;
 }
 
+@media only screen and (max-width: 750px) {
+  #for--desktop {
+    display: none;
+  }
+
+  #for--mobile {
+    display: block;
+  }
+}
+
 /* -------------------menu---------------------------- */
 
-.menu {
+.menu--desktop {
   margin: 0 auto;
   padding: 30px 0;
   display: flex;
@@ -43,11 +58,20 @@ body {
   gap: 30px;
 }
 
-.menu a {
+.menu--mobile {
+  display: none;
+}
+
+.menu-list {
+  display: flex;
+  gap: 30px;
+}
+
+.menu--desktop ul a {
   text-decoration: none;
 }
 
-.menu a:hover {
+.menu--desktop ul a:hover {
   background-color: #74c043;
   border-radius: 80%;
 }
@@ -69,22 +93,36 @@ body {
 }
 
 @media only screen and (max-width: 750px) {
-  .menu {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: auto auto;
+  .menu--mobile {
+    margin: 0 auto;
+    padding: 15px 0;
+    padding-bottom: 0;
+    display: flex;
+    gap: 30px;
   }
 
-  .menu a {
-    text-decoration: none;
+  .menu-list--mobile {
+    display: grid;
+    grid-template-columns: auto auto;
     text-align: center;
+    gap: 10px;
+  }
+
+  .menu-list--mobile a {
+    text-decoration: none;
   }
 }
 
 /* -------------------logo---------------------------- */
 
 .logo-wrapper {
-  margin-top: -25px;
+  margin-top: -30px;
+}
+
+@media only screen and (max-width: 740px) {
+  .logo-container svg {
+    margin-top: -150px;
+  }
 }
 
 .marquee {
@@ -131,8 +169,12 @@ body {
   }
 
   .marquee {
-    margin-top: 20px;
+    margin-top: 0;
     height: fit-content;
+  }
+
+  .marquee__text {
+    animation: marquee-scroll 60s linear infinite;
   }
 
   .marquee__text-string {
