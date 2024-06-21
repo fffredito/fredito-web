@@ -1,3 +1,19 @@
+const cursorSmall = document.querySelector('.small');
+
+const positionElement = (e) => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+
+  // Adjust for scroll position
+  const scrollX = window.scrollX;
+  const scrollY = window.scrollY;
+
+  cursorSmall.style.transform = `translate3d(${mouseX + scrollX}px, ${mouseY + scrollY}px, 0)`;
+}
+
+window.addEventListener('mousemove', positionElement);
+
+
 // VIDEO LOOPS ON HOVER
 document.addEventListener("DOMContentLoaded", function () {
     const videos = document.querySelectorAll(".video");
