@@ -15,6 +15,8 @@ body {
   cursor: none;
 }
 
+
+
 a {
   text-decoration: none;
   cursor: none;
@@ -49,6 +51,10 @@ a:hover {
 }
 
 @media only screen and (max-width: 750px) {
+
+  body {
+    cursor: pointer;
+  }
   #for--desktop {
     display: none;
   }
@@ -76,11 +82,12 @@ a:hover {
 
 .menu--desktop {
   margin: 0 auto;
-  padding: 30px 0;
+  margin-bottom: 10px;
+  background-color: whitesmoke;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  gap: 30px;
+  position: sticky;
+  top: 0;
 }
 
 .menu--mobile {
@@ -88,12 +95,14 @@ a:hover {
 }
 
 .menu-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
   gap: 30px;
 }
 
 .menu--desktop ul a {
   text-decoration: none;
+  text-align: center;
 }
 
 .menu--desktop ul a:hover {
@@ -136,12 +145,13 @@ a:hover {
     padding: 15px 0;
     padding-bottom: 0;
     display: flex;
+    justify-content: center;
     gap: 30px;
   }
 
   .menu-list--mobile {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     text-align: center;
     gap: 10px;
   }
