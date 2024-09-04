@@ -1,14 +1,14 @@
-const cursorSmall = document.querySelector('.small');
+const cursorSmall = document.querySelector('.cursor');
 
 const positionElement = (e) => {
-  const mouseX = e.clientX;
-  const mouseY = e.clientY;
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
 
-  // Adjust for scroll position
-  const scrollX = window.scrollX;
-  const scrollY = window.scrollY;
+    // Adjust for scroll position
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
 
-  cursorSmall.style.transform = `translate3d(${mouseX + scrollX}px, ${mouseY + scrollY}px, 0)`;
+    cursorSmall.style.transform = `translate3d(${mouseX + scrollX}px, ${mouseY + scrollY}px, 0)`;
 }
 
 window.addEventListener('mousemove', positionElement);
@@ -113,4 +113,31 @@ const menuList = document.querySelector('.menu-list');
 menuToggle.addEventListener('click', function() {
   const isOpen = menuList.classList.toggle('active');
   menuToggle.setAttribute('aria-expanded', isOpen);
+});
+
+
+// POPUP
+
+document.addEventListener('DOMContentLoaded', function() {
+    var popup = document.getElementById('popup');
+    var openPopup = document.getElementById('openPopup');
+    var closePopup = document.getElementById('closePopup');
+
+    // Open the popup
+    openPopup.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        popup.style.display = 'block';
+    });
+
+    // Close the popup
+    closePopup.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
+
+    // Close the popup if the user clicks outside of it
+    window.addEventListener('click', function(event) {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
 });
