@@ -12,8 +12,7 @@ html {
 
 body {
   background-color: whitesmoke;
-  cursor: none;
-}
+  cursor: grab;
 
 a {
   text-decoration: none;
