@@ -84,6 +84,11 @@ a:hover {
 
 /* -------------------menu---------------------------- */
 
+.menu-wrapper {
+  height: fit-content;
+  padding-top: 10px;
+}
+
 .menu--desktop {
   margin: 0 auto;
   margin-bottom: 10px;
@@ -141,7 +146,6 @@ a:hover {
   position: relative;
   top: 50px;
   right: 40%;
-  border: 1px red solid;
   background-color: black;
   width: 20px;
   height: 40px;
@@ -226,7 +230,6 @@ a:hover {
 
 .marquee {
   user-select: none;
-  margin-top: -15px;
   display: flex;
   height: 30px;
   overflow: hidden;
@@ -240,7 +243,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   min-width: 100%;
-  animation: marquee-scroll 110s linear infinite;
+  animation: marquee-scroll 100s linear infinite;
 }
 
 @keyframes marquee-scroll {
@@ -260,6 +263,10 @@ a:hover {
   font-size: 1.1em;
   color: white;
   letter-spacing: 2px;
+}
+
+.logo-wrapper svg {
+  width: 100%;
 }
 
 @media only screen and (max-width: 740px) {
@@ -359,6 +366,7 @@ a:hover {
   object-fit: cover;
   width: fit-content;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .content__about-img img {
@@ -565,6 +573,7 @@ a:hover {
   width: fit-content;
   display: flex;
   flex-wrap: wrap;
+  pointer-events: none;
 }
 
 .scan-smears img {
