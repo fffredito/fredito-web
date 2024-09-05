@@ -50,9 +50,6 @@ a:hover {
   z-index: -9999;
 }
 
-.bg-video-rotate {
-  transform: rotate(90deg);
-}
 
 .line-divider {
   height: 10px;
