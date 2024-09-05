@@ -141,3 +141,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const marqueeText = document.querySelector('.marquee__text');
+    const textWidth = marqueeText.scrollWidth;
+    const marqueeContainerWidth = document.querySelector('.marquee').offsetWidth;
+    
+    const keyframes = [
+        { transform: `translateX(${marqueeContainerWidth}px)` },
+        { transform: `translateX(-${textWidth}px)` }
+    ];
+    
+    const timing = {
+        duration: 20000, // Adjust duration for speed
+        iterations: Infinity,
+        easing: 'linear'
+    };
+    
+    marqueeText.animate(keyframes, timing);
+});
+
