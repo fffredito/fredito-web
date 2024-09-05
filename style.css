@@ -585,7 +585,7 @@ a:hover {
   border: 1px solid #312fa6;
   margin: 0 auto;
   padding: 12px;
-  width: 95%;
+  width: 100%;
   height: fit-content;
   background-color: rgba(0, 0, 0, 80%);
   border-radius: 2px;
