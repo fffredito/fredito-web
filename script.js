@@ -161,3 +161,68 @@ document.addEventListener('DOMContentLoaded', () => {
     marqueeText.animate(keyframes, timing);
 });
 
+
+//////////////
+// List of video file names
+const videos = [
+    'black-rivr.mp4',
+    'bloom.mp4',
+    'butterfly.mp4',
+    'clementines.mp4'
+];
+
+// Function to pick a random video
+function getRandomVideo() {
+    const randomIndex = Math.floor(Math.random() * videos.length);
+    return videos[randomIndex];
+}
+
+// Set the video source
+function setVideoSource() {
+    const videoElement = document.getElementById('background-video');
+    const videoFile = getRandomVideo();
+    videoElement.src = `/assets/videos/${videoFile}`;
+}
+
+// Run the function on page load
+window.onload = setVideoSource;
+
+
+
+
+
+
+///////////////////
+const svg = document.getElementById('draggable-svg');
+let isDragging = false;
+let offsetX, offsetY;
+
+svg.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - svg.getBoundingClientRect().left;
+    offsetY = e.clientY - svg.getBoundingClientRect().top;
+    svg.style.cursor = 'grabbing'; // Change cursor to grabbing
+});
+
+document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+        const wrapperRect = svg.parentElement.getBoundingClientRect();
+        const svgRect = svg.getBoundingClientRect();
+
+        let newLeft = e.clientX - offsetX - wrapperRect.left;
+        let newTop = e.clientY - offsetY - wrapperRect.top;
+
+        // Constraint movement within the boundaries
+        newLeft = Math.max(0, Math.min(newLeft, wrapperRect.width - svgRect.width));
+        newTop = Math.max(0, Math.min(newTop, wrapperRect.height - svgRect.height));
+
+        svg.style.left = `${newLeft}px`;
+        svg.style.top = `${newTop}px`;
+    }
+});
+
+document.addEventListener('mouseup', () => {
+    isDragging = false;
+    svg.style.cursor = 'grab'; // Change cursor back to grab
+});
+
